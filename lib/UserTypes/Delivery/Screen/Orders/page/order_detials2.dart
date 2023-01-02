@@ -10,8 +10,6 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import '../../../../Admin/Screen/Order/delegation_order.dart';
-
 class OrderDetails2 extends StatefulWidget {
   const OrderDetails2({Key? key}) : super(key: key);
 
@@ -59,12 +57,7 @@ class _OrderDetails2State extends State<OrderDetails2> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const DelegationOrder(),
-                                ),
-                              );
+                              Navigator.pop(context);
                             },
                             child: const Icon(
                               // added by vp
