@@ -2,7 +2,9 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 
+import '../../Delivery/Screen/Chat/page/message.dart';
 import 'HomePage/admin_home_page.dart';
+import 'Order/delegation_order.dart';
 import 'admin_profile.dart';
 import 'admin_wallet.dart';
 
@@ -25,7 +27,10 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
         // MyProducts(),
         // Orders(),
         AdminProfile(),
+        DelegationOrder(),
+        DeliveryMessage(),
         AdminWallet(),
+
         AdminHomePage(),
 
         // Here must add your pages which will appear after clicking on bottom navigation bar
@@ -44,35 +49,24 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
           activeColorSecondary: Colors.white,
           inactiveColorPrimary: Colors.grey,
         ),
-        // PersistentBottomNavBarItem(
-        //   icon: const Icon(
-        //     Icons.notifications,
-        //   ),
-        //   title: "اشعاراتي",
-        //   activeColorPrimary: primaryColor,
-        //   activeColorSecondary: Colors.white,
-        //   inactiveColorPrimary: Colors.grey,
-        //   onSelectedTabPressWhenNoScreensPushed: () {},
-        // ),
-        // PersistentBottomNavBarItem(
-        //   icon: const Icon(
-        //     Icons.production_quantity_limits_rounded,
-        //   ),
-        //   title: "منتجاتي",
-        //   activeColorPrimary: primaryColor,
-        //   activeColorSecondary: Colors.white,
-        //   inactiveColorPrimary: Colors.grey,
-        //   onSelectedTabPressWhenNoScreensPushed: () {},
-        // ),
-        // PersistentBottomNavBarItem(
-        //   activeColorPrimary: primaryColor,
-        //   activeColorSecondary: Colors.white,
-        //   inactiveColorPrimary: Colors.grey,
-        //   icon: const Icon(
-        //     Icons.inbox_sharp,
-        //   ),
-        //   title: "طلباتي",
-        // ),
+        PersistentBottomNavBarItem(
+          activeColorPrimary: primaryColor,
+          activeColorSecondary: Colors.white,
+          inactiveColorPrimary: Colors.grey,
+          icon: const Icon(
+            Icons.inbox_sharp,
+          ),
+          title: "طلباتي",
+        ),
+        PersistentBottomNavBarItem(
+          activeColorPrimary: primaryColor,
+          activeColorSecondary: Colors.white,
+          inactiveColorPrimary: Colors.grey,
+          icon: const Icon(
+            Icons.chat,
+          ),
+          title: "محادثاتي",
+        ),
         PersistentBottomNavBarItem(
           icon: const Icon(
             Icons.account_balance_wallet_rounded,

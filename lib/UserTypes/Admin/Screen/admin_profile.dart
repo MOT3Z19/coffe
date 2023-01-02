@@ -47,10 +47,10 @@ class _AdminProfileState extends State<AdminProfile> {
                 children: [
                   Container(
                     margin: EdgeInsets.only(
-                        top: size.height / 4.4,
+                        top: size.height / 4.5,
                         left: size.height / 55,
                         right: size.height / 55),
-                    height: size.height / 1.3,
+                    // height: size.height / 1.1,
                     decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
