@@ -80,7 +80,7 @@ class _ComplaintsState extends State<Complaints> {
                           // ),
                           Center(
                             child: Text(
-                              "الشكاوي ",
+                              "رد على الشكاوي ",
                               style:
                                   TextStyle(fontSize: 20, color: Colors.white),
                             ),
@@ -118,7 +118,15 @@ class _ComplaintsState extends State<Complaints> {
                     ),
                     const Text(
                       // " شكاوي من مناديب ",
-                      "  من مناديب ",
+                      "   تجار ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const Text(
+                      // " شكاوي من مناديب ",
+                      "   مناديب ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
@@ -126,7 +134,7 @@ class _ComplaintsState extends State<Complaints> {
                     ),
                     Text(
                       //  "شكاوي من زبائن  ",
-                      " من زبائن  ",
+                      "  زبائن  ",
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 15,
