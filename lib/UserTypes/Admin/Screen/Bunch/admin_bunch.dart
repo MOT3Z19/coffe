@@ -87,10 +87,48 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 20,
               ),
               Container(
-                margin: const EdgeInsets.symmetric(horizontal: 20),
+                margin: EdgeInsets.symmetric(
+                  horizontal: size.width / 12,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "   تجار ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    const Text(
+                      " مندوبين ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(
+                      "  مستخدمين  ",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 15,
+                        color: secondaryColor,
+                        // decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Container(
+                margin: const EdgeInsets.symmetric(
+                  horizontal: 20,
+                ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -236,7 +274,7 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
                         child: Icon(Icons.arrow_back)),
                   ],
                 ),
-                const Center(child: Text("ادخل عنوان الباقة الجديدة")),
+                const Center(child: Text("ادخل باقة جديدة")),
               ],
             ),
             actions: <Widget>[
