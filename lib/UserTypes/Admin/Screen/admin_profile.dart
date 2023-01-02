@@ -69,181 +69,41 @@ class _AdminProfileState extends State<AdminProfile> {
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(
-                              horizontal: 30,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "  حسابي",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, "  حسابي "),
                         ),
                         InkWell(
                           onTap: () {},
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "سياسات الخصوصية والموقع",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, "  سياسات الخصوصية والموقع "),
                         ),
                         InkWell(
                           onTap: () {},
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "من نحن",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " من نحن "),
                         ),
                         InkWell(
                           onTap: () {},
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  " الثيمات والعناصر الاساسية ",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, "  الثيمات والعناصر الاساسية"),
                         ),
                         InkWell(
                           onTap: () {},
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "اتصل بنا",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " اتصل بنا"),
                         ),
-                        Container(
-                          width: size.width,
-                          height: size.height / 15,
-                          margin: const EdgeInsets.symmetric(horizontal: 30),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Icon(Icons.arrow_back_ios),
-                              Text(
-                                " اعتماد اللغات",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                                textAlign: TextAlign.right,
-                              ),
-                            ],
-                          ),
-                        ),
+                        Item(context, " اعتماد اللغات"),
                         InkWell(
-                          onTap: () {},
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "اعدادات التطبيق",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                            onTap: () {},
+                            child: Item(context, "اعدادات التطبيق")),
                         InkWell(
-                          // onTap: () {
-                          //   showDialog2();
-                          // },
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Complaints(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  " الشكوى",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
+                            // onTap: () {
+                            //   showDialog2();
+                            // },
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => const Complaints(),
                                 ),
-                              ],
-                            ),
-                          ),
-                        ),
+                              );
+                            },
+                            child: Item(context, "الشكوى")),
                       ],
                     ),
                   ),
@@ -386,5 +246,27 @@ class _AdminProfileState extends State<AdminProfile> {
             ],
           );
         });
+  }
+
+  Widget Item(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width,
+      height: size.height / 15,
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(Icons.arrow_back_ios),
+          Text(
+            "$title",
+            style: TextStyle(
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.right,
+          ),
+        ],
+      ),
+    );
   }
 }
