@@ -252,7 +252,7 @@ class _AddRequestsState extends State<AddRequests> {
                 ),
               ),
               const SizedBox(
-                height: 50,
+                height: 20,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
