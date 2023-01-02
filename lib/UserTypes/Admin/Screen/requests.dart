@@ -260,8 +260,6 @@ class _AddRequestsState extends State<AddRequests> {
                   Container(
                     width: size.width / 2.5,
                     height: size.height / 22,
-                    // margin: EdgeInsets.symmetric(
-                    //     horizontal: size.width / 18, vertical: 10),
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -276,8 +274,6 @@ class _AddRequestsState extends State<AddRequests> {
                   Container(
                     width: size.width / 2.5,
                     height: size.height / 22,
-                    // margin: EdgeInsets.symmetric(
-                    //     horizontal: size.width / 18, vertical: 10),
                     decoration: BoxDecoration(
                       color: Colors.grey[300],
                       borderRadius: const BorderRadius.all(Radius.circular(10)),

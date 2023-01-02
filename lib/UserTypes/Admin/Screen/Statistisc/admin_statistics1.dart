@@ -52,12 +52,12 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.search,
                             color: Colors.white,
                             size: 40,
                           ),
-                          Text(
+                          const Text(
                             "الاحصائيات  ",
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
@@ -65,7 +65,7 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
                             onTap: () {
                               _key.currentState!.openDrawer();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.view_headline,
                               color: Colors.white,
                               size: 40,
@@ -265,162 +265,15 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
                   ],
                 ),
               ),
-              Container(
-                  margin: const EdgeInsets.symmetric(vertical: 8),
-                  child: const DottedLine(dashLength: 20)),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي عدد التجار",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي عدد المندوبين",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي افرع المتجر",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي الاصناف",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي الارباح",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي العملاء ",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي البدان",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي المدن",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي الاحياء",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
+              Item(context, "  اجمالي عدد التجار"),
+              Item(context, "  اجمالي عدد المندوبين"),
+              Item(context, "  اجمالي افرع المتجر"),
+              Item(context, "  اجمالي الاصناف"),
+              Item(context, "  اجمالي الارباح"),
+              Item(context, "  اجمالي العملاء"),
+              Item(context, "  اجمالي البدان"),
+              Item(context, "  اجمالي المدن"),
+              Item(context, "  اجمالي الاحياء"),
               const Divider(
                 // color: Colors.black,
                 thickness: 1,
@@ -463,111 +316,35 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
               Container(
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   child: const DottedLine(dashLength: 20)),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي المبيعات",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي عدد المندوبين",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي حصة الموقع",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي المحصل من الموقع",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " اجمالي المسدد من الموقع",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 13, vertical: 5),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: const [
-                    Text(
-                      " ٦٠",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                    Text(
-                      " رصيد المندوب",
-                      style: TextStyle(fontSize: 17),
-                    ),
-                  ],
-                ),
-              ),
+              Item(context, " اجمالي المبيعات"),
+              Item(context, " اجمالي عدد المندوبين"),
+              Item(context, " اجمالي حصة الموقع"),
+              Item(context, " اجمالي المحصل من الموقع"),
+              Item(context, " اجمالي المسدد من الموقع"),
+              Item(context, " رصيد المندوب"),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Item(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: size.width / 13, vertical: 5),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Text(
+            " ٦٠",
+            style: TextStyle(fontSize: 17),
+          ),
+          Text(
+            "$title",
+            style: const TextStyle(fontSize: 17),
+          ),
+        ],
       ),
     );
   }

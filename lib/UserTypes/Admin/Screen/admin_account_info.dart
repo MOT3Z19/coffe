@@ -2,8 +2,6 @@ import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/s
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 
-import 'admin_profile.dart';
-
 class AdminAccountInfo extends StatefulWidget {
   const AdminAccountInfo({Key? key}) : super(key: key);
 
@@ -50,12 +48,7 @@ class _AdminAccountInfoState extends State<AdminAccountInfo> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) => const AdminProfile(),
-                                ),
-                              );
+                              Navigator.pop(context);
                             },
                             child: const Icon(
                               // added by vp
@@ -64,8 +57,8 @@ class _AdminAccountInfoState extends State<AdminAccountInfo> {
                               size: 40,
                             ),
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "حسابي  ",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -122,98 +115,46 @@ class _AdminAccountInfoState extends State<AdminAccountInfo> {
               Column(
                 children: [
                   InkWell(
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const ServiceProviderProfile(),
-                      //   ),
-                      // );
-                    },
-                    child: Container(
-                      width: size.width,
-                      height: size.height / 15,
-                      margin: const EdgeInsets.symmetric(
-                        horizontal: 30,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(Icons.arrow_back_ios),
-                          Text(
-                            " تعديل البيانات الشخصية",
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ],
-                      ),
-                    ),
+                    onTap: () {},
+                    child: Item(context, " تعديل البيانات الشخصية  "),
                   ),
                   InkWell(
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) =>
-                      //         const ServiceProviderChangePassword(),
-                      //   ),
-                      // );
-                    },
-                    child: Container(
-                      width: size.width,
-                      height: size.height / 15,
-                      margin: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(Icons.arrow_back_ios),
-                          Text(
-                            "تعديل كلمة السر",
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ],
-                      ),
-                    ),
+                    onTap: () {},
+                    child: Item(context, "تعديل كلمة السر "),
                   ),
                   InkWell(
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) =>
-                      //         const ServiceProviderChangePassword(),
-                      //   ),
-                      // );
-                    },
-                    child: Container(
-                      width: size.width,
-                      height: size.height / 15,
-                      margin: const EdgeInsets.symmetric(horizontal: 30),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
-                          Icon(Icons.arrow_back_ios),
-                          Text(
-                            " تغيير اللغة",
-                            style: TextStyle(
-                              fontSize: 18,
-                            ),
-                            textAlign: TextAlign.right,
-                          ),
-                        ],
-                      ),
-                    ),
+                    onTap: () {},
+                    child: Item(context, "تغيير اللغة"),
                   ),
                 ],
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Item(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width,
+      height: size.height / 15,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(Icons.arrow_back_ios),
+          Text(
+            " $title",
+            style: const TextStyle(
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.right,
+          ),
+        ],
       ),
     );
   }

@@ -19,21 +19,14 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
   @override
   Widget build(BuildContext context) {
     PersistentTabController _controller;
-    _controller = PersistentTabController(initialIndex: 2);
+    _controller = PersistentTabController(initialIndex: 4);
     List<Widget> _tabScreen() {
       return [
-        // ServiceProviderDelegationsScreen3(),
-        // ServiceProviderNotification2(),
-        // MyProducts(),
-        // Orders(),
-        AdminProfile(),
-        DelegationOrder(),
-        DeliveryMessage(),
-        AdminWallet(),
-
-        AdminHomePage(),
-
-        // Here must add your pages which will appear after clicking on bottom navigation bar
+        const AdminProfile(),
+        const DelegationOrder(),
+        const DeliveryMessage(),
+        const AdminWallet(),
+        const AdminHomePage(),
       ];
     }
 
@@ -44,7 +37,7 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
             Icons.person,
           ),
           title: "حسابي",
-          textStyle: TextStyle(color: Colors.white),
+          textStyle: const TextStyle(color: Colors.white),
           activeColorPrimary: primaryColor,
           activeColorSecondary: Colors.white,
           inactiveColorPrimary: Colors.grey,
@@ -81,7 +74,7 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
             Icons.home,
           ),
           title: "الرئيسة",
-          textStyle: TextStyle(color: Colors.white),
+          textStyle: const TextStyle(color: Colors.white),
           activeColorPrimary: primaryColor,
           activeColorSecondary: Colors.white,
           inactiveColorPrimary: Colors.grey,
@@ -90,8 +83,6 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
     }
 
     return Container(
-      // color: Colors.red,
-      // margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: const BoxDecoration(
         color: Colors.red,
         borderRadius: BorderRadius.all(Radius.circular(20)),
@@ -100,17 +91,13 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
         ],
       ),
       child: ClipRRect(
-        // borderRadius: BorderRadius.circular(10),
         child: PersistentTabView(
           context,
           controller: _controller,
-          // backgroundColor: Color(0xffe1e9ee),
           backgroundColor: Colors.white,
-
           screens: _tabScreen(),
           items: _navBarsItems(),
           confineInSafeArea: true,
-
           handleAndroidBackButtonPress: true,
           resizeToAvoidBottomInset: true,
           // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
@@ -130,8 +117,6 @@ class _AdminMainTabsState extends State<AdminMainTabs> {
             curve: Curves.ease,
           ),
           screenTransitionAnimation: const ScreenTransitionAnimation(
-            // Screen transition animation on change of selected tab.
-            // animateTabTransition: true,
             curve: Curves.bounceOut,
             duration: Duration(milliseconds: 100),
           ),

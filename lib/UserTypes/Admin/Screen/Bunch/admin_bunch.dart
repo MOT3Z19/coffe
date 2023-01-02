@@ -2,7 +2,6 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 
 import '../admin_side_drawer.dart';
-import '../controls.dart';
 
 class AdminBunchScreen extends StatefulWidget {
   const AdminBunchScreen({Key? key}) : super(key: key);
@@ -50,11 +49,8 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Controls(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -74,7 +70,7 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
                             onTap: () {
                               _key.currentState!.openDrawer();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.view_headline,
                               color: Colors.white,
                               size: 40,
@@ -152,102 +148,47 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
               const SizedBox(
                 height: 30,
               ),
-              Container(
-                width: size.width / 1.2,
-                height: size.height / 15,
-                decoration: BoxDecoration(
-                  color: greyColor2,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "تعديل",
-                      style: TextStyle(fontSize: 15, color: secondaryColor),
-                    ),
-                    const Text(
-                      "باقة ١٠٠ ريال ٢٥ منتج لليوم الواحد",
-                      style: TextStyle(fontSize: 15),
-                    )
-                  ],
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                width: size.width / 1.2,
-                height: size.height / 15,
-                decoration: BoxDecoration(
-                  color: greyColor2,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "تعديل",
-                      style: TextStyle(fontSize: 15, color: secondaryColor),
-                    ),
-                    const Text(
-                      "باقة ١٠٠ ريال ٢٥ منتج لليوم الواحد",
-                      style: TextStyle(fontSize: 15),
-                    )
-                  ],
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                width: size.width / 1.2,
-                height: size.height / 15,
-                decoration: BoxDecoration(
-                  color: greyColor2,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "تعديل",
-                      style: TextStyle(fontSize: 15, color: secondaryColor),
-                    ),
-                    const Text(
-                      "باقة ١٠٠ ريال ٢٥ منتج لليوم الواحد",
-                      style: TextStyle(fontSize: 15),
-                    )
-                  ],
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              Container(
-                width: size.width / 1.2,
-                height: size.height / 15,
-                decoration: BoxDecoration(
-                  color: greyColor2,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Text(
-                      "تعديل",
-                      style: TextStyle(fontSize: 15, color: secondaryColor),
-                    ),
-                    const Text(
-                      "باقة ١٠٠ ريال ٢٥ منتج لليوم الواحد",
-                      style: TextStyle(fontSize: 15),
-                    )
-                  ],
-                ),
-              ),
+              Box(context),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width / 1.2,
+      height: size.height / 15,
+      decoration: BoxDecoration(
+        color: greyColor2,
+        borderRadius: BorderRadius.circular(10),
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        children: [
+          Text(
+            "تعديل",
+            style: TextStyle(fontSize: 15, color: secondaryColor),
+          ),
+          const Text(
+            "باقة ١٠٠ ريال ٢٥ منتج لليوم الواحد",
+            style: TextStyle(fontSize: 15),
+          )
+        ],
       ),
     );
   }
@@ -271,7 +212,7 @@ class _AdminBunchScreenState extends State<AdminBunchScreen> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(child: Text("ادخل باقة جديدة")),
