@@ -90,12 +90,12 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.search,
                             color: Colors.white,
                             size: 40,
                           ),
-                          Text(
+                          const Text(
                             "الاحصائيات  ",
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
@@ -103,7 +103,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             onTap: () {
                               _key.currentState!.openDrawer();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.view_headline,
                               color: Colors.white,
                               size: 40,
@@ -832,6 +832,23 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
               ),
               Row(
                 children: [
+                  Container(
+                    width: size.width / 2.2,
+                    height: size.height / 15,
+                    margin: EdgeInsets.symmetric(
+                        horizontal: size.width / 50,
+                        vertical: size.height / 66),
+                    decoration: BoxDecoration(
+                      color: primaryColor,
+                      borderRadius: const BorderRadius.all(Radius.circular(10)),
+                    ),
+                    child: const Center(
+                      child: Text(
+                        "بحث جديد",
+                        style: TextStyle(color: Colors.white, fontSize: 24),
+                      ),
+                    ),
+                  ),
                   InkWell(
                     onTap: () {
                       showDialog1();
@@ -842,33 +859,15 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       margin: EdgeInsets.symmetric(
                           horizontal: size.width / 50,
                           vertical: size.height / 66),
-                      decoration: BoxDecoration(
-                        color: primaryColor,
-                        borderRadius:
-                            const BorderRadius.all(Radius.circular(10)),
+                      decoration: const BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
                       ),
                       child: const Center(
                         child: Text(
-                          "بحث جديد",
+                          "ابحث",
                           style: TextStyle(color: Colors.white, fontSize: 24),
                         ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: size.width / 2.2,
-                    height: size.height / 15,
-                    margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 50,
-                        vertical: size.height / 66),
-                    decoration: const BoxDecoration(
-                      color: Colors.black,
-                      borderRadius: BorderRadius.all(Radius.circular(10)),
-                    ),
-                    child: const Center(
-                      child: Text(
-                        "ابحث",
-                        style: TextStyle(color: Colors.white, fontSize: 24),
                       ),
                     ),
                   ),
@@ -891,11 +890,25 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            title: const Center(
-                child: Text(
-              " نتيجة المندوب ",
-              style: TextStyle(fontWeight: FontWeight.bold),
-            )),
+            title: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    InkWell(
+                        onTap: () {
+                          Navigator.of(context).pop();
+                        },
+                        child: Icon(Icons.arrow_back)),
+                  ],
+                ),
+                const Center(
+                    child: Text(
+                  " نتيجة المندوب ",
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+              ],
+            ),
             actions: <Widget>[
               SingleChildScrollView(
                 child: Column(
