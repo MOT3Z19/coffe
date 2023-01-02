@@ -3,7 +3,6 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'Order/delegation_order.dart';
 import 'clients.dart';
-import 'delegation-page.dart';
 
 class DelegationDetails extends StatefulWidget {
   const DelegationDetails({Key? key}) : super(key: key);
@@ -37,12 +36,7 @@ class _DelegationDetailsState extends State<DelegationDetails> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => DelegationPagee(),
-                          ),
-                        );
+                        Navigator.pop(context);
                       },
                       child: Container(
                         margin: EdgeInsets.only(
@@ -234,36 +228,8 @@ class _DelegationDetailsState extends State<DelegationDetails> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("المناديب"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("المتاجر"),
-                          Text(
-                            "5",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  Box(" المناديب"),
+                  Box(" المتاجر"),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -273,87 +239,17 @@ class _DelegationDetailsState extends State<DelegationDetails> {
                         ),
                       );
                     },
-                    child: SizedBox(
-                      width: 100,
-                      height: 50,
-                      child: Card(
-                        child: Column(
-                          children: const [
-                            Text("العملاء"),
-                            Text(
-                              "55",
-                              style: TextStyle(color: Colors.blue),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    child: Box(" العملاء"),
                   ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الشركات"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
+                  Box(" الشركات"),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الطلبات الحالية"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الطلبات الملغية"),
-                          Text(
-                            "5",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الطلبات المنتهية"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  Box("الطلبات الحالية"),
+                  Box("الطلبات الملغية"),
+                  Box("الطلبات المنتهية"),
                   InkWell(
                     onTap: () {
                       Navigator.push(
@@ -363,275 +259,51 @@ class _DelegationDetailsState extends State<DelegationDetails> {
                         ),
                       );
                     },
-                    child: SizedBox(
-                      width: 100,
-                      height: 50,
-                      child: Card(
-                        child: Column(
-                          children: const [
-                            Text("الطلبات"),
-                            Text(
-                              "55",
-                              style: TextStyle(color: Colors.blue),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
+                    child: Box("الطلبات"),
                   )
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الدول"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("الاقتراحات"),
-                          Text(
-                            "5",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("التذاكر"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("العروض"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
+                  Box("الدول"),
+                  Box("الاقتراحات"),
+                  Box("التذاكر"),
+                  Box("العروض"),
                 ],
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("المنتجات"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("طلبات المنتجات"),
-                          Text(
-                            "5",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("التصفيات"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 100,
-                    height: 50,
-                    child: Card(
-                      child: Column(
-                        children: const [
-                          Text("المدن"),
-                          Text(
-                            "55",
-                            style: TextStyle(color: Colors.blue),
-                          ),
-                        ],
-                      ),
-                    ),
-                  )
+                  Box(" المنتجات"),
+                  Box("طلبات المنتجات"),
+                  Box("التصفيات"),
+                  Box("المدن"),
                 ],
               ),
               const SizedBox(
                 height: 30,
               ),
-              // Container(
-              //   margin: EdgeInsets.symmetric(vertical: 10),
-              //   child: Center(
-              //       child: Text(
-              //     "تقييمات العملاء",
-              //     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              //   )),
-              // ),
-              // SizedBox(
-              //   width: size.width / 1.1,
-              //   height: size.height / 3.5,
-              //   child: Card(
-              //     child: Column(
-              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //       children: [
-              //         const CircleAvatar(
-              //           backgroundImage: AssetImage("assest/images/man.jpg"),
-              //           maxRadius: 30,
-              //         ),
-              //         const Center(
-              //           child: Text(
-              //             " احمد محمود ",
-              //             style: TextStyle(fontSize: 20),
-              //           ),
-              //         ),
-              //         Container(
-              //           margin: EdgeInsets.only(top: size.height / 58),
-              //           child: Center(
-              //             child: RatingBar.builder(
-              //               initialRating: 5,
-              //               minRating: 1,
-              //               direction: Axis.horizontal,
-              //               allowHalfRating: true,
-              //               itemCount: 5,
-              //               itemSize: 15,
-              //               // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              //               itemBuilder: (context, _) => const Icon(
-              //                 Icons.star,
-              //                 color: Colors.amber,
-              //               ),
-              //               onRatingUpdate: (rating) {},
-              //             ),
-              //           ),
-              //         ),
-              //         Container(
-              //           width: size.width / 1.3,
-              //           height: size.height / 14,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(20),
-              //             color: greyColor2,
-              //           ),
-              //           child: const Center(
-              //             child: Text(
-              //               " قائد مركبة مميز وذو خبرة أنصح به ",
-              //               style: TextStyle(fontSize: 20),
-              //             ),
-              //           ),
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width / 1.1,
-              //   height: size.height / 3.5,
-              //   child: Card(
-              //     child: Column(
-              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //       children: [
-              //         const CircleAvatar(
-              //           backgroundImage: AssetImage("assest/images/man.jpg"),
-              //           maxRadius: 30,
-              //         ),
-              //         const Center(
-              //           child: Text(
-              //             " احمد محمود ",
-              //             style: TextStyle(fontSize: 20),
-              //           ),
-              //         ),
-              //         Container(
-              //           margin: EdgeInsets.only(top: size.height / 58),
-              //           child: Center(
-              //             child: RatingBar.builder(
-              //               initialRating: 5,
-              //               minRating: 1,
-              //               direction: Axis.horizontal,
-              //               allowHalfRating: true,
-              //               itemCount: 5,
-              //               itemSize: 15,
-              //               // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              //               itemBuilder: (context, _) => const Icon(
-              //                 Icons.star,
-              //                 color: Colors.amber,
-              //               ),
-              //               onRatingUpdate: (rating) {},
-              //             ),
-              //           ),
-              //         ),
-              //         Container(
-              //           width: size.width / 1.3,
-              //           height: size.height / 14,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(20),
-              //             color: greyColor2,
-              //           ),
-              //           child: const Center(
-              //             child: Text(
-              //               " قائد مركبة مميز وذو خبرة أنصح به ",
-              //               style: TextStyle(fontSize: 20),
-              //             ),
-              //           ),
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget Box(String title) {
+    return SizedBox(
+      width: 100,
+      height: 50,
+      child: Card(
+        child: Column(
+          children: [
+            Text("$title"),
+            const Text(
+              "55",
+              style: TextStyle(color: Colors.blue),
+            ),
+          ],
         ),
       ),
     );
