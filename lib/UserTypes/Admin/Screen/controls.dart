@@ -12,7 +12,6 @@ import 'package:flutter/widgets.dart';
 
 import '../../Delivery/Screen/Chat/page/message.dart';
 import 'Bunch/admin_bunch.dart';
-import 'HomePage/admin_home_page.dart';
 import 'complintas.dart';
 
 class Controls extends StatefulWidget {
@@ -73,55 +72,9 @@ class _ControlsState extends State<Controls> {
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(
-                              horizontal: 30,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "  قبول الطلبات ",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, "قبول الطلبات"),
                         ),
-                        InkWell(
-                          // onTap: () {
-                          //   Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //       builder: (context) => const Statistics(),
-                          //     ),
-                          //   );
-                          // },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "الصلاحيات والسلطات",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                        Item(context, "الصلاحيات والسلطات"),
                         InkWell(
                           onTap: () {
                             Navigator.push(
@@ -131,47 +84,13 @@ class _ControlsState extends State<Controls> {
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "الباقات ",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " الباقات "),
                         ),
                         InkWell(
                           onTap: () {
                             //  showDialog1();
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "مستويات الصلاحيات المخولة ",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " مستويات الصلاحيات المخولة "),
                         ),
                         InkWell(
                           onTap: () {
@@ -182,72 +101,10 @@ class _ControlsState extends State<Controls> {
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "المحادثات",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " المحادثات"),
                         ),
-                        Container(
-                          width: size.width,
-                          height: size.height / 15,
-                          margin: const EdgeInsets.symmetric(horizontal: 30),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Icon(Icons.arrow_back_ios),
-                              Text(
-                                " اعتماد اللغات",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                                textAlign: TextAlign.right,
-                              ),
-                            ],
-                          ),
-                        ),
-                        InkWell(
-                          // onTap: () {
-                          //   Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //       builder: (context) =>
-                          //           const ServiceProviderAppSettings(),
-                          //     ),
-                          //   );
-                          // },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "اعدادات التطبيق",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                        Item(context, " اعتماد اللغات"),
+                        Item(context, "اعدادات التطبيق"),
                         InkWell(
                           onTap: () {
                             Navigator.push(
@@ -257,24 +114,7 @@ class _ControlsState extends State<Controls> {
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  " الشكوى",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " الشكوى"),
                         ),
                       ],
                     ),
@@ -292,12 +132,7 @@ class _ControlsState extends State<Controls> {
                           children: [
                             InkWell(
                               onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const AdminHomePage(),
-                                  ),
-                                );
+                                Navigator.pop(context);
                               },
                               child: const Icon(
                                 // added by vp
@@ -353,7 +188,7 @@ class _ControlsState extends State<Controls> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -374,9 +209,6 @@ class _ControlsState extends State<Controls> {
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              // const SizedBox(
-              //   height: 20,
-              // ),
               InkWell(
                 onTap: () {
                   Navigator.push(
@@ -427,7 +259,7 @@ class _ControlsState extends State<Controls> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -467,5 +299,27 @@ class _ControlsState extends State<Controls> {
             ],
           );
         });
+  }
+
+  Widget Item(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width,
+      height: size.height / 15,
+      margin: const EdgeInsets.symmetric(horizontal: 30),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(Icons.arrow_back_ios),
+          Text(
+            " $title",
+            style: const TextStyle(
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.right,
+          ),
+        ],
+      ),
+    );
   }
 }
