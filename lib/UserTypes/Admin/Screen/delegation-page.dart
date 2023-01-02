@@ -54,13 +54,7 @@ class _DelegationPageeState extends State<DelegationPagee> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
-                                context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const AdminStatistics1(),
-                                ),
-                              );
+                              Navigator.pop(context);
                             },
                             child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
@@ -79,7 +73,7 @@ class _DelegationPageeState extends State<DelegationPagee> {
                             onTap: () {
                               _key.currentState!.openDrawer();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.view_headline,
                               color: Colors.white,
                               size: 40,
@@ -201,332 +195,126 @@ class _DelegationPageeState extends State<DelegationPagee> {
               const SizedBox(
                 height: 20,
               ),
-              Stack(
-                alignment: Alignment.topCenter,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(size.height / 30),
-                    child: SizedBox(
-                      width: size.width / 1.2,
-                      height: size.height / 3.3,
-                      child: Card(
-                        child: Column(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const SizedBox(
-                              height: 60,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const DelegationDetails(),
-                                  ),
-                                );
-                              },
-                              child: const Text(
-                                " المندوب أحمد يونس",
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 58),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 5,
-                                  minRating: 5,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            ),
-                            const Divider(
-                              thickness: 1.0,
-                            ),
-                            IntrinsicHeight(
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        "عدد المتاجر",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                  const VerticalDivider(
-                                    //color: Colors.black,
-                                    thickness: 1,
-                                  ),
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        " سنوات",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: size.width / 4,
-                    height: size.height / 10,
-                    decoration: const ShapeDecoration(
-                        shape: CircleBorder(), color: Colors.white),
-                    child: const DecoratedBox(
-                      decoration: ShapeDecoration(
-                          shape: CircleBorder(),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("assest/images/man.jpg"))),
-                    ),
-                  )
-                ],
-              ),
-              Stack(
-                alignment: Alignment.topCenter,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(size.height / 30),
-                    child: SizedBox(
-                      width: size.width / 1.2,
-                      height: size.height / 3.3,
-                      child: Card(
-                        child: Column(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const SizedBox(
-                              height: 60,
-                            ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) =>
-                                        const DelegationDetails(),
-                                  ),
-                                );
-                              },
-                              child: const Text(
-                                " المندوب أحمد يونس",
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 58),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 5,
-                                  minRating: 5,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            ),
-                            const Divider(
-                              thickness: 1.0,
-                            ),
-                            IntrinsicHeight(
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        "عدد المتاجر",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                  const VerticalDivider(
-                                    //color: Colors.black,
-                                    thickness: 1,
-                                  ),
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        " سنوات",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: size.width / 4,
-                    height: size.height / 10,
-                    decoration: const ShapeDecoration(
-                        shape: CircleBorder(), color: Colors.white),
-                    child: const DecoratedBox(
-                      decoration: ShapeDecoration(
-                          shape: CircleBorder(),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("assest/images/man.jpg"))),
-                    ),
-                  )
-                ],
-              ),
-              Stack(
-                alignment: Alignment.topCenter,
-                children: <Widget>[
-                  Padding(
-                    padding: EdgeInsets.all(size.height / 30),
-                    child: SizedBox(
-                      width: size.width / 1.2,
-                      height: size.height / 3.3,
-                      child: Card(
-                        child: Column(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            const SizedBox(
-                              height: 60,
-                            ),
-                            const Text(
-                              " المندوب أحمد يونس",
-                              style: TextStyle(
-                                  fontSize: 20,
-                                  color: Colors.black,
-                                  fontWeight: FontWeight.bold),
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 58),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 5,
-                                  minRating: 5,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            ),
-                            const Divider(
-                              thickness: 1.0,
-                            ),
-                            IntrinsicHeight(
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
-                                children: [
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        "عدد المتاجر",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                  const VerticalDivider(
-                                    //color: Colors.black,
-                                    thickness: 1,
-                                  ),
-                                  Column(
-                                    children: const [
-                                      Text(
-                                        "9999",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                      Text(
-                                        " سنوات",
-                                        style: TextStyle(fontSize: 18),
-                                      ),
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    width: size.width / 4,
-                    height: size.height / 10,
-                    decoration: const ShapeDecoration(
-                        shape: CircleBorder(), color: Colors.white),
-                    child: const DecoratedBox(
-                      decoration: ShapeDecoration(
-                          shape: CircleBorder(),
-                          image: DecorationImage(
-                              fit: BoxFit.cover,
-                              image: AssetImage("assest/images/man.jpg"))),
-                    ),
-                  )
-                ],
-              ),
+              Box(context),
+              Box(context),
+              Box(context),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Stack(
+      alignment: Alignment.topCenter,
+      children: <Widget>[
+        Padding(
+          padding: EdgeInsets.all(size.height / 30),
+          child: SizedBox(
+            width: size.width / 1.2,
+            height: size.height / 3.3,
+            child: Card(
+              child: Column(
+                //   mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  const SizedBox(
+                    height: 60,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const DelegationDetails(),
+                        ),
+                      );
+                    },
+                    child: const Text(
+                      " المندوب أحمد يونس",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: size.height / 58),
+                    child: Center(
+                      child: RatingBar.builder(
+                        initialRating: 5,
+                        minRating: 5,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemSize: 20,
+                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        onRatingUpdate: (rating) {},
+                      ),
+                    ),
+                  ),
+                  const Divider(
+                    thickness: 1.0,
+                  ),
+                  IntrinsicHeight(
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        Column(
+                          children: const [
+                            Text(
+                              "9999",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Text(
+                              "عدد المتاجر",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ],
+                        ),
+                        const VerticalDivider(
+                          //color: Colors.black,
+                          thickness: 1,
+                        ),
+                        Column(
+                          children: const [
+                            Text(
+                              "9999",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                            Text(
+                              " سنوات",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        Container(
+          width: size.width / 4,
+          height: size.height / 10,
+          decoration:
+              const ShapeDecoration(shape: CircleBorder(), color: Colors.white),
+          child: const DecoratedBox(
+            decoration: ShapeDecoration(
+                shape: CircleBorder(),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assest/images/man.jpg"))),
+          ),
+        )
+      ],
     );
   }
 }
