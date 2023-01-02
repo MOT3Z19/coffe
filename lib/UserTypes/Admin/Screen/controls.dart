@@ -10,6 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 
+import '../../Delivery/Screen/Chat/page/message.dart';
 import 'Bunch/admin_bunch.dart';
 import 'HomePage/admin_home_page.dart';
 import 'complintas.dart';
@@ -173,15 +174,14 @@ class _ControlsState extends State<Controls> {
                           ),
                         ),
                         InkWell(
-                          // onTap: () {
-                          //   Navigator.push(
-                          //     context,
-                          //     MaterialPageRoute(
-                          //       builder: (context) =>
-                          //           const ServiceProviderContactUs(),
-                          //     ),
-                          //   );
-                          // },
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const DeliveryMessage(),
+                              ),
+                            );
+                          },
                           child: Container(
                             width: size.width,
                             height: size.height / 15,
