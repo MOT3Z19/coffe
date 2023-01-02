@@ -15,32 +15,6 @@ class AdminHomePage extends StatefulWidget {
 }
 
 class _AdminHomePageState extends State<AdminHomePage> {
-  // String? selectedValue;
-  // List<String> items = ['احمد محمود'];
-  //
-  // String? selectedValue4;
-  // List<String> items4 = [
-  //   '  الفرع الاول',
-  //   '  الفرع التاني',
-  //   '  الفرع الثالث',
-  // ];
-  // String? selectedValue7;
-  // List<String> items7 = [
-  //   'احمد محمود',
-  //   'محمد محمود',
-  //   'علي محمود',
-  // ];
-  // String? selectedValue8;
-  // List<String> items8 = [
-  //   'احمد محمود',
-  //   'محمد محمود',
-  //   'علي محمود',
-  // ];
-  // String? selectedValue9;
-  // List<String> items9 = [
-  //   'دائن',
-  //   'مدين',
-  // ];
   String? selectedValue0;
   List<String> items0 = [
     ' مخصص',
@@ -79,7 +53,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
   String? selectedValue8;
   List<String> items8 = [
     'احمد محمود',
-    'محمد محمود',
+    'محمد حالذ',
     'علي محمود',
   ];
   String? selectedValue9;
@@ -565,24 +539,11 @@ class _AdminHomePageState extends State<AdminHomePage> {
               ),
               content: Column(
                 children: [
-                  // const Center(
-                  //     child: Text(
-                  //   " فرع زارا",
-                  //   style: TextStyle(fontWeight: FontWeight.bold),
-                  // )),
-                  // Center(
-                  //     child: Text(
-                  //   " ٢١ اكتوبر - ٣٠ ديسمبر",
-                  //   style: TextStyle(
-                  //     fontWeight: FontWeight.bold,
-                  //     color: secondaryColor,
-                  //   ),
-                  // )),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const Icon(Icons.navigate_before),
-                      const Icon(Icons.navigate_next),
+                    children: const [
+                      Icon(Icons.navigate_before),
+                      Icon(Icons.navigate_next),
                     ],
                   ),
                   Row(
@@ -841,6 +802,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
               const SizedBox(
                 height: 5,
               ),
+              ////
               DropdownButtonHideUnderline(
                 child: DropdownButton2(
                   isExpanded: true,
@@ -1150,6 +1112,8 @@ class _AdminHomePageState extends State<AdminHomePage> {
                   // offset: const Offset(-20, 0),
                 ),
               ),
+              /////
+
               const SizedBox(
                 height: 5,
               ),
