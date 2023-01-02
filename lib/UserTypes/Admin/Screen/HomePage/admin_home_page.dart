@@ -1,5 +1,6 @@
 import 'package:coffee_station/core/constant.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../Statistisc/admin_statistics1.dart';
@@ -47,7 +48,9 @@ class _AdminHomePageState extends State<AdminHomePage> {
   ];
   String? selectedValue;
   List<String> items = [
-    'احمد محمود',
+    'مزود خدمة',
+    'مندوب',
+    'مستخدم',
   ];
   String? selectedValue4;
   List<String> items4 = [
@@ -124,6 +127,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
     'محمد',
     'علي',
   ];
+  String status = '';
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   @override
   Widget build(BuildContext context) {
@@ -156,7 +160,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                       ),
                     ),
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: size.width / 20),
+                      margin: EdgeInsets.symmetric(horizontal: size.width / 70),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
@@ -174,29 +178,38 @@ class _AdminHomePageState extends State<AdminHomePage> {
                                 child: const Icon(
                                   Icons.search,
                                   color: Colors.white,
-                                  size: 40,
+                                  size: 30,
                                 ),
+                              ),
+                              const SizedBox(
+                                height: 30,
                               ),
                               InkWell(
-                                onTap: () {
-                                  showDialog3();
-                                },
-                                child: const Text(
-                                  "التصفيات",
-                                  style: TextStyle(color: Colors.white),
-                                ),
-                              ),
+                                  onTap: () {
+                                    showDialog3();
+                                  },
+                                  child: const Icon(
+                                    CupertinoIcons.drop_triangle,
+                                    color: Colors.white,
+                                    size: 30,
+                                  )
+                                  // Image.asset(
+                                  //   "assest/images/triangle.png",
+                                  //   width: 35,
+                                  // ),
+                                  ),
                             ],
                           ),
                           const Text(
                             "القائمة  ",
                             style: TextStyle(color: Colors.white, fontSize: 20),
+                            textAlign: TextAlign.center,
                           ),
                           InkWell(
                             onTap: () {
                               _key.currentState!.openDrawer();
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.view_headline,
                               color: Colors.white,
                               size: 40,
@@ -478,7 +491,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(child: Text("ادخل البحث الخاص فيك ")),
@@ -540,7 +553,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-                          child: Icon(Icons.arrow_back)),
+                          child: const Icon(Icons.arrow_back)),
                     ],
                   ),
                   const Center(
@@ -568,8 +581,8 @@ class _AdminHomePageState extends State<AdminHomePage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Icon(Icons.navigate_before),
-                      Icon(Icons.navigate_next),
+                      const Icon(Icons.navigate_before),
+                      const Icon(Icons.navigate_next),
                     ],
                   ),
                   Row(
@@ -738,7 +751,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(child: Text("التصفيات")),
@@ -759,7 +772,7 @@ class _AdminHomePageState extends State<AdminHomePage> {
                         ),
                         Expanded(
                           child: Text(
-                            ' المندوب : احمد محمود ',
+                            ' توع الشريك   ',
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.bold,
@@ -823,6 +836,84 @@ class _AdminHomePageState extends State<AdminHomePage> {
                     scrollbarAlwaysShow: true,
                     // offset: const Offset(-20, 0),
                   ),
+                ),
+              ),
+              const SizedBox(
+                height: 5,
+              ),
+              DropdownButtonHideUnderline(
+                child: DropdownButton2(
+                  isExpanded: true,
+                  hint: Row(
+                    children: const [
+                      SizedBox(
+                        width: 4,
+                      ),
+                      Expanded(
+                        child: Text(
+                          ' اسم التاجر',
+                          style: TextStyle(
+                            fontSize: 14,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.black,
+                          ),
+                          // overflow: TextOverflow.ellipsis,
+                        ),
+                      ),
+                    ],
+                  ),
+                  items: items8
+                      .map((item) => DropdownMenuItem<String>(
+                            value: item,
+                            child: Text(
+                              item,
+                              style: const TextStyle(
+                                fontSize: 14,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.black,
+                              ),
+                              overflow: TextOverflow.ellipsis,
+                            ),
+                          ))
+                      .toList(),
+                  value: selectedValue8,
+                  onChanged: (value) {
+                    setState(() {
+                      selectedValue8 = value as String;
+                    });
+                  },
+                  icon: const Icon(
+                    Icons.keyboard_arrow_down_outlined,
+                  ),
+                  iconSize: 25,
+                  iconEnabledColor: Colors.black,
+                  buttonHeight: size.height / 25,
+                  buttonWidth: size.width / 1.1,
+                  buttonPadding: const EdgeInsets.only(left: 14, right: 14),
+                  buttonDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    // border: Border.all(
+                    //   color: Colors.black26,
+                    // ),
+                    //
+                    //
+                    color: Colors.white,
+                  ),
+                  buttonElevation: 2,
+                  itemHeight: 40,
+                  itemPadding: const EdgeInsets.only(left: 14, right: 14),
+                  dropdownMaxHeight: 200,
+                  dropdownWidth: 250,
+                  dropdownPadding: null,
+                  dropdownDecoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(14),
+                    // color: Colors.redAccent,
+                  ),
+                  dropdownElevation: 8,
+                  scrollbarRadius: const Radius.circular(40),
+                  scrollbarThickness: 5,
+                  scrollbarAlwaysShow: true,
+                  // offset: const Offset(-20, 0),
                 ),
               ),
               const SizedBox(
@@ -945,162 +1036,6 @@ class _AdminHomePageState extends State<AdminHomePage> {
                   onChanged: (value) {
                     setState(() {
                       selectedValue5 = value as String;
-                    });
-                  },
-                  icon: const Icon(
-                    Icons.keyboard_arrow_down_outlined,
-                  ),
-                  iconSize: 25,
-                  iconEnabledColor: Colors.black,
-                  buttonHeight: size.height / 25,
-                  buttonWidth: size.width / 1.1,
-                  buttonPadding: const EdgeInsets.only(left: 14, right: 14),
-                  buttonDecoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    // border: Border.all(
-                    //   color: Colors.black26,
-                    // ),
-                    //
-                    //
-                    color: Colors.white,
-                  ),
-                  buttonElevation: 2,
-                  itemHeight: 40,
-                  itemPadding: const EdgeInsets.only(left: 14, right: 14),
-                  dropdownMaxHeight: 200,
-                  dropdownWidth: 250,
-                  dropdownPadding: null,
-                  dropdownDecoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(14),
-                    // color: Colors.redAccent,
-                  ),
-                  dropdownElevation: 8,
-                  scrollbarRadius: const Radius.circular(40),
-                  scrollbarThickness: 5,
-                  scrollbarAlwaysShow: true,
-                  // offset: const Offset(-20, 0),
-                ),
-              ),
-              const SizedBox(
-                height: 5,
-              ),
-              // DropdownButtonHideUnderline(
-              //   child: DropdownButton2(
-              //     isExpanded: true,
-              //     hint: Row(
-              //       children: const [
-              //         SizedBox(
-              //           width: 4,
-              //         ),
-              //         Expanded(
-              //           child: Text(
-              //             ' اسم النوع',
-              //             style: TextStyle(
-              //               fontSize: 14,
-              //               fontWeight: FontWeight.bold,
-              //               color: Colors.black,
-              //             ),
-              //             // overflow: TextOverflow.ellipsis,
-              //           ),
-              //         ),
-              //       ],
-              //     ),
-              //     items: items
-              //         .map((item) => DropdownMenuItem<String>(
-              //               value: item,
-              //               child: Text(
-              //                 item,
-              //                 style: const TextStyle(
-              //                   fontSize: 14,
-              //                   fontWeight: FontWeight.bold,
-              //                   color: Colors.black,
-              //                 ),
-              //                 overflow: TextOverflow.ellipsis,
-              //               ),
-              //             ))
-              //         .toList(),
-              //     value: selectedValue,
-              //     onChanged: (value) {
-              //       setState(() {
-              //         selectedValue = value as String;
-              //       });
-              //     },
-              //     icon: const Icon(
-              //       Icons.keyboard_arrow_down_outlined,
-              //     ),
-              //     iconSize: 25,
-              //     iconEnabledColor: Colors.black,
-              //     buttonHeight: size.height / 25,
-              //     buttonWidth: size.width / 1.1,
-              //     buttonPadding: const EdgeInsets.only(left: 14, right: 14),
-              //     buttonDecoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(14),
-              //       // border: Border.all(
-              //       //   color: Colors.black26,
-              //       // ),
-              //       //
-              //       //
-              //       color: Colors.white,
-              //     ),
-              //     buttonElevation: 2,
-              //     itemHeight: 40,
-              //     itemPadding: const EdgeInsets.only(left: 14, right: 14),
-              //     dropdownMaxHeight: 200,
-              //     dropdownWidth: 250,
-              //     dropdownPadding: null,
-              //     dropdownDecoration: BoxDecoration(
-              //       borderRadius: BorderRadius.circular(14),
-              //       // color: Colors.redAccent,
-              //     ),
-              //     dropdownElevation: 8,
-              //     scrollbarRadius: const Radius.circular(40),
-              //     scrollbarThickness: 5,
-              //     scrollbarAlwaysShow: true,
-              //     // offset: const Offset(-20, 0),
-              //   ),
-              // ),
-              // const SizedBox(
-              //   height: 5,
-              // ),
-              DropdownButtonHideUnderline(
-                child: DropdownButton2(
-                  isExpanded: true,
-                  hint: Row(
-                    children: const [
-                      SizedBox(
-                        width: 4,
-                      ),
-                      Expanded(
-                        child: Text(
-                          ' اسم التاجر',
-                          style: TextStyle(
-                            fontSize: 14,
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                          // overflow: TextOverflow.ellipsis,
-                        ),
-                      ),
-                    ],
-                  ),
-                  items: items8
-                      .map((item) => DropdownMenuItem<String>(
-                            value: item,
-                            child: Text(
-                              item,
-                              style: const TextStyle(
-                                fontSize: 14,
-                                fontWeight: FontWeight.bold,
-                                color: Colors.black,
-                              ),
-                              overflow: TextOverflow.ellipsis,
-                            ),
-                          ))
-                      .toList(),
-                  value: selectedValue8,
-                  onChanged: (value) {
-                    setState(() {
-                      selectedValue8 = value as String;
                     });
                   },
                   icon: const Icon(
