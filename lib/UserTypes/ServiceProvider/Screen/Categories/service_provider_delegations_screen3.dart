@@ -74,26 +74,7 @@ class _ServiceProviderDelegationsScreen3State
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(
-                              horizontal: 30,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "  حسابي",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " حسابي"),
                         ),
                         InkWell(
                           onTap: () {
@@ -104,24 +85,7 @@ class _ServiceProviderDelegationsScreen3State
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "الاحصائيات",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " الاحصائيات"),
                         ),
                         InkWell(
                           onTap: () {
@@ -133,47 +97,13 @@ class _ServiceProviderDelegationsScreen3State
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "من نحن",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " من نحن"),
                         ),
                         InkWell(
                           onTap: () {
                             showDialog1();
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "إضافة حسابات مستخدمين",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, "  إضافة حسابات مستخدمين"),
                         ),
                         InkWell(
                           onTap: () {
@@ -185,95 +115,25 @@ class _ServiceProviderDelegationsScreen3State
                               ),
                             );
                           },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "اتصل بنا",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
+                          child: Item(context, " اتصل بنا"),
                         ),
-                        Container(
-                          width: size.width,
-                          height: size.height / 15,
-                          margin: const EdgeInsets.symmetric(horizontal: 30),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const [
-                              Icon(Icons.arrow_back_ios),
-                              Text(
-                                "تغيير اللغة",
-                                style: TextStyle(
-                                  fontSize: 18,
-                                ),
-                                textAlign: TextAlign.right,
-                              ),
-                            ],
-                          ),
-                        ),
+                        Item(context, "تغيير اللغة"),
                         InkWell(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) =>
-                                    const ServiceProviderAppSettings(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  "اعدادات التطبيق",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      const ServiceProviderAppSettings(),
                                 ),
-                              ],
-                            ),
-                          ),
-                        ),
+                              );
+                            },
+                            child: Item(context, "اعدادات التطبيق")),
                         InkWell(
-                          onTap: () {
-                            showDialog2();
-                          },
-                          child: Container(
-                            width: size.width,
-                            height: size.height / 15,
-                            margin: const EdgeInsets.symmetric(horizontal: 30),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: const [
-                                Icon(Icons.arrow_back_ios),
-                                Text(
-                                  " الشكوى",
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                  ),
-                                  textAlign: TextAlign.right,
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
+                            onTap: () {
+                              showDialog2();
+                            },
+                            child: Item(context, " الشكوى")),
                       ],
                     ),
                   ),
@@ -376,7 +236,7 @@ class _ServiceProviderDelegationsScreen3State
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -386,7 +246,6 @@ class _ServiceProviderDelegationsScreen3State
                 )),
               ],
             ),
-            //content: Text("body"),
             actions: <Widget>[
               const SizedBox(
                 height: 10,
@@ -397,9 +256,6 @@ class _ServiceProviderDelegationsScreen3State
                   style: TextStyle(fontSize: 20),
                 ),
               ),
-              // const SizedBox(
-              //   height: 20,
-              // ),
               InkWell(
                 onTap: () {
                   Navigator.push(
@@ -450,7 +306,7 @@ class _ServiceProviderDelegationsScreen3State
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -490,5 +346,29 @@ class _ServiceProviderDelegationsScreen3State
             ],
           );
         });
+  }
+
+  Widget Item(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width,
+      height: size.height / 15,
+      margin: const EdgeInsets.symmetric(
+        horizontal: 30,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const Icon(Icons.arrow_back_ios),
+          Text(
+            "  $title",
+            style: const TextStyle(
+              fontSize: 18,
+            ),
+            textAlign: TextAlign.right,
+          ),
+        ],
+      ),
+    );
   }
 }
