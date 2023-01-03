@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Categories/service_provider_delegations_screen3.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
 // import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -48,21 +47,18 @@ class _ServiceProviderAppSettingsState
                       ),
                     ),
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: size.width / 60),
+                      margin:
+                          EdgeInsets.symmetric(horizontal: size.width / 120),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ServiceProviderDelegationsScreen3(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -71,8 +67,8 @@ class _ServiceProviderAppSettingsState
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  اعدادات التطبيق",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
