@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Categories/service_provider_delegations_screen3.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
 // import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:flutter/material.dart';
@@ -44,15 +43,11 @@ class ServiceProviderAboutUS extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ServiceProviderDelegationsScreen3(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -61,8 +56,8 @@ class ServiceProviderAboutUS extends StatelessWidget {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  من نحن",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),

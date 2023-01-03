@@ -124,9 +124,6 @@ class _ServiceProviderNotification2State
                     "طريقة الدفع : عن طريق المتجر",
                     style: TextStyle(fontSize: 15),
                   ),
-                  // SizedBox(
-                  //   width: 10,
-                  // ),
                   Text(
                     "اسم الزبون: احمد مرتجى",
                     style: TextStyle(fontSize: 17),
@@ -136,15 +133,12 @@ class _ServiceProviderNotification2State
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Text(
-                    "              اسم الفرع: فرع زارا",
+                  const Text(
+                    "        اسم الفرع: فرع زارا",
                     style: TextStyle(fontSize: 15),
                   ),
-                  // SizedBox(
-                  //   width: 50,
-                  // ),
                   Row(
-                    children: [
+                    children: const [
                       Icon(
                         Icons.location_on_sharp,
                         size: 20,
@@ -176,7 +170,7 @@ class _ServiceProviderNotification2State
                   ),
                 ],
               ),
-              DottedLine(),
+              const DottedLine(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -235,7 +229,7 @@ class _ServiceProviderNotification2State
                   ),
                 ],
               ),
-              DottedLine(),
+              const DottedLine(),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -360,7 +354,8 @@ class _ServiceProviderNotification2State
                           borderRadius: BorderRadius.circular(10),
                           border: Border.all(color: Colors.grey),
                         ),
-                        child: Center(child: Text("  احمد سائق جيد وامين  ")),
+                        child: const Center(
+                            child: Text("  احمد سائق جيد وامين  ")),
                       ),
                       const SizedBox(
                         height: 20,

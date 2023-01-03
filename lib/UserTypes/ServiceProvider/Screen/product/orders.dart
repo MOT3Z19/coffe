@@ -88,19 +88,13 @@ class _OrdersState extends State<Orders> {
                               size: 40,
                             ),
                           ),
-                          // SizedBox(
-                          //   width: size.width / 3,
-                          // ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "الطلبات ",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
-                          // SizedBox(
-                          //   width: size.width / 4.8,
-                          // ),
                           InkWell(
                             onTap: () {
                               _key.currentState!.openDrawer();
@@ -350,443 +344,7 @@ class _OrdersState extends State<Orders> {
                   Icon(Icons.navigate_next),
                 ],
               ),
-              SizedBox(
-                width: size.width,
-                height: size.height / 3,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderPayment1(),
-                          ),
-                        );
-                      },
-                      child: Card(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "102#",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 120,
-                                        ),
-                                        Text(
-                                          " كوفي",
-                                          style: TextStyle(
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          " محمد احمد ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 40,
-                                        ),
-                                        Text(
-                                          " : اسم الزبون ",
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "عن طريق المتجر  ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 50,
-                                        ),
-                                        Text(
-                                          " : التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 90,
-                                        ),
-                                        Text(
-                                          " : السعر ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                        Text(
-                                          " : السعر مع التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                SizedBox(
-                                  width: size.width / 2.5,
-                                  height: size.width / 2.5,
-                                  child: Image.asset(
-                                    "assest/images/coffee5.png",
-                                    fit: BoxFit.fill,
-                                    // fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            InkWell(
-                              onTap: () {
-                                showDialog2();
-                              },
-                              child: Row(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value3,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value3 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "مكتملة",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value2,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value2 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "في التوصيل",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "تحت التجهير",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderPayment1(),
-                          ),
-                        );
-                      },
-                      child: Card(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "102#",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 120,
-                                        ),
-                                        Text(
-                                          " كوفي",
-                                          style: TextStyle(
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          " محمد احمد ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 40,
-                                        ),
-                                        Text(
-                                          " : اسم الزبون",
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "عن طريق المتجر  ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 50,
-                                        ),
-                                        Text(
-                                          " : التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 90,
-                                        ),
-                                        Text(
-                                          " : السعر ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                        Text(
-                                          " : السعر مع التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                SizedBox(
-                                  width: size.width / 2.5,
-                                  height: size.width / 2.5,
-                                  child: Image.asset(
-                                    "assest/images/coffee5.png",
-                                    fit: BoxFit.fill,
-                                    // fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            InkWell(
-                              onTap: () {
-                                showDialog2();
-                              },
-                              child: Row(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value3,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value3 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "مكتملة",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value2,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value2 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "في التوصيل",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "تحت التجهير",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 10,
               ),
@@ -804,443 +362,7 @@ class _OrdersState extends State<Orders> {
                   Icon(Icons.navigate_next),
                 ],
               ),
-              SizedBox(
-                width: size.width,
-                height: size.height / 3,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderPayment1(),
-                          ),
-                        );
-                      },
-                      child: Card(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "102#",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 120,
-                                        ),
-                                        Text(
-                                          " كوفي",
-                                          style: TextStyle(
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          " محمد احمد ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 40,
-                                        ),
-                                        Text(
-                                          " : اسم الزبون ",
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "عن طريق المتجر  ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 50,
-                                        ),
-                                        Text(
-                                          " : التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 90,
-                                        ),
-                                        Text(
-                                          " : السعر ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                        Text(
-                                          " : السعر مع التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                SizedBox(
-                                  width: size.width / 2.5,
-                                  height: size.width / 2.5,
-                                  child: Image.asset(
-                                    "assest/images/coffee5.png",
-                                    fit: BoxFit.fill,
-                                    // fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            InkWell(
-                              onTap: () {
-                                showDialog2();
-                              },
-                              child: Row(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value3,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value3 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "مكتملة",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value2,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value2 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "في التوصيل",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "تحت التجهير",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderPayment1(),
-                          ),
-                        );
-                      },
-                      child: Card(
-                        child: Column(
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Column(
-                                  // mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    Row(
-                                      children: const [
-                                        Text(
-                                          "102#",
-                                          style: TextStyle(
-                                              fontSize: 16,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                        SizedBox(
-                                          width: 120,
-                                        ),
-                                        Text(
-                                          " كوفي",
-                                          style: TextStyle(
-                                              fontSize: 17,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 20,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          " محمد احمد ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 40,
-                                        ),
-                                        Text(
-                                          " : اسم الزبون",
-                                          style: TextStyle(
-                                              fontSize: 15,
-                                              fontWeight: FontWeight.bold),
-                                        ),
-                                      ],
-                                    ),
-                                    const SizedBox(
-                                      height: 10,
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "عن طريق المتجر  ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 50,
-                                        ),
-                                        Text(
-                                          " : التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceEvenly,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 90,
-                                        ),
-                                        Text(
-                                          " : السعر ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceAround,
-                                      children: const [
-                                        Text(
-                                          "  ٥٠ ريال ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                          ),
-                                        ),
-                                        SizedBox(
-                                          width: 30,
-                                        ),
-                                        Text(
-                                          " : السعر مع التوصيل ",
-                                          style: TextStyle(
-                                            fontSize: 15,
-                                            fontWeight: FontWeight.bold,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(
-                                  width: 15,
-                                ),
-                                SizedBox(
-                                  width: size.width / 2.5,
-                                  height: size.width / 2.5,
-                                  child: Image.asset(
-                                    "assest/images/coffee5.png",
-                                    fit: BoxFit.fill,
-                                    // fit: BoxFit.fill,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            InkWell(
-                              onTap: () {
-                                showDialog2();
-                              },
-                              child: Row(
-                                children: [
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value3,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value3 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "مكتملة",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value2,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value2 = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "في التوصيل",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Row(
-                                    children: [
-                                      Checkbox(
-                                        value: value,
-                                        onChanged: (valuee) {
-                                          setState(() {
-                                            value = valuee!;
-                                          });
-                                        },
-                                      ),
-                                      const Text(
-                                        "تحت التجهير",
-                                        style: TextStyle(fontSize: 15),
-                                      )
-                                    ],
-                                  ),
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Box(context),
             ],
           ),
         ),
@@ -1267,7 +389,7 @@ class _OrdersState extends State<Orders> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1317,5 +439,430 @@ class _OrdersState extends State<Orders> {
             ],
           );
         });
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width,
+      height: size.height / 3,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: [
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ServiceProviderPayment1(),
+                ),
+              );
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: const [
+                              Text(
+                                "102#",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                width: 120,
+                              ),
+                              Text(
+                                " كوفي",
+                                style: TextStyle(
+                                    fontSize: 17, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                " محمد احمد ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 40,
+                              ),
+                              Text(
+                                " : اسم الزبون ",
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                "عن طريق المتجر  ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 50,
+                              ),
+                              Text(
+                                " : التوصيل ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                "  ٥٠ ريال ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 90,
+                              ),
+                              Text(
+                                " : السعر ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: const [
+                              Text(
+                                "  ٥٠ ريال ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                " : السعر مع التوصيل ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      SizedBox(
+                        width: size.width / 2.5,
+                        height: size.width / 2.5,
+                        child: Image.asset(
+                          "assest/images/coffee5.png",
+                          fit: BoxFit.fill,
+                          // fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                  InkWell(
+                    onTap: () {
+                      showDialog2();
+                    },
+                    child: Row(
+                      children: [
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value3,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value3 = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "مكتملة",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value2,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value2 = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "في التوصيل",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "تحت التجهير",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ServiceProviderPayment1(),
+                ),
+              );
+            },
+            child: Card(
+              child: Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        // mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: const [
+                              Text(
+                                "102#",
+                                style: TextStyle(
+                                    fontSize: 16, fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                width: 120,
+                              ),
+                              Text(
+                                " كوفي",
+                                style: TextStyle(
+                                    fontSize: 17, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 20,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                " محمد احمد ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 40,
+                              ),
+                              Text(
+                                " : اسم الزبون",
+                                style: TextStyle(
+                                    fontSize: 15, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                          const SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                "عن طريق المتجر  ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 50,
+                              ),
+                              Text(
+                                " : التوصيل ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: const [
+                              Text(
+                                "  ٥٠ ريال ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 90,
+                              ),
+                              Text(
+                                " : السعر ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceAround,
+                            children: const [
+                              Text(
+                                "  ٥٠ ريال ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                ),
+                              ),
+                              SizedBox(
+                                width: 30,
+                              ),
+                              Text(
+                                " : السعر مع التوصيل ",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        width: 15,
+                      ),
+                      SizedBox(
+                        width: size.width / 2.5,
+                        height: size.width / 2.5,
+                        child: Image.asset(
+                          "assest/images/coffee5.png",
+                          fit: BoxFit.fill,
+                          // fit: BoxFit.fill,
+                        ),
+                      ),
+                    ],
+                  ),
+                  InkWell(
+                    onTap: () {
+                      showDialog2();
+                    },
+                    child: Row(
+                      children: [
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value3,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value3 = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "مكتملة",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value2,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value2 = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "في التوصيل",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        Row(
+                          children: [
+                            Checkbox(
+                              value: value,
+                              onChanged: (valuee) {
+                                setState(() {
+                                  value = valuee!;
+                                });
+                              },
+                            ),
+                            const Text(
+                              "تحت التجهير",
+                              style: TextStyle(fontSize: 15),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

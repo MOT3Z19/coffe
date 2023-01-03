@@ -408,11 +408,6 @@ class _WalletState extends State<Wallet> {
                       buttonPadding: const EdgeInsets.only(left: 30, right: 16),
                       buttonDecoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(14),
-                        // border: Border.all(
-                        //   color: Colors.black26,
-                        // ),
-                        //
-                        //
                         color: Colors.white,
                       ),
                       buttonElevation: 2,
@@ -437,157 +432,88 @@ class _WalletState extends State<Wallet> {
               const SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: size.height / 30, right: size.height / 30),
-                child: SizedBox(
-                  width: size.width / 1.2,
-                  height: size.height / 6,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "40",
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: secondaryColor,
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Container(
-                            height: size.height / 13,
-                            decoration: BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: secondaryColor,
-                            ))),
-                          ),
-                          const Expanded(
-                            child: Center(
-                              child: Text(
-                                "تم خصم 50 من حسابك اشتراك في باقة",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: size.height / 7,
-                            decoration: const BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: Colors.grey,
-                            ))),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "8/8/1888",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                " الاحد",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "4:55 PM",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: size.height / 30, right: size.height / 30),
-                child: SizedBox(
-                  width: size.width / 1.2,
-                  height: size.height / 6,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          Text(
-                            "40",
-                            style: TextStyle(
-                              fontSize: 15,
-                              color: secondaryColor,
-                            ),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Container(
-                            height: size.height / 13,
-                            decoration: BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: secondaryColor,
-                            ))),
-                          ),
-                          const Expanded(
-                            child: Center(
-                              child: Text(
-                                "تم خصم 50 من حسابك اشتراك في باقة",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: size.height / 7,
-                            decoration: const BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: Colors.grey,
-                            ))),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "8/8/1888",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                " الاحد",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                              Text(
-                                "4:55 PM",
-                                style: TextStyle(fontSize: 18),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )),
-                ),
-              ),
+              Box(context),
+              Box(context),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Padding(
+      padding: EdgeInsets.only(left: size.height / 30, right: size.height / 30),
+      child: SizedBox(
+        width: size.width / 1.2,
+        height: size.height / 6,
+        child: Card(
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(color: Colors.white70, width: 1),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                Text(
+                  "40",
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: secondaryColor,
+                  ),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Container(
+                  height: size.height / 13,
+                  decoration: BoxDecoration(
+                      border: Border.fromBorderSide(BorderSide(
+                    color: secondaryColor,
+                  ))),
+                ),
+                const Expanded(
+                  child: Center(
+                    child: Text(
+                      "تم خصم 50 من حسابك اشتراك في باقة",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 1,
+                  height: size.height / 7,
+                  decoration: const BoxDecoration(
+                      border: Border.fromBorderSide(BorderSide(
+                    color: Colors.grey,
+                  ))),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "8/8/1888",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Text(
+                      " الاحد",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                    Text(
+                      "4:55 PM",
+                      style: TextStyle(fontSize: 18),
+                    ),
+                  ],
+                ),
+              ],
+            )),
       ),
     );
   }

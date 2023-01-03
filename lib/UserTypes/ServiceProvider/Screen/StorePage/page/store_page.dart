@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Branch/page/add_new_branch.dart';
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/HomePage/page/home_page.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
 // import 'package:coffee_station/UserTypes/ServiceProvider/Screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -58,12 +57,8 @@ class _ServiceProviderStoreScreenState
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ServiceProviderHomePage(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -293,568 +288,164 @@ class _ServiceProviderStoreScreenState
               const SizedBox(
                 height: 10,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderStorePage(),
-                    ),
-                  );
-                  // need
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // const SizedBox(
-                      //   width: 15,
-                      // ),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  //  margin: EdgeInsets.only(right: 130),
-                                  child: Icon(Icons.cancel_outlined)),
-                              SizedBox(
-                                width: size.width / 4,
-                              ),
-                              Container(
-                                // margin: EdgeInsets.only(right: 130),
-                                child: Text(
-                                  "تعديل",
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: size.width / 30),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // const SizedBox(
-                                //   width: 15,
-                                // ),
-                                const Text(
-                                  "متجر زارا",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                const Text(
-                                  "فرع الكورنيش 0110",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.grey),
-                                ),
-                                Row(
-                                  //   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "الكويت",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Icon(
-                                      Icons.location_on_rounded,
-                                      color: secondaryColor,
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 7,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 7,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 11),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderStorePage(),
-                    ),
-                  );
-                  // need
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // const SizedBox(
-                      //   width: 15,
-                      // ),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  //  margin: EdgeInsets.only(right: 130),
-                                  child: Icon(Icons.cancel_outlined)),
-                              SizedBox(
-                                width: size.width / 4,
-                              ),
-                              Container(
-                                // margin: EdgeInsets.only(right: 130),
-                                child: Text(
-                                  "تعديل",
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: size.width / 30),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // const SizedBox(
-                                //   width: 15,
-                                // ),
-                                const Text(
-                                  "متجر زارا",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                const Text(
-                                  "فرع الكورنيش 0110",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.grey),
-                                ),
-                                Row(
-                                  //   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "الكويت",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Icon(
-                                      Icons.location_on_rounded,
-                                      color: secondaryColor,
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 7,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 7,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 11),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderStorePage(),
-                    ),
-                  );
-                  // need
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // const SizedBox(
-                      //   width: 15,
-                      // ),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  //  margin: EdgeInsets.only(right: 130),
-                                  child: Icon(Icons.cancel_outlined)),
-                              SizedBox(
-                                width: size.width / 4,
-                              ),
-                              Container(
-                                // margin: EdgeInsets.only(right: 130),
-                                child: Text(
-                                  "تعديل",
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: size.width / 30),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // const SizedBox(
-                                //   width: 15,
-                                // ),
-                                const Text(
-                                  "متجر زارا",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                const Text(
-                                  "فرع الكورنيش 0110",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.grey),
-                                ),
-                                Row(
-                                  //   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "الكويت",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Icon(
-                                      Icons.location_on_rounded,
-                                      color: secondaryColor,
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 7,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 7,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 11),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderStorePage(),
-                    ),
-                  );
-                  // need
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      // const SizedBox(
-                      //   width: 15,
-                      // ),
-                      Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                  //  margin: EdgeInsets.only(right: 130),
-                                  child: Icon(Icons.cancel_outlined)),
-                              SizedBox(
-                                width: size.width / 4,
-                              ),
-                              Container(
-                                // margin: EdgeInsets.only(right: 130),
-                                child: Text(
-                                  "تعديل",
-                                  style: TextStyle(fontSize: 19),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(left: size.width / 30),
-                            child: Column(
-                              // mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                // const SizedBox(
-                                //   width: 15,
-                                // ),
-                                const Text(
-                                  "متجر زارا",
-                                  style: TextStyle(fontSize: 20),
-                                ),
-                                const Text(
-                                  "فرع الكورنيش 0110",
-                                  style: TextStyle(
-                                      fontSize: 20, color: Colors.grey),
-                                ),
-                                Row(
-                                  //   mainAxisAlignment: MainAxisAlignment.start,
-                                  children: [
-                                    const Text(
-                                      "الكويت",
-                                      style: TextStyle(fontSize: 20),
-                                    ),
-                                    const SizedBox(
-                                      width: 10,
-                                    ),
-                                    Icon(
-                                      Icons.location_on_rounded,
-                                      color: secondaryColor,
-                                    )
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 7,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 7,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 11),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ServiceProviderStorePage(),
+          ),
+        );
+        // need
+      },
+      child: Container(
+        width: size.width / 1.1,
+        height: size.height / 5,
+        decoration: const BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 25.0, // soften the shadow
+              spreadRadius: 5.0, //extend the shadow
+              offset: Offset(
+                1.0, // Move to right 10  horizontally
+                1.0, // Move to bottom 10 Vertically
+              ),
+            ),
+          ],
+          color: Colors.white,
+          // borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            // const SizedBox(
+            //   width: 15,
+            // ),
+            Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                        //  margin: EdgeInsets.only(right: 130),
+                        child: Icon(Icons.cancel_outlined)),
+                    SizedBox(
+                      width: size.width / 4,
+                    ),
+                    Container(
+                      // margin: EdgeInsets.only(right: 130),
+                      child: Text(
+                        "تعديل",
+                        style: TextStyle(fontSize: 19),
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(left: size.width / 30),
+                  child: Column(
+                    // mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      // const SizedBox(
+                      //   width: 15,
+                      // ),
+                      const Text(
+                        "متجر زارا",
+                        style: TextStyle(fontSize: 20),
+                      ),
+                      const Text(
+                        "فرع الكورنيش 0110",
+                        style: TextStyle(fontSize: 20, color: Colors.grey),
+                      ),
+                      Row(
+                        //   mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "الكويت",
+                            style: TextStyle(fontSize: 20),
+                          ),
+                          const SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.location_on_rounded,
+                            color: secondaryColor,
+                          )
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Container(
+              width: size.width / 2.2,
+              height: size.height / 7,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assest/images/zara.png",
+                  ),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Image.asset(
+                    "assest/images/blackBackground.png",
+                    height: size.height / 7,
+                    width: size.width / 2.2,
+                    fit: BoxFit.fill,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: size.height / 11),
+                    child: Center(
+                      child: RatingBar.builder(
+                        initialRating: 4,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemSize: 20,
+                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        onRatingUpdate: (rating) {},
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

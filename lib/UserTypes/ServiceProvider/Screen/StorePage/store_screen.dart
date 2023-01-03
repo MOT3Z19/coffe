@@ -1,6 +1,5 @@
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Branch/page/add_new_branch.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Categories/statistics.dart';
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/StorePage/page/store_page.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/StorePage/page/store_product.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
@@ -36,12 +35,8 @@ class _ServiceProviderStorePageState extends State<ServiceProviderStorePage> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.push(
+                          Navigator.pop(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  const ServiceProviderStoreScreen(),
-                            ),
                           );
                         },
                         child: Container(
@@ -160,15 +155,6 @@ class _ServiceProviderStorePageState extends State<ServiceProviderStorePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               InkWell(
-                                  // onTap: () {
-                                  //   Navigator.push(
-                                  //     context,
-                                  //     MaterialPageRoute(
-                                  //       builder: (context) =>
-                                  //       const PaymentMap(),
-                                  //     ),
-                                  //   );
-                                  // },
                                   child: Icon(
                                 Icons.location_on_rounded,
                                 color: brownColor,

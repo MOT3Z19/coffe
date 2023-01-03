@@ -466,46 +466,20 @@ class _AddNewBranchState extends State<AddNewBranch> {
                   ],
                 ),
               ),
-              // Container(
-              //   width: size.width / 1,
-              //   height: size.height / 4.5,
-              //   decoration: const BoxDecoration(
-              //     image: DecorationImage(
-              //       image: AssetImage("assest/images/mapss.png"),
-              //     ),
-              //   ),
-              //   child: Center(
-              //     child: Icon(
-              //       Icons.location_on_rounded,
-              //       color: brownColor,
-              //       size: 30,
-              //     ),
-              //   ),
-              // ),
               Container(
                 width: size.width,
                 height: size.height / 13,
                 margin: EdgeInsets.symmetric(
                   horizontal: size.width / 20,
                 ),
-                child: TextField(
+                child: const TextField(
                   decoration: InputDecoration(
-                    suffix: InkWell(
-                        // onTap: () {
-                        //   Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //       builder: (context) => GoogleMap(),
-                        //     ),
-                        //   );
-                        // },
-                        child: const Icon(Icons.location_on_rounded)),
-                    enabledBorder: const UnderlineInputBorder(
+                    suffix: InkWell(child: Icon(Icons.location_on_rounded)),
+                    enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(width: 1, color: Colors.grey),
                     ),
                     // labelText: " الموقع ",
-                    labelStyle:
-                        const TextStyle(fontSize: 15, color: Colors.black),
+                    labelStyle: TextStyle(fontSize: 15, color: Colors.black),
                   ),
                 ),
               ),

@@ -326,873 +326,302 @@ class _AddProductToBranchState extends State<AddProductToBranch> {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
+              Items(context),
+              const SizedBox(
                 height: 15,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(
+              Items(context),
+              const SizedBox(
                 height: 15,
               ),
-              Container(
-                margin: EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  children: [
-                    const SizedBox(
-                      width: 8,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 4,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) =>
-                                const ServiceProviderProductPage(),
-                          ),
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                                width: size.width / 3.3,
-                                height: size.height / 8,
-                              ),
-                              Row(
-                                children: [
-                                  Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Row(
-                                        children: const [
-                                          Icon(
-                                            Icons.local_fire_department,
-                                            color: Colors.white,
-                                            size: 20,
-                                          ),
-                                          Center(
-                                              child: Text(
-                                            "خصم 10 ",
-                                            style:
-                                                TextStyle(color: Colors.white),
-                                          )),
-                                        ],
-                                      )),
-                                  const SizedBox(
-                                    width: 25,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          ),
-                          Row(
-                            children: [
-                              Stack(
-                                children: [
-                                  Image.asset("assest/images/empty_leaf.png"),
-                                  Container(
-                                    margin: const EdgeInsets.symmetric(
-                                        vertical: 3, horizontal: 3),
-                                    child: Icon(
-                                      Icons.check,
-                                      color: brownColor,
-                                    ),
-                                  ),
-                                ],
-                              ),
-                              const SizedBox(
-                                width: 40,
-                              ),
-                              Column(
-                                children: const [
-                                  Text("كوفي"),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 12),
-                                  ),
-                                  SizedBox(
-                                    width: 16,
-                                  ),
-                                ],
-                              ),
-                            ],
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              Items(context),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Items(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: const EdgeInsets.symmetric(horizontal: 5),
+      child: Row(
+        children: [
+          const SizedBox(
+            width: 8,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ServiceProviderProductPage(),
+                ),
+              );
+            },
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Image.asset(
+                      "assest/images/coffee4.png",
+                      fit: BoxFit.fill,
+                      width: size.width / 3.3,
+                      height: size.height / 8,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                            width: size.width / 5,
+                            height: size.height / 30,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assest/images/yellowbackground.png",
+                                ),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.local_fire_department,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                Center(
+                                    child: Text(
+                                  "خصم 10 ",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ],
+                            )),
+                        const SizedBox(
+                          width: 25,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Stack(
+                      children: [
+                        Image.asset("assest/images/empty_leaf.png"),
+                        Container(
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 3, horizontal: 3),
+                          child: Icon(
+                            Icons.check,
+                            color: brownColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 40,
+                    ),
+                    Column(
+                      children: const [
+                        Text("كوفي"),
+                        Text(
+                          "٧ ريال",
+                          style: TextStyle(fontSize: 12),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 4,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ServiceProviderProductPage(),
+                ),
+              );
+            },
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Image.asset(
+                      "assest/images/coffee4.png",
+                      fit: BoxFit.fill,
+                      width: size.width / 3.3,
+                      height: size.height / 8,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                            width: size.width / 5,
+                            height: size.height / 30,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assest/images/yellowbackground.png",
+                                ),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.local_fire_department,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                Center(
+                                    child: Text(
+                                  "خصم 10 ",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ],
+                            )),
+                        const SizedBox(
+                          width: 25,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Stack(
+                      children: [
+                        Image.asset("assest/images/empty_leaf.png"),
+                        Container(
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 3, horizontal: 3),
+                          child: Icon(
+                            Icons.check,
+                            color: brownColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 40,
+                    ),
+                    Column(
+                      children: const [
+                        Text("كوفي"),
+                        Text(
+                          "٧ ريال",
+                          style: TextStyle(fontSize: 12),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+          const SizedBox(
+            width: 4,
+          ),
+          InkWell(
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => const ServiceProviderProductPage(),
+                ),
+              );
+            },
+            child: Column(
+              children: [
+                Stack(
+                  children: [
+                    Image.asset(
+                      "assest/images/coffee4.png",
+                      fit: BoxFit.fill,
+                      width: size.width / 3.3,
+                      height: size.height / 8,
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                            width: size.width / 5,
+                            height: size.height / 30,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assest/images/yellowbackground.png",
+                                ),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: Row(
+                              children: const [
+                                Icon(
+                                  Icons.local_fire_department,
+                                  color: Colors.white,
+                                  size: 20,
+                                ),
+                                Center(
+                                    child: Text(
+                                  "خصم 10 ",
+                                  style: TextStyle(color: Colors.white),
+                                )),
+                              ],
+                            )),
+                        const SizedBox(
+                          width: 25,
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Row(
+                  children: [
+                    Stack(
+                      children: [
+                        Image.asset("assest/images/empty_leaf.png"),
+                        Container(
+                          margin: const EdgeInsets.symmetric(
+                              vertical: 3, horizontal: 3),
+                          child: Icon(
+                            Icons.check,
+                            color: brownColor,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(
+                      width: 40,
+                    ),
+                    Column(
+                      children: const [
+                        Text("كوفي"),
+                        Text(
+                          "٧ ريال",
+                          style: TextStyle(fontSize: 12),
+                        ),
+                        SizedBox(
+                          width: 16,
+                        ),
+                      ],
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

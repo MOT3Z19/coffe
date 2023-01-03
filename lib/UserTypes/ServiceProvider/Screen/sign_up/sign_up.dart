@@ -345,29 +345,7 @@ class _ProviderSignUpState extends State<ProviderSignUp> {
                               ),
                             ),
                           ),
-                          Container(
-                            width: size.width / 4,
-                            height: size.height / 10,
-                            decoration: BoxDecoration(
-                              color: boxColor,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            margin: const EdgeInsets.symmetric(
-                                horizontal: 5, vertical: 20),
-                            child: const Center(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  prefixIcon: Center(
-                                    child: Icon(
-                                      Icons.file_upload,
-                                      size: 50,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          Image(context),
                         ],
                       ),
                       Column(
@@ -384,29 +362,7 @@ class _ProviderSignUpState extends State<ProviderSignUp> {
                               ),
                             ),
                           ),
-                          Container(
-                            width: size.width / 4,
-                            height: size.height / 10,
-                            decoration: BoxDecoration(
-                              color: boxColor,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            margin: const EdgeInsets.symmetric(
-                                horizontal: 5, vertical: 20),
-                            child: const Center(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  prefixIcon: Center(
-                                    child: Icon(
-                                      Icons.file_upload,
-                                      size: 50,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          Image(context),
                         ],
                       ),
                       Column(
@@ -423,29 +379,7 @@ class _ProviderSignUpState extends State<ProviderSignUp> {
                               ),
                             ),
                           ),
-                          Container(
-                            width: size.width / 4,
-                            height: size.height / 10,
-                            decoration: BoxDecoration(
-                              color: boxColor,
-                              borderRadius: BorderRadius.circular(15),
-                            ),
-                            margin: const EdgeInsets.symmetric(
-                                horizontal: 5, vertical: 20),
-                            child: const Center(
-                              child: TextField(
-                                decoration: InputDecoration(
-                                  border: InputBorder.none,
-                                  prefixIcon: Center(
-                                    child: Icon(
-                                      Icons.file_upload,
-                                      size: 50,
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
+                          Image(context),
                         ],
                       ),
                     ],
@@ -480,6 +414,32 @@ class _ProviderSignUpState extends State<ProviderSignUp> {
                 ],
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget Image(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width / 4,
+      height: size.height / 10,
+      decoration: BoxDecoration(
+        color: boxColor,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
+      child: const Center(
+        child: TextField(
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Center(
+              child: Icon(
+                Icons.file_upload,
+                size: 50,
+              ),
+            ),
           ),
         ),
       ),

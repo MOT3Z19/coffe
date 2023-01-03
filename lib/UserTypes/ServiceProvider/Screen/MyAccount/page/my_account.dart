@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Categories/service_provider_delegations_screen3.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/service_provider_change_password.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/service_provider_profile.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
@@ -51,12 +50,8 @@ class _MyAccountState extends State<MyAccount> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const ServiceProviderDelegationsScreen3(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -66,8 +61,8 @@ class _MyAccountState extends State<MyAccount> {
                               size: 40,
                             ),
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "حسابي  ",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),

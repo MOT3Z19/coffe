@@ -14,41 +14,6 @@ class MyProducts extends StatefulWidget {
 }
 
 class _MyProductsState extends State<MyProducts> {
-  // late FToast fToast;
-
-  // @override
-  // void initState() {
-  //   super.initState();
-  //   fToast = FToast();
-  //   fToast.init(context);
-  // }
-
-  // _showToast() {
-  //   Widget toast = Container(
-  //     padding: const EdgeInsets.symmetric(horizontal: 24.0, vertical: 12.0),
-  //     decoration: BoxDecoration(
-  //       borderRadius: BorderRadius.circular(25.0),
-  //       color: Colors.greenAccent,
-  //     ),
-  //     child: Row(
-  //       mainAxisSize: MainAxisSize.min,
-  //       children: [
-  //         Icon(Icons.check),
-  //         SizedBox(
-  //           width: 12.0,
-  //         ),
-  //         Text("This is a Custom Toast"),
-  //       ],
-  //     ),
-  //   );
-  //
-  //   // fToast.showToast(
-  //   //   child: toast,
-  //   //   gravity: ToastGravity.BOTTOM,
-  //   //   toastDuration: Duration(seconds: 2),
-  //   // );
-  // }
-
   bool value = false;
   final GlobalKey<ScaffoldState> _key = GlobalKey();
   @override
@@ -103,19 +68,13 @@ class _MyProductsState extends State<MyProducts> {
                               size: 40,
                             ),
                           ),
-                          // SizedBox(
-                          //   width: size.width / 6,
-                          // ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "منتجاتي ",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
                             ),
                           ),
-                          // SizedBox(
-                          //   width: size.width / 3,
-                          // ),
                           InkWell(
                             onTap: () {
                               _key.currentState!.openDrawer();
@@ -351,10 +310,10 @@ class _MyProductsState extends State<MyProducts> {
                                 Icons.edit,
                                 color: secondaryColor,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 120,
                               ),
-                              Text(
+                              const Text(
                                 " كوفي",
                                 style: TextStyle(
                                     fontSize: 20, fontWeight: FontWeight.bold),
@@ -480,305 +439,11 @@ class _MyProductsState extends State<MyProducts> {
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderProductPage(),
-                    ),
-                  );
-                },
-                child: Card(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        // mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.edit,
-                                color: secondaryColor,
-                              ),
-                              SizedBox(
-                                width: 120,
-                              ),
-                              Text(
-                                " كوفي",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
-                              Text(
-                                " ريال 18",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width: 90,
-                              ),
-                              Text(
-                                "  سعره",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                              margin: const EdgeInsets.only(left: 150),
-                              child: const Text(
-                                "102#",
-                                style: TextStyle(fontSize: 16),
-                              )),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          IntrinsicHeight(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    showDialog3();
-                                  },
-                                  child: Text(
-                                    " حذف",
-                                    style: TextStyle(
-                                        fontSize: 18, color: secondaryColor),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                const VerticalDivider(
-                                  color: Colors.black,
-                                  thickness: 2,
-                                ),
-                                const SizedBox(
-                                  width: 60,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    showDialog2();
-                                  },
-                                  child: Text(
-                                    " اضف الفرع",
-                                    style: TextStyle(
-                                        fontSize: 18, color: secondaryColor),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Stack(
-                        children: [
-                          SizedBox(
-                            width: size.width / 2.5,
-                            height: size.width / 2.5,
-                            child: Image.asset(
-                              "assest/images/coffee5.png",
-                              fit: BoxFit.fill,
-                              // fit: BoxFit.fill,
-                            ),
-                          ),
-                          Container(
-                              width: size.width / 4.5,
-                              height: size.height / 28,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      "خصم 10%",
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ServiceProviderProductPage(),
-                    ),
-                  );
-                },
-                child: Card(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        // mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.edit,
-                                color: secondaryColor,
-                              ),
-                              SizedBox(
-                                width: 120,
-                              ),
-                              Text(
-                                " كوفي",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: const [
-                              Text(
-                                " ريال 18",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                              SizedBox(
-                                width: 90,
-                              ),
-                              Text(
-                                "  سعره",
-                                style: TextStyle(
-                                    fontSize: 20, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                          const SizedBox(
-                            height: 10,
-                          ),
-                          Container(
-                              margin: const EdgeInsets.only(left: 150),
-                              child: const Text(
-                                "102#",
-                                style: TextStyle(fontSize: 16),
-                              )),
-                          const SizedBox(
-                            height: 20,
-                          ),
-                          IntrinsicHeight(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    showDialog3();
-                                  },
-                                  child: Text(
-                                    " حذف",
-                                    style: TextStyle(
-                                        fontSize: 18, color: secondaryColor),
-                                  ),
-                                ),
-                                const SizedBox(
-                                  width: 20,
-                                ),
-                                const VerticalDivider(
-                                  color: Colors.black,
-                                  thickness: 2,
-                                ),
-                                const SizedBox(
-                                  width: 60,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    showDialog2();
-                                  },
-                                  child: Text(
-                                    " اضف الفرع",
-                                    style: TextStyle(
-                                        fontSize: 18, color: secondaryColor),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ],
-                      ),
-                      Stack(
-                        children: [
-                          SizedBox(
-                            width: size.width / 2.5,
-                            height: size.width / 2.5,
-                            child: Image.asset(
-                              "assest/images/coffee5.png",
-                              fit: BoxFit.fill,
-                              // fit: BoxFit.fill,
-                            ),
-                          ),
-                          Container(
-                              width: size.width / 4.5,
-                              height: size.height / 28,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Center(
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceEvenly,
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                    ),
-                                    Text(
-                                      "خصم 10%",
-                                      style: TextStyle(color: Colors.white),
-                                    ),
-                                  ],
-                                ),
-                              )),
-                        ],
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
             ],
           ),
         ),
@@ -805,7 +470,7 @@ class _MyProductsState extends State<MyProducts> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1014,7 +679,7 @@ class _MyProductsState extends State<MyProducts> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1025,7 +690,7 @@ class _MyProductsState extends State<MyProducts> {
               ],
             ),
             actions: <Widget>[
-              Center(
+              const Center(
                 child: Text(
                     "يجب التاكد من ازالة جميع الفروع من المنتج قبل 24 ساعة وانه لا يوجد اي طلبات صادرة للمنتج قبل الحذف"),
               ),
@@ -1057,5 +722,154 @@ class _MyProductsState extends State<MyProducts> {
             ],
           );
         });
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const ServiceProviderProductPage(),
+          ),
+        );
+      },
+      child: Card(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              // mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Row(
+                  children: [
+                    Icon(
+                      Icons.edit,
+                      color: secondaryColor,
+                    ),
+                    const SizedBox(
+                      width: 120,
+                    ),
+                    const Text(
+                      " كوفي",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    Text(
+                      " ريال 18",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                    SizedBox(
+                      width: 90,
+                    ),
+                    Text(
+                      "  سعره",
+                      style:
+                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Container(
+                    margin: const EdgeInsets.only(left: 150),
+                    child: const Text(
+                      "102#",
+                      style: TextStyle(fontSize: 16),
+                    )),
+                const SizedBox(
+                  height: 20,
+                ),
+                IntrinsicHeight(
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          showDialog3();
+                        },
+                        child: Text(
+                          " حذف",
+                          style: TextStyle(fontSize: 18, color: secondaryColor),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 20,
+                      ),
+                      const VerticalDivider(
+                        color: Colors.black,
+                        thickness: 2,
+                      ),
+                      const SizedBox(
+                        width: 60,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          showDialog2();
+                        },
+                        child: Text(
+                          " اضف الفرع",
+                          style: TextStyle(fontSize: 18, color: secondaryColor),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            Stack(
+              children: [
+                SizedBox(
+                  width: size.width / 2.5,
+                  height: size.width / 2.5,
+                  child: Image.asset(
+                    "assest/images/coffee5.png",
+                    fit: BoxFit.fill,
+                    // fit: BoxFit.fill,
+                  ),
+                ),
+                Container(
+                    width: size.width / 4.5,
+                    height: size.height / 28,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage(
+                          "assest/images/yellowbackground.png",
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                    ),
+                    child: Center(
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: const [
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.white,
+                          ),
+                          Text(
+                            "خصم 10%",
+                            style: TextStyle(color: Colors.white),
+                          ),
+                        ],
+                      ),
+                    )),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
