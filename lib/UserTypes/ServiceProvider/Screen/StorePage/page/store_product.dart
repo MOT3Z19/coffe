@@ -55,8 +55,8 @@ class _StoreProductsState extends State<StoreProducts> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
-                              InkWell(
-                                child: const Icon(
+                              const InkWell(
+                                child: Icon(
                                   // added by vp
                                   Icons.keyboard_arrow_left_rounded,
                                   color: Colors.white,
