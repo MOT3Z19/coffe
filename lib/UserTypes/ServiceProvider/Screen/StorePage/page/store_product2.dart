@@ -58,15 +58,11 @@ class _StoreProducts2State extends State<StoreProducts2> {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
                               InkWell(
-                                // onTap: () {
-                                //   Navigator.push(
-                                //     context,
-                                //     MaterialPageRoute(
-                                //       builder: (context) =>
-                                //       const (),
-                                //     ),
-                                //   );
-                                // },
+                                onTap: () {
+                                  Navigator.pop(
+                                    context,
+                                  );
+                                },
                                 child: const Icon(
                                   // added by vp
                                   Icons.keyboard_arrow_left_rounded,
@@ -89,7 +85,7 @@ class _StoreProducts2State extends State<StoreProducts2> {
                                 onTap: () {
                                   _key.currentState!.openDrawer();
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.view_headline,
                                   color: Colors.white,
                                   size: 30,
@@ -294,7 +290,7 @@ class _StoreProducts2State extends State<StoreProducts2> {
                             style:
                                 TextStyle(color: secondaryColor, fontSize: 18),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             width: 10,
                           ),
                           Icon(Icons.add_circle_outline, color: secondaryColor),
@@ -352,7 +348,7 @@ class _StoreProducts2State extends State<StoreProducts2> {
                                   const SizedBox(
                                     width: 25,
                                   ),
-                                  Icon(Icons.cancel_outlined),
+                                  const Icon(Icons.cancel_outlined),
                                 ],
                               ),
                             ],
