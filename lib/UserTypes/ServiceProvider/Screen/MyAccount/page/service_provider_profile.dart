@@ -3,8 +3,6 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 
-import 'my_account.dart';
-
 class MultiSelect extends StatefulWidget {
   final List<String> items;
   const MultiSelect({Key? key, required this.items}) : super(key: key);
@@ -138,11 +136,8 @@ class _ServiceProviderProfileState extends State<ServiceProviderProfile> {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.push(
+                          Navigator.pop(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => const MyAccount(),
-                            ),
                           );
                         },
                         child: const Icon(
