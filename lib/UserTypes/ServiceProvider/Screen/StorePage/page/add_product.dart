@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Branch/page/add_product_to_branch.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
 // import 'package:coffee_station/UserTypes/ServiceProvider/Screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/StorePage/page/store_product2.dart';
@@ -37,7 +36,7 @@ class _MultiSelectState extends State<MultiSelect> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Center(child: const Text('اختر الفروع ')),
+      title: const Center(child: Text('اختر الفروع ')),
       content: SingleChildScrollView(
         child: ListBody(
           children: widget.items
@@ -101,7 +100,7 @@ class _MultiSelect2State extends State<MultiSelect2> {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: Center(child: const Text('اختر الصنف ')),
+      title: const Center(child: Text('اختر الصنف ')),
       content: SingleChildScrollView(
         child: ListBody(
           children: widget.items2
@@ -238,12 +237,8 @@ class _AddProductsState extends State<AddProducts> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pop(
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const AddProductToBranch(),
-                                    ),
                                   );
                                 },
                                 child: const Icon(
@@ -331,7 +326,7 @@ class _AddProductsState extends State<AddProducts> {
                           const Icon(
                             Icons.keyboard_arrow_down_outlined,
                           ),
-                          Text(
+                          const Text(
                             " اختر  الصنف",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
@@ -350,7 +345,7 @@ class _AddProductsState extends State<AddProducts> {
                             backgroundColor: primaryColor,
                             label: Text(
                               e,
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                           ),
                         ))
@@ -371,7 +366,7 @@ class _AddProductsState extends State<AddProducts> {
                           const Icon(
                             Icons.keyboard_arrow_down_outlined,
                           ),
-                          Text(
+                          const Text(
                             " اختر فروع الصنف",
                             style: TextStyle(
                                 fontSize: 15, fontWeight: FontWeight.bold),
@@ -390,7 +385,7 @@ class _AddProductsState extends State<AddProducts> {
                             backgroundColor: primaryColor,
                             label: Text(
                               e,
-                              style: TextStyle(color: Colors.white),
+                              style: const TextStyle(color: Colors.white),
                             ),
                           ),
                         ))
@@ -617,7 +612,7 @@ class _AddProductsState extends State<AddProducts> {
                         color: secondaryColor,
                       ),
                     ),
-                    Text(
+                    const Text(
                       "تفاصيل المنتج",
                       style:
                           TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
@@ -804,7 +799,7 @@ class _AddProductsState extends State<AddProducts> {
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-                          child: Icon(Icons.arrow_back)),
+                          child: const Icon(Icons.arrow_back)),
                     ],
                   ),
                   const Center(
