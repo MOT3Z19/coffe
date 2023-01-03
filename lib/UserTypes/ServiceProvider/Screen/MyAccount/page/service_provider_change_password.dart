@@ -2,8 +2,6 @@ import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/s
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 
-import 'my_account.dart';
-
 class ServiceProviderChangePassword extends StatefulWidget {
   const ServiceProviderChangePassword({Key? key}) : super(key: key);
 
@@ -43,11 +41,8 @@ class _ServiceProviderChangePasswordState
                   children: [
                     InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const MyAccount(),
-                          ),
                         );
                       },
                       child: const Icon(
