@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Branch/page/add_product_to_branch.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/StorePage/page/add_product.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/product/sp_product_page2.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -42,12 +41,8 @@ class _ServiceProviderProductPageState
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      const AddProductToBranch(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -57,17 +52,17 @@ class _ServiceProviderProductPageState
                               size: 40,
                             ),
                           ),
-                          Text(
+                          const Text(
                             "١٠٢#",
                             style: TextStyle(fontSize: 18),
                           ),
                         ],
                       ),
-                      Text(
+                      const Text(
                         "صنف حلويات - حلويات شرقية",
                         style: TextStyle(fontSize: 18),
                       ),
-                      Text(
+                      const Text(
                         "كوفي",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
@@ -189,7 +184,7 @@ class _ServiceProviderProductPageState
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text(
+                    const Text(
                       "ريال 16.60  ",
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
@@ -198,7 +193,7 @@ class _ServiceProviderProductPageState
                       onTap: () {
                         showDialog2();
                       },
-                      child: Text(
+                      child: const Text(
                         "فرع الكورنيش 1100",
                         style: TextStyle(fontSize: 15, color: Colors.grey),
                       ),
@@ -340,130 +335,41 @@ class _ServiceProviderProductPageState
                   ),
                   width: size.width,
                   height: size.height / 9,
-                  child: ListView(
+                  child: ListView.builder(
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: const [
+                                Text(
+                                  " كوفي",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Text(
+                                  " ريال 18",
+                                  style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              width: 30,
+                            ),
+                            Image.asset(
+                              "assest/images/coffee3.png",
+                              // fit: BoxFit.fill,
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                     scrollDirection: Axis.horizontal,
-                    children: [
-                      Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: const [
-                                Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: const [
-                                Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: const [
-                                Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: const [
-                                Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 18,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                              ],
-                            ),
-                            SizedBox(
-                              width: 30,
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ],
@@ -491,7 +397,7 @@ class _ServiceProviderProductPageState
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -701,7 +607,7 @@ class _ServiceProviderProductPageState
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-                          child: Icon(Icons.arrow_back)),
+                          child: const Icon(Icons.arrow_back)),
                     ],
                   ),
                   const Center(
