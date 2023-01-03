@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/ServiceProvider/Screen/Categories/service_provider_delegations_screen3.dart';
 import 'package:coffee_station/UserTypes/ServiceProvider/Screen/MyAccount/page/side_drawer.dart';
 // import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -51,15 +50,11 @@ class _ServiceProviderContactUsState extends State<ServiceProviderContactUs> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) =>
-                                      ServiceProviderDelegationsScreen3(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -68,8 +63,8 @@ class _ServiceProviderContactUsState extends State<ServiceProviderContactUs> {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               " اتصل بنا",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -158,7 +153,7 @@ class _ServiceProviderContactUsState extends State<ServiceProviderContactUs> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
