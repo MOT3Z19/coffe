@@ -356,753 +356,10 @@ class _ServiceProviderSweetPageState extends State<ServiceProviderSweetPage> {
                 ),
               ),
               ///////
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
+              Item(context),
+              Item(context),
+              Item(context),
 
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات شرقية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات غربية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات هندية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    ///////
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.cancel_outlined,
-                                color: Colors.white,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  showDialog1();
-                                },
-                                child: Text(
-                                  " تعديل",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: size.height / 9,
-                            ),
-                            child: const Text(
-                              "صنف الحلويات",
-                              style:
-                                  TextStyle(fontSize: 25, color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
-
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات شرقية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات غربية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات هندية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    ///////
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.cancel_outlined,
-                                color: Colors.white,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  showDialog1();
-                                },
-                                child: Text(
-                                  " تعديل",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: size.height / 9,
-                            ),
-                            child: const Text(
-                              "صنف الحلويات",
-                              style:
-                                  TextStyle(fontSize: 25, color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
-
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات شرقية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات غربية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Column(
-                                  children: [
-                                    Row(
-                                      mainAxisAlignment:
-                                          MainAxisAlignment.spaceBetween,
-                                      children: [
-                                        Icon(
-                                          Icons.cancel_outlined,
-                                          color: Colors.white,
-                                        ),
-                                        InkWell(
-                                          onTap: () {
-                                            showDialog1();
-                                          },
-                                          child: Text(
-                                            " تعديل",
-                                            style: TextStyle(
-                                                fontSize: 18,
-                                                color: Colors.white),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    Container(
-                                      margin: EdgeInsets.only(
-                                          top: size.height /
-                                              25), // vp changed from 10 to 12
-                                      // EdgeInsets.only(top: size.height / 10),
-                                      child: const Center(
-                                        child: Text(
-                                          " حلويات هندية",
-                                          style: TextStyle(
-                                              fontSize: 25,
-                                              color: Colors.white),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    ///////
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Icon(
-                                Icons.cancel_outlined,
-                                color: Colors.white,
-                              ),
-                              InkWell(
-                                onTap: () {
-                                  showDialog1();
-                                },
-                                child: Text(
-                                  " تعديل",
-                                  style: TextStyle(
-                                      fontSize: 18, color: Colors.white),
-                                ),
-                              ),
-                            ],
-                          ),
-                          Container(
-                            margin: EdgeInsets.only(
-                              top: size.height / 8,
-                            ),
-                            child: const Text(
-                              "صنف الحلويات",
-                              style:
-                                  TextStyle(fontSize: 25, color: Colors.white),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               ////
             ],
           ),
@@ -1131,7 +388,7 @@ class _ServiceProviderSweetPageState extends State<ServiceProviderSweetPage> {
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-                          child: Icon(Icons.arrow_back)),
+                          child: const Icon(Icons.arrow_back)),
                     ],
                   ),
                   const Center(
@@ -1222,9 +479,11 @@ class _ServiceProviderSweetPageState extends State<ServiceProviderSweetPage> {
                           child: TextField(
                             decoration: InputDecoration(
                               border: InputBorder.none,
-                              prefixIcon: Icon(
-                                Icons.file_upload,
-                                size: 50,
+                              prefixIcon: Center(
+                                child: Icon(
+                                  Icons.file_upload,
+                                  size: 50,
+                                ),
                               ),
                             ),
                           ),
@@ -1303,5 +562,231 @@ class _ServiceProviderSweetPageState extends State<ServiceProviderSweetPage> {
             ],
           );
         });
+  }
+
+  Widget Item(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.symmetric(
+          horizontal: size.width / 40 * 0,
+          vertical: size.height / 60), //vp changed to width and /60
+      child: Row(
+        mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly, // vp says try right&left
+        children: [
+          Column(
+            children: [
+              const Icon(Icons.keyboard_arrow_up_outlined),
+              SizedBox(
+                width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                height: size.height / 4,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Container(
+                      width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet2.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Icon(
+                                Icons.cancel_outlined,
+                                color: Colors.white,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  showDialog1();
+                                },
+                                child: const Text(
+                                  " تعديل",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: size.height /
+                                    25), // vp changed from 10 to 12
+                            // EdgeInsets.only(top: size.height / 10),
+                            child: const Center(
+                              child: Text(
+                                " حلويات شرقية",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5, // changed by vp from 10 to 5
+                      //   height: 10,
+                    ),
+                    Container(
+                      width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      // width: size.width / 2.7,
+                      // height: size.height / 7,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet4.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Icon(
+                                Icons.cancel_outlined,
+                                color: Colors.white,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  showDialog1();
+                                },
+                                child: const Text(
+                                  " تعديل",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: size.height /
+                                    25), // vp changed from 10 to 12
+                            // EdgeInsets.only(top: size.height / 10),
+                            child: const Center(
+                              child: Text(
+                                " حلويات غربية",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5, // changed by vp from 10 to 5
+                      // height: 10,
+                    ),
+                    Container(
+                      width: size.width / 3, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      // width: size.width / 2.7,
+                      // height: size.height / 7,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet2.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              const Icon(
+                                Icons.cancel_outlined,
+                                color: Colors.white,
+                              ),
+                              InkWell(
+                                onTap: () {
+                                  showDialog1();
+                                },
+                                child: const Text(
+                                  " تعديل",
+                                  style: TextStyle(
+                                      fontSize: 18, color: Colors.white),
+                                ),
+                              ),
+                            ],
+                          ),
+                          Container(
+                            margin: EdgeInsets.only(
+                                top: size.height /
+                                    25), // vp changed from 10 to 12
+                            // EdgeInsets.only(top: size.height / 10),
+                            child: const Center(
+                              child: Text(
+                                " حلويات هندية",
+                                style: TextStyle(
+                                    fontSize: 25, color: Colors.white),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.keyboard_arrow_down_rounded),
+            ],
+          ),
+          ///////
+          Container(
+            width: size.width *
+                2 /
+                3 *
+                .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
+            // width: size.width / 2,
+            height: size.height / 4,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assest/images/sweet.png"),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: Column(
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Icon(
+                      Icons.cancel_outlined,
+                      color: Colors.white,
+                    ),
+                    InkWell(
+                      onTap: () {
+                        showDialog1();
+                      },
+                      child: const Text(
+                        " تعديل",
+                        style: TextStyle(fontSize: 18, color: Colors.white),
+                      ),
+                    ),
+                  ],
+                ),
+                Container(
+                  margin: EdgeInsets.only(
+                    top: size.height / 9,
+                  ),
+                  child: const Text(
+                    "صنف الحلويات",
+                    style: TextStyle(fontSize: 25, color: Colors.white),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }
