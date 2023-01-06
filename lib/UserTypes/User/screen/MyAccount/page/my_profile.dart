@@ -55,11 +55,11 @@ class _MyProfileState extends State<MyProfile> {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder: (context) => MyAccount(),
+                                  builder: (context) => const MyAccount(),
                                 ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -68,8 +68,8 @@ class _MyProfileState extends State<MyProfile> {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  حسابي",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
