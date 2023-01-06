@@ -4,8 +4,6 @@ import 'package:coffee_station/UserTypes/User/screen/Chat/page/chat_details_page
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import 'delegations_list.dart';
-
 class DelegationPage extends StatefulWidget {
   const DelegationPage({Key? key}) : super(key: key);
 
@@ -38,11 +36,8 @@ class _DelegationPageState extends State<DelegationPage> {
                     ),
                     child: InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => delegationsList(),
-                          ),
                         );
                       },
                       child: Container(
@@ -229,122 +224,6 @@ class _DelegationPageState extends State<DelegationPage> {
                   ),
                 ),
               ),
-              // Container(
-              //   margin: EdgeInsets.symmetric(vertical: 10),
-              //   child: Center(
-              //       child: Text(
-              //     "تقييمات العملاء",
-              //     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
-              //   )),
-              // ),
-              // SizedBox(
-              //   width: size.width / 1.1,
-              //   height: size.height / 3.5,
-              //   child: Card(
-              //     child: Column(
-              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //       children: [
-              //         const CircleAvatar(
-              //           backgroundImage: AssetImage("assest/images/man.jpg"),
-              //           maxRadius: 30,
-              //         ),
-              //         const Center(
-              //           child: Text(
-              //             " احمد محمود ",
-              //             style: TextStyle(fontSize: 20),
-              //           ),
-              //         ),
-              //         Container(
-              //           margin: EdgeInsets.only(top: size.height / 58),
-              //           child: Center(
-              //             child: RatingBar.builder(
-              //               initialRating: 5,
-              //               minRating: 1,
-              //               direction: Axis.horizontal,
-              //               allowHalfRating: true,
-              //               itemCount: 5,
-              //               itemSize: 15,
-              //               // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              //               itemBuilder: (context, _) => const Icon(
-              //                 Icons.star,
-              //                 color: Colors.amber,
-              //               ),
-              //               onRatingUpdate: (rating) {},
-              //             ),
-              //           ),
-              //         ),
-              //         Container(
-              //           width: size.width / 1.3,
-              //           height: size.height / 14,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(20),
-              //             color: greyColor2,
-              //           ),
-              //           child: const Center(
-              //             child: Text(
-              //               " قائد مركبة مميز وذو خبرة أنصح به ",
-              //               style: TextStyle(fontSize: 20),
-              //             ),
-              //           ),
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
-              // SizedBox(
-              //   width: size.width / 1.1,
-              //   height: size.height / 3.5,
-              //   child: Card(
-              //     child: Column(
-              //       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //       children: [
-              //         const CircleAvatar(
-              //           backgroundImage: AssetImage("assest/images/man.jpg"),
-              //           maxRadius: 30,
-              //         ),
-              //         const Center(
-              //           child: Text(
-              //             " احمد محمود ",
-              //             style: TextStyle(fontSize: 20),
-              //           ),
-              //         ),
-              //         Container(
-              //           margin: EdgeInsets.only(top: size.height / 58),
-              //           child: Center(
-              //             child: RatingBar.builder(
-              //               initialRating: 5,
-              //               minRating: 1,
-              //               direction: Axis.horizontal,
-              //               allowHalfRating: true,
-              //               itemCount: 5,
-              //               itemSize: 15,
-              //               // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              //               itemBuilder: (context, _) => const Icon(
-              //                 Icons.star,
-              //                 color: Colors.amber,
-              //               ),
-              //               onRatingUpdate: (rating) {},
-              //             ),
-              //           ),
-              //         ),
-              //         Container(
-              //           width: size.width / 1.3,
-              //           height: size.height / 14,
-              //           decoration: BoxDecoration(
-              //             borderRadius: BorderRadius.circular(20),
-              //             color: greyColor2,
-              //           ),
-              //           child: const Center(
-              //             child: Text(
-              //               " قائد مركبة مميز وذو خبرة أنصح به ",
-              //               style: TextStyle(fontSize: 20),
-              //             ),
-              //           ),
-              //         )
-              //       ],
-              //     ),
-              //   ),
-              // ),
             ],
           ),
         ),
