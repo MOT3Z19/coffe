@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/User/screen/GoogleMaps/page/payment_map.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
@@ -72,11 +71,8 @@ class _CurrentOrdersState extends State<CurrentOrders> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => PaymentMap(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -85,8 +81,8 @@ class _CurrentOrdersState extends State<CurrentOrders> {
                               size: 40,
                             ),
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               " طلباتي",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -398,181 +394,68 @@ class _CurrentOrdersState extends State<CurrentOrders> {
               SizedBox(
                 width: size.width,
                 height: size.height / 2.7,
-                child: ListView(
+                child: ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const OrderDetails(),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        width: size.width / 2.4,
+                        margin: EdgeInsets.symmetric(
+                            vertical: size.width / 18, horizontal: 5),
+                        child: Card(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15.0),
+                          ),
+                          child: Column(
+                            children: [
+                              Image.asset(
+                                "assest/images/coffee4.png",
+                                fit: BoxFit.fill,
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(right: 20),
+                                child: Row(
+                                  mainAxisAlignment: MainAxisAlignment.end,
+                                  children: const [
+                                    Text(
+                                      "كوفي",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                              Container(
+                                margin: const EdgeInsets.only(right: 20),
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: const [
+                                    Text(
+                                      " #102",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                    Text(
+                                      "٧ ريال",
+                                      style: TextStyle(fontSize: 15),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    );
+                  },
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OrderDetails(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: size.width / 2.4,
-                        margin: EdgeInsets.symmetric(
-                            vertical: size.width / 18, horizontal: 5),
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: const [
-                                    Text(
-                                      "كوفي",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text(
-                                      " #102",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    Text(
-                                      "٧ ريال",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OrderDetails(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: size.width / 2.4,
-                        margin: EdgeInsets.symmetric(
-                            vertical: size.width / 18, horizontal: 5),
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: const [
-                                    Text(
-                                      "كوفي",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text(
-                                      " #102",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    Text(
-                                      "٧ ريال",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => OrderDetails(),
-                          ),
-                        );
-                      },
-                      child: Container(
-                        width: size.width / 2.4,
-                        margin: EdgeInsets.symmetric(
-                            vertical: size.width / 18, horizontal: 5),
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(15.0),
-                          ),
-                          child: Column(
-                            children: [
-                              Image.asset(
-                                "assest/images/coffee4.png",
-                                fit: BoxFit.fill,
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment: MainAxisAlignment.end,
-                                  children: const [
-                                    Text(
-                                      "كوفي",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                              Container(
-                                margin: const EdgeInsets.only(right: 20),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: const [
-                                    Text(
-                                      " #102",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                    Text(
-                                      "٧ ريال",
-                                      style: TextStyle(fontSize: 15),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
               const SizedBox(
@@ -592,151 +475,58 @@ class _CurrentOrdersState extends State<CurrentOrders> {
               SizedBox(
                 width: size.width,
                 height: size.height / 2.7,
-                child: ListView(
+                child: ListView.builder(
+                  itemCount: 3,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      width: size.width / 2.4,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.width / 18, horizontal: 5),
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assest/images/coffee4.png",
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: const [
+                                  Text(
+                                    "كوفي",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: const [
+                                  Text(
+                                    " #102",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  Text(
+                                    "٧ ريال",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: const [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Text(
-                                    "٧ ريال",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
             ],
