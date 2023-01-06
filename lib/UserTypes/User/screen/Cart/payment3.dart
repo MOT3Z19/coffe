@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/User/screen/GoogleMaps/page/payment_map.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/UserTypes/User/screen/catergories/page/notification.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -56,14 +55,11 @@ class _Payement3State extends State<Payement3> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pop(
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) => PaymentMap(),
-                                    ),
                                   );
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.keyboard_arrow_left_rounded,
                                   color: Colors.white,
                                   size: 40,
@@ -75,10 +71,6 @@ class _Payement3State extends State<Payement3> {
                             "  الدفع بالبطاقة",
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
-                          // const SizedBox(
-                          //     //added by vp
-                          //     //width: size.width / 2.7, // vp should be var
-                          //     width: 30),
                           InkWell(
                             onTap: () {
                               _key.currentState!.openDrawer();
@@ -367,20 +359,20 @@ class _Payement3State extends State<Payement3> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            title: Center(child: const Text(" اضافة بطاقة")),
+            title: const Center(child: Text(" اضافة بطاقة")),
             actions: <Widget>[
               Text(
                 "الاسم ",
                 style: TextStyle(color: Colors.grey[500], fontSize: 20),
               ),
-              Text("Warda Sobaih"),
-              Divider(),
+              const Text("Warda Sobaih"),
+              const Divider(),
               Text(
                 "رقم البطاقة",
                 style: TextStyle(color: Colors.grey[500], fontSize: 20),
               ),
-              Text("1234    5555    7777    8888"),
-              Divider(),
+              const Text("1234    5555    7777    8888"),
+              const Divider(),
               Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
@@ -577,7 +569,7 @@ class _Payement3State extends State<Payement3> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -630,10 +622,10 @@ class _Payement3State extends State<Payement3> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
-                Text(
+                const Text(
                   "  تم قبول طلبك لدى التاجر وجاري التجهيز",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
@@ -649,7 +641,7 @@ class _Payement3State extends State<Payement3> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Notification1(),
+                            builder: (context) => const Notification1(),
                           ),
                         );
                       },
