@@ -49,7 +49,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     ),
                     child: Container(
                       margin: EdgeInsets.symmetric(horizontal: size.width / 40),
-                      //  margin: EdgeInsets.symmetric(horizontal: size.width / 20),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceAround,
                         children: [
@@ -68,7 +67,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                         ),
                                       );
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       // added by vp
                                       Icons.keyboard_arrow_left_rounded,
                                       color: Colors.white,
@@ -96,13 +95,13 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -110,7 +109,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 3,
                                             ),
                                             Column(
@@ -120,13 +119,13 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -134,7 +133,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 3,
                                             ),
                                             Column(
@@ -144,13 +143,13 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -161,7 +160,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                           ],
                                         ),
                                       ), // first shape which contain 3 rows and columns
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       Column(
@@ -175,7 +174,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                 height: 5,
                                                 color: brownColor,
                                               ),
-                                              SizedBox(width: 3),
+                                              const SizedBox(width: 3),
                                               Container(
                                                 width: 5,
                                                 height: 5,
@@ -183,7 +182,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 3,
                                           ),
                                           Row(
@@ -193,7 +192,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                 height: 5,
                                                 color: brownColor,
                                               ),
-                                              SizedBox(width: 3),
+                                              const SizedBox(width: 3),
                                               Container(
                                                 width: 5,
                                                 height: 5,
@@ -201,7 +200,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 3,
                                           ),
                                           Row(
@@ -211,7 +210,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                                 height: 5,
                                                 color: brownColor,
                                               ),
-                                              SizedBox(width: 3),
+                                              const SizedBox(width: 3),
                                               Container(
                                                 width: 5,
                                                 height: 5,
@@ -219,7 +218,7 @@ class _ProductsScreenState extends State<ProductsScreen> {
                                               ),
                                             ],
                                           ),
-                                          SizedBox(
+                                          const SizedBox(
                                             height: 3,
                                           ),
                                         ],
@@ -255,7 +254,6 @@ class _ProductsScreenState extends State<ProductsScreen> {
                     ),
                   ),
                   Container(
-                    //margin: EdgeInsets.only(top: size.height / 6.5),
                     margin: EdgeInsets.only(
                         top: size.height / (6.5 - 1.5) - size.height / 19 / 2),
                     child: Row(
@@ -556,178 +554,8 @@ class _ProductsScreenState extends State<ProductsScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      Stack(
-                        children: [
-                          Image.asset("assest/images/coffee4.png"),
-                          Container(
-                              width: size.width / 4,
-                              height: size.height / 30,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.local_fire_department,
-                                    color: Colors.white,
-                                  ),
-                                  Center(
-                                      child: Text(
-                                    "خصم 10%",
-                                    style: TextStyle(color: Colors.white),
-                                  )),
-                                ],
-                              )),
-                        ],
-                      ),
-                      const Text("كوفي"),
-                      Row(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf2.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "متجر زارا",
-                                style: TextStyle(
-                                    color: secondaryColor, fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "٧ ريال",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 6,
-                              ),
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.shopping_cart_outlined,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Stack(
-                        children: [
-                          Image.asset("assest/images/coffee4.png"),
-                          Container(
-                              width: size.width / 4,
-                              height: size.height / 30,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.local_fire_department,
-                                    color: Colors.white,
-                                  ),
-                                  Center(
-                                      child: Text(
-                                    "خصم 10%",
-                                    style: TextStyle(color: Colors.white),
-                                  )),
-                                ],
-                              )),
-                        ],
-                      ),
-                      const Text("كوفي"),
-                      Row(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf2.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "متجر زارا",
-                                style: TextStyle(
-                                    color: secondaryColor, fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "٧ ريال",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 6,
-                              ),
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.shopping_cart_outlined,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                  Box(context),
+                  Box(context),
                 ],
               ),
               const SizedBox(
@@ -736,184 +564,103 @@ class _ProductsScreenState extends State<ProductsScreen> {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
-                  Column(
-                    children: [
-                      Stack(
-                        children: [
-                          Image.asset("assest/images/coffee4.png"),
-                          Container(
-                              width: size.width / 4,
-                              height: size.height / 30,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.local_fire_department,
-                                    color: Colors.white,
-                                  ),
-                                  Center(
-                                      child: Text(
-                                    "خصم 10%",
-                                    style: TextStyle(color: Colors.white),
-                                  )),
-                                ],
-                              )),
-                        ],
-                      ),
-                      const Text("كوفي"),
-                      Row(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf2.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "متجر زارا",
-                                style: TextStyle(
-                                    color: secondaryColor, fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "٧ ريال",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 6,
-                              ),
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.shopping_cart_outlined,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      Stack(
-                        children: [
-                          Image.asset("assest/images/coffee4.png"),
-                          Container(
-                              width: size.width / 4,
-                              height: size.height / 30,
-                              decoration: const BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(
-                                    "assest/images/yellowbackground.png",
-                                  ),
-                                  fit: BoxFit.fill,
-                                ),
-                              ),
-                              child: Row(
-                                children: const [
-                                  Icon(
-                                    Icons.local_fire_department,
-                                    color: Colors.white,
-                                  ),
-                                  Center(
-                                      child: Text(
-                                    "خصم 10%",
-                                    style: TextStyle(color: Colors.white),
-                                  )),
-                                ],
-                              )),
-                        ],
-                      ),
-                      const Text("كوفي"),
-                      Row(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf2.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.favorite_border,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                              Text(
-                                "متجر زارا",
-                                style: TextStyle(
-                                    color: secondaryColor, fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              const Text(
-                                "٧ ريال",
-                                style: TextStyle(fontSize: 12),
-                              ),
-                              const SizedBox(
-                                width: 6,
-                              ),
-                              Container(
-                                width: size.width / 10,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                    image: DecorationImage(
-                                  image: AssetImage("assest/images/leaf.png"),
-                                )),
-                                child: const Center(
-                                  child: Icon(
-                                    Icons.shopping_cart_outlined,
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                  Box(context),
+                  Box(context),
                 ],
               ),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Column(
+      children: [
+        Stack(
+          children: [
+            Image.asset("assest/images/coffee4.png"),
+            Container(
+                width: size.width / 4,
+                height: size.height / 30,
+                decoration: const BoxDecoration(
+                  image: DecorationImage(
+                    image: AssetImage(
+                      "assest/images/yellowbackground.png",
+                    ),
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                child: Row(
+                  children: const [
+                    Icon(
+                      Icons.local_fire_department,
+                      color: Colors.white,
+                    ),
+                    Center(
+                        child: Text(
+                      "خصم 10%",
+                      style: TextStyle(color: Colors.white),
+                    )),
+                  ],
+                )),
+          ],
+        ),
+        const Text("كوفي"),
+        Row(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Container(
+                  width: size.width / 10,
+                  height: size.height / 30,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage("assest/images/leaf2.png"),
+                  )),
+                  child: const Center(
+                    child: Icon(
+                      Icons.favorite_border,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+                Text(
+                  "متجر زارا",
+                  style: TextStyle(color: secondaryColor, fontSize: 12),
+                ),
+                const SizedBox(
+                  width: 10,
+                ),
+                const Text(
+                  "٧ ريال",
+                  style: TextStyle(fontSize: 12),
+                ),
+                const SizedBox(
+                  width: 6,
+                ),
+                Container(
+                  width: size.width / 10,
+                  height: size.height / 30,
+                  decoration: const BoxDecoration(
+                      image: DecorationImage(
+                    image: AssetImage("assest/images/leaf.png"),
+                  )),
+                  child: const Center(
+                    child: Icon(
+                      Icons.shopping_cart_outlined,
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        )
+      ],
     );
   }
 }

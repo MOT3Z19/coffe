@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/Delivery/Screen/Profile/page/my_profile.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/cupertino.dart';
@@ -45,20 +44,18 @@ class _AppSettingsState extends State<AppSettings> {
                       ),
                     ),
                     child: Container(
-                      margin: EdgeInsets.symmetric(horizontal: size.width / 60),
+                      margin:
+                          EdgeInsets.symmetric(horizontal: size.width / 110),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => DeliveryProfile(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -67,8 +64,8 @@ class _AppSettingsState extends State<AppSettings> {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  اعدادات التطبيق",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),

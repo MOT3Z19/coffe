@@ -103,7 +103,6 @@ class _SweetPageState extends State<SweetPage> {
                     ),
                   ),
                   Container(
-                    //margin: EdgeInsets.only(top: size.height / 6.5),
                     margin: EdgeInsets.only(
                         top: size.height / (6.5 - 1.5) - size.height / 19 / 2),
                     child: Row(
@@ -223,159 +222,6 @@ class _SweetPageState extends State<SweetPage> {
                   ),
                 ],
               ),
-              // Stack(
-              //   children: [
-              //     Container(
-              //       width: size.width,
-              //       height: size.height / 5,
-              //       decoration: const BoxDecoration(
-              //         image: DecorationImage(
-              //           image: AssetImage(
-              //             "assest/images/rectangle.png",
-              //           ),
-              //           fit: BoxFit.fill,
-              //         ),
-              //       ),
-              //       child: Container(
-              //         margin: EdgeInsets.symmetric(horizontal: size.width / 40),
-              //         //  margin: EdgeInsets.symmetric(horizontal: size.width / 20),
-              //         child: Row(
-              //           mainAxisAlignment: MainAxisAlignment.spaceAround,
-              //           children: [
-              //             Row(
-              //               children: const [
-              //                 Icon(
-              //                   // added by vp
-              //                   Icons.keyboard_arrow_left_rounded,
-              //                   color: Colors.white,
-              //                   size: 40,
-              //                 ),
-              //                 // Icon(
-              //                 //   Icons.arrow_back_ios,
-              //                 //   color: Colors.white,
-              //                 //   size: 30,
-              //                 // ),
-              //                 Icon(
-              //                   Icons.favorite_border,
-              //                   color: Colors.white,
-              //                   size: 40,
-              //                 ),
-              //                 SizedBox(
-              //                     //added by vp
-              //                     //width: size.width / 2.7, // vp should be var
-              //                     width: 40),
-              //               ],
-              //             ),
-              //             const Text(
-              //               "االاصناف  ",
-              //               style: TextStyle(color: Colors.white, fontSize: 20),
-              //             ),
-              //             const SizedBox(
-              //                 //added by vp
-              //                 //width: size.width / 2.7, // vp should be var
-              //                 width: 30),
-              //             InkWell(
-              //               onTap: () {
-              //                 _key2.currentState!.openDrawer();
-              //               },
-              //               child: const Icon(
-              //                 Icons.view_headline,
-              //                 color: Colors.white,
-              //                 size: 40,
-              //               ),
-              //             ),
-              //           ],
-              //         ),
-              //       ),
-              //     ),
-              //     Container(
-              //       margin: EdgeInsets.only(top: size.height / 6.5),
-              //       child: Row(
-              //         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              //         children: [
-              //           Container(
-              //             width: size.width / 3.5,
-              //             height: size.height / 19,
-              //             decoration: BoxDecoration(
-              //               boxShadow: const [
-              //                 BoxShadow(
-              //                   color: Colors.grey,
-              //                   blurRadius: 25.0, // soften the shadow
-              //                   spreadRadius: 5.0, //extend the shadow
-              //                   offset: Offset(
-              //                     1.0, // Move to right 10  horizontally
-              //                     1.0, // Move to bottom 10 Vertically
-              //                   ),
-              //                 ),
-              //               ],
-              //               color: Colors.white,
-              //               borderRadius: BorderRadius.circular(20),
-              //             ),
-              //             child: const Center(
-              //               child: Text(
-              //                 "الخصومات",
-              //                 style:
-              //                     TextStyle(color: Colors.black, fontSize: 20),
-              //               ),
-              //             ),
-              //           ),
-              //           Container(
-              //             width: size.width / 3.5,
-              //             height: size.height / 19,
-              //             decoration: BoxDecoration(
-              //               boxShadow: const [
-              //                 BoxShadow(
-              //                   color: Colors.grey,
-              //                   blurRadius: 25.0, // soften the shadow
-              //                   spreadRadius: 5.0, //extend the shadow
-              //                   offset: Offset(
-              //                     1.0, // Move to right 10  horizontally
-              //                     1.0, // Move to bottom 10 Vertically
-              //                   ),
-              //                 ),
-              //               ],
-              //               color: Colors.white,
-              //               borderRadius: BorderRadius.circular(20),
-              //             ),
-              //             child: const Center(
-              //               child: Text(
-              //                 "المندوبين",
-              //                 style:
-              //                     TextStyle(color: Colors.black, fontSize: 20),
-              //               ),
-              //             ),
-              //           ),
-              //           Container(
-              //             width: size.width / 3.5,
-              //             height: size.height / 19,
-              //             decoration: BoxDecoration(
-              //               boxShadow: const [
-              //                 BoxShadow(
-              //                   color: Colors.grey,
-              //                   blurRadius: 25.0, // soften the shadow
-              //                   spreadRadius: 5.0, //extend the shadow
-              //                   offset: Offset(
-              //                     1.0, // Move to right 10  horizontally
-              //                     1.0, // Move to bottom 10 Vertically
-              //                   ),
-              //                 ),
-              //               ],
-              //               color: Colors.white,
-              //               borderRadius: BorderRadius.circular(20),
-              //             ),
-              //             child: const Center(
-              //               child: Text(
-              //                 "المنتجات",
-              //                 style:
-              //                     TextStyle(color: Colors.black, fontSize: 20),
-              //               ),
-              //             ),
-              //           ),
-              //         ],
-              //       ),
-              //     ),
-              //   ],
-              // ),
               Container(
                 width: size.width / 1.3,
                 height: size.height / 17,
@@ -566,441 +412,9 @@ class _SweetPageState extends State<SweetPage> {
                   ],
                 ),
               ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
-
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات شرقية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 12),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات غربية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات هندية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.only(
-                            top: size.height / 3.7, left: size.width / 6),
-                        child: const Text(
-                          "صنف الحلويات",
-                          style: TextStyle(fontSize: 25, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
-
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات شرقية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 12),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات غربية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات هندية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.only(
-                            top: size.height / 3.7, left: size.width / 6),
-                        child: const Text(
-                          "صنف الحلويات",
-                          style: TextStyle(fontSize: 25, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-              Container(
-                margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 40 * 0,
-                    vertical: size.height / 60), //vp changed to width and /60
-
-                //     horizontal: size.height / 40, vertical: size.height / 40),
-                child: Row(
-                  mainAxisAlignment:
-                      MainAxisAlignment.spaceEvenly, // vp says try right&left
-                  // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Column(
-                      children: [
-                        const Icon(Icons.keyboard_arrow_up_outlined),
-                        SizedBox(
-                          width:
-                              size.width / 2.9, // changed by vp from 2.7 to 2.9
-                          //  width: size.width / 2.7,
-                          height: size.height / 4,
-                          child: ListView(
-                            scrollDirection: Axis.vertical,
-                            children: [
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات شرقية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                //   height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    2.9, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet4.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 12),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات غربية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                              const SizedBox(
-                                height: 5, // changed by vp from 10 to 5
-                                // height: 10,
-                              ),
-                              Container(
-                                width: size.width /
-                                    3, // changed by vp from 2.7 to 2.9
-                                height: size.height /
-                                    8, // changed by vp from 7 to 8
-                                // width: size.width / 2.7,
-                                // height: size.height / 7,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image:
-                                        AssetImage("assest/images/sweet2.png"),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Container(
-                                  margin: EdgeInsets.only(
-                                      top: size.height /
-                                          14), // vp changed from 10 to 12
-                                  // EdgeInsets.only(top: size.height / 10),
-                                  child: const Center(
-                                    child: Text(
-                                      " حلويات هندية",
-                                      style: TextStyle(
-                                          fontSize: 25, color: Colors.white),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        const Icon(Icons.keyboard_arrow_down_rounded),
-                      ],
-                    ),
-                    Container(
-                      width: size.width *
-                          2 /
-                          3 *
-                          .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
-                      // width: size.width / 2,
-                      height: size.height / 4,
-                      decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          image: AssetImage("assest/images/sweet.png"),
-                          fit: BoxFit.fill,
-                        ),
-                      ),
-                      child: Container(
-                        margin: EdgeInsets.only(
-                            top: size.height / 3.7, left: size.width / 6),
-                        child: const Text(
-                          "صنف الحلويات",
-                          style: TextStyle(fontSize: 25, color: Colors.white),
-                        ),
-                      ),
-                    ),
-                  ],
-                ),
-              ),
+              SweetStore(context),
+              SweetStore(context),
+              SweetStore(context),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
@@ -1057,338 +471,263 @@ class _SweetPageState extends State<SweetPage> {
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreProducts(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 7.5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const Text(
-                            "متجر زارا",
-                            style: TextStyle(fontSize: 17),
-                          ),
-                          const Text(
-                            "فرع الكورنيش 0110",
-                            style: TextStyle(fontSize: 17, color: Colors.grey),
-                          ),
-                          Row(
-                            //   mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "الكويت",
-                                style: TextStyle(fontSize: 17),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.location_on_rounded,
-                                color: secondaryColor,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 8,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 8,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 13),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Store(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreProducts(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 7.5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const Text(
-                            "متجر زارا",
-                            style: TextStyle(fontSize: 17),
-                          ),
-                          const Text(
-                            "فرع الكورنيش 0110",
-                            style: TextStyle(fontSize: 17, color: Colors.grey),
-                          ),
-                          Row(
-                            //   mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "الكويت",
-                                style: TextStyle(fontSize: 17),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.location_on_rounded,
-                                color: secondaryColor,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 8,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 8,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 13),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Store(context),
               const SizedBox(
                 height: 20,
               ),
-              InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const StoreProducts(),
-                    ),
-                  );
-                },
-                child: Container(
-                  width: size.width / 1.1,
-                  height: size.height / 7.5,
-                  decoration: const BoxDecoration(
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey,
-                        blurRadius: 25.0, // soften the shadow
-                        spreadRadius: 5.0, //extend the shadow
-                        offset: Offset(
-                          1.0, // Move to right 10  horizontally
-                          1.0, // Move to bottom 10 Vertically
-                        ),
-                      ),
-                    ],
-                    color: Colors.white,
-                    // borderRadius: BorderRadius.circular(20),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          const Text(
-                            "متجر زارا",
-                            style: TextStyle(fontSize: 17),
-                          ),
-                          const Text(
-                            "فرع الكورنيش 0110",
-                            style: TextStyle(fontSize: 17, color: Colors.grey),
-                          ),
-                          Row(
-                            //   mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              const Text(
-                                "الكويت",
-                                style: TextStyle(fontSize: 17),
-                              ),
-                              const SizedBox(
-                                width: 10,
-                              ),
-                              Icon(
-                                Icons.location_on_rounded,
-                                color: secondaryColor,
-                              )
-                            ],
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 2.2,
-                        height: size.height / 8,
-                        decoration: const BoxDecoration(
-                          image: DecorationImage(
-                            image: AssetImage(
-                              "assest/images/zara.png",
-                            ),
-                            fit: BoxFit.fill,
-                          ),
-                        ),
-                        child: Stack(
-                          children: [
-                            Image.asset(
-                              "assest/images/blackBackground.png",
-                              height: size.height / 8,
-                              width: size.width / 2.2,
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(top: size.height / 13),
-                              child: Center(
-                                child: RatingBar.builder(
-                                  initialRating: 4,
-                                  minRating: 1,
-                                  direction: Axis.horizontal,
-                                  allowHalfRating: true,
-                                  itemCount: 5,
-                                  itemSize: 20,
-                                  // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                  itemBuilder: (context, _) => const Icon(
-                                    Icons.star,
-                                    color: Colors.amber,
-                                  ),
-                                  onRatingUpdate: (rating) {},
-                                ),
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              Store(context),
               const SizedBox(
                 height: 20,
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget SweetStore(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.symmetric(
+          horizontal: size.width / 40 * 0,
+          vertical: size.height / 60), //vp changed to width and /60
+
+      child: Row(
+        mainAxisAlignment:
+            MainAxisAlignment.spaceEvenly, // vp says try right&left
+
+        children: [
+          Column(
+            children: [
+              const Icon(Icons.keyboard_arrow_up_outlined),
+              SizedBox(
+                width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                //  width: size.width / 2.7,
+                height: size.height / 4,
+                child: ListView(
+                  scrollDirection: Axis.vertical,
+                  children: [
+                    Container(
+                      width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      // width: size.width / 2.7,
+                      // height: size.height / 7,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet2.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(
+                            top: size.height / 14), // vp changed from 10 to 12
+                        // EdgeInsets.only(top: size.height / 10),
+                        child: const Center(
+                          child: Text(
+                            " حلويات شرقية",
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5, // changed by vp from 10 to 5
+                      //   height: 10,
+                    ),
+                    Container(
+                      width: size.width / 2.9, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      // width: size.width / 2.7,
+                      // height: size.height / 7,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet4.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(
+                            top: size.height / 14), // vp changed from 10 to 12
+                        // EdgeInsets.only(top: size.height / 12),
+                        child: const Center(
+                          child: Text(
+                            " حلويات غربية",
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 5, // changed by vp from 10 to 5
+                      // height: 10,
+                    ),
+                    Container(
+                      width: size.width / 3, // changed by vp from 2.7 to 2.9
+                      height: size.height / 8, // changed by vp from 7 to 8
+                      // width: size.width / 2.7,
+                      // height: size.height / 7,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage("assest/images/sweet2.png"),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Container(
+                        margin: EdgeInsets.only(
+                            top: size.height / 14), // vp changed from 10 to 12
+                        // EdgeInsets.only(top: size.height / 10),
+                        child: const Center(
+                          child: Text(
+                            " حلويات هندية",
+                            style: TextStyle(fontSize: 25, color: Colors.white),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              const Icon(Icons.keyboard_arrow_down_rounded),
+            ],
+          ),
+          Container(
+            width: size.width *
+                2 /
+                3 *
+                .90, // vp says we can make p2=p1/(p1-1)*s% p1=1st cont. Dvdr, p2=2nd, s% space%
+            // width: size.width / 2,
+            height: size.height / 4,
+            decoration: const BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage("assest/images/sweet.png"),
+                fit: BoxFit.fill,
+              ),
+            ),
+            child: Container(
+              margin:
+                  EdgeInsets.only(top: size.height / 3.7, left: size.width / 6),
+              child: const Text(
+                "صنف الحلويات",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Widget Store(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return InkWell(
+      onTap: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const StoreProducts(),
+          ),
+        );
+      },
+      child: Container(
+        width: size.width / 1.1,
+        height: size.height / 7.5,
+        decoration: const BoxDecoration(
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 25.0, // soften the shadow
+              spreadRadius: 5.0, //extend the shadow
+              offset: Offset(
+                1.0, // Move to right 10  horizontally
+                1.0, // Move to bottom 10 Vertically
+              ),
+            ),
+          ],
+          color: Colors.white,
+          // borderRadius: BorderRadius.circular(20),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            const SizedBox(
+              width: 20,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Text(
+                  "متجر زارا",
+                  style: TextStyle(fontSize: 17),
+                ),
+                const Text(
+                  "فرع الكورنيش 0110",
+                  style: TextStyle(fontSize: 17, color: Colors.grey),
+                ),
+                Row(
+                  //   mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    const Text(
+                      "الكويت",
+                      style: TextStyle(fontSize: 17),
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    Icon(
+                      Icons.location_on_rounded,
+                      color: secondaryColor,
+                    )
+                  ],
+                ),
+              ],
+            ),
+            Container(
+              width: size.width / 2.2,
+              height: size.height / 8,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage(
+                    "assest/images/zara.png",
+                  ),
+                  fit: BoxFit.fill,
+                ),
+              ),
+              child: Stack(
+                children: [
+                  Image.asset(
+                    "assest/images/blackBackground.png",
+                    height: size.height / 8,
+                    width: size.width / 2.2,
+                    fit: BoxFit.fill,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(top: size.height / 13),
+                    child: Center(
+                      child: RatingBar.builder(
+                        initialRating: 4,
+                        minRating: 1,
+                        direction: Axis.horizontal,
+                        allowHalfRating: true,
+                        itemCount: 5,
+                        itemSize: 20,
+                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                        itemBuilder: (context, _) => const Icon(
+                          Icons.star,
+                          color: Colors.amber,
+                        ),
+                        onRatingUpdate: (rating) {},
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );

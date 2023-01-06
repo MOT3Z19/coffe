@@ -88,25 +88,30 @@ class _Notification1State extends State<Notification1> {
                   ),
                 ],
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    children: const [
-                      Text("سعيد"),
-                      Icon(Icons.person),
-                    ],
-                  ),
-                  const Text(
-                    "               المندوب في طريقه اليك",
-                    style: TextStyle(fontSize: 18),
-                  ),
-                  Icon(
-                    Icons.notifications,
-                    size: 40,
-                    color: secondaryColor,
-                  )
-                ],
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: size.width / 40),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: const [
+                        Text("سعيد"),
+                        Icon(Icons.person),
+                      ],
+                    ),
+                    const Center(
+                      child: Text(
+                        "    المندوب في طريقه اليك",
+                        style: TextStyle(fontSize: 18),
+                      ),
+                    ),
+                    Icon(
+                      Icons.notifications,
+                      size: 40,
+                      color: secondaryColor,
+                    )
+                  ],
+                ),
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -165,25 +170,30 @@ class _Notification1State extends State<Notification1> {
                 },
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Row(
-                          children: const [
-                            Text("سعيد"),
-                            Icon(Icons.person),
-                          ],
-                        ),
-                        const Text(
-                          "تم استلام طلبك نرجو التوجه نحو المتجر في الوقت ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                        Icon(
-                          Icons.notifications,
-                          size: 40,
-                          color: secondaryColor,
-                        )
-                      ],
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: size.width / 40),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Text("سعيد"),
+                              Icon(Icons.person),
+                            ],
+                          ),
+                          const Center(
+                            child: Text(
+                              "تم استلام طلبك نرجو التوجه نحو المتجر في الوقت ",
+                              style: TextStyle(fontSize: 14),
+                            ),
+                          ),
+                          Icon(
+                            Icons.notifications,
+                            size: 40,
+                            color: secondaryColor,
+                          )
+                        ],
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -216,25 +226,30 @@ class _Notification1State extends State<Notification1> {
                 },
                 child: Column(
                   children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Row(
-                          children: const [
-                            Text("سعيد"),
-                            Icon(Icons.person),
-                          ],
-                        ),
-                        const Text(
-                          "                    تم تقديم عرض جديد  ",
-                          style: TextStyle(fontSize: 18),
-                        ),
-                        Icon(
-                          Icons.notifications,
-                          size: 40,
-                          color: secondaryColor,
-                        )
-                      ],
+                    Container(
+                      margin: EdgeInsets.symmetric(horizontal: size.width / 40),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Row(
+                            children: const [
+                              Text("سعيد"),
+                              Icon(Icons.person),
+                            ],
+                          ),
+                          const Center(
+                            child: Text(
+                              " تم تقديم عرض جديد بنجاح ",
+                              style: TextStyle(fontSize: 18),
+                            ),
+                          ),
+                          Icon(
+                            Icons.notifications,
+                            size: 40,
+                            color: secondaryColor,
+                          )
+                        ],
+                      ),
                     ),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,

@@ -79,12 +79,8 @@ class _HomeGoogleMapState extends State<HomeGoogleMap> {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      Navigator.push(
+                                      Navigator.pop(
                                         context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const StoreScreen(),
-                                        ),
                                       );
                                     },
                                     child: const Icon(
@@ -122,7 +118,6 @@ class _HomeGoogleMapState extends State<HomeGoogleMap> {
                         ),
                       ),
                       Container(
-                        //margin: EdgeInsets.only(top: size.height / 6.5),
                         margin: EdgeInsets.only(
                             top: size.height / (6.5 - 1.5) -
                                 size.height / 19 / 2),

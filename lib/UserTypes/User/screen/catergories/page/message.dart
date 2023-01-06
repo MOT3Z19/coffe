@@ -40,11 +40,11 @@ class _MessageState extends State<Message> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => const HomePage(),
                               ),
                             );
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_left_rounded,
                             color: Colors.white,
                             size: 40,
@@ -76,57 +76,7 @@ class _MessageState extends State<Message> {
                     ),
                   );
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        const Text("9 hor"),
-                        Container(
-                          width: size.width / 17,
-                          height: size.width / 17,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Colors.red),
-                          child: const Center(
-                            child: Text(
-                              "7",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: const [
-                        Text(
-                          "محمد علي ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                        Text(
-                          "مرحبا محمد ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      width: size.width / 7,
-                      height: size.width / 7,
-                      decoration: const ShapeDecoration(
-                          shape: CircleBorder(), color: Colors.white),
-                      child: const DecoratedBox(
-                        decoration: ShapeDecoration(
-                            shape: CircleBorder(),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage("assest/images/man.jpg"))),
-                      ),
-                    )
-                  ],
-                ),
+                child: Chat(context),
               ),
               const Divider(),
               InkWell(
@@ -138,57 +88,7 @@ class _MessageState extends State<Message> {
                     ),
                   );
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        const Text("9 hor"),
-                        Container(
-                          width: size.width / 17,
-                          height: size.width / 17,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Colors.red),
-                          child: const Center(
-                            child: Text(
-                              "7",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: const [
-                        Text(
-                          "محمد علي ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                        Text(
-                          "مرحبا محمد ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      width: size.width / 7,
-                      height: size.width / 7,
-                      decoration: const ShapeDecoration(
-                          shape: CircleBorder(), color: Colors.white),
-                      child: const DecoratedBox(
-                        decoration: ShapeDecoration(
-                            shape: CircleBorder(),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage("assest/images/man.jpg"))),
-                      ),
-                    )
-                  ],
-                ),
+                child: Chat(context),
               ),
               const Divider(),
               InkWell(
@@ -200,57 +100,7 @@ class _MessageState extends State<Message> {
                     ),
                   );
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        const Text("9 hor"),
-                        Container(
-                          width: size.width / 17,
-                          height: size.width / 17,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Colors.red),
-                          child: const Center(
-                            child: Text(
-                              "7",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: const [
-                        Text(
-                          "محمد علي ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                        Text(
-                          "مرحبا محمد ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      width: size.width / 7,
-                      height: size.width / 7,
-                      decoration: const ShapeDecoration(
-                          shape: CircleBorder(), color: Colors.white),
-                      child: const DecoratedBox(
-                        decoration: ShapeDecoration(
-                            shape: CircleBorder(),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage("assest/images/man.jpg"))),
-                      ),
-                    )
-                  ],
-                ),
+                child: Chat(context),
               ),
               const Divider(),
               InkWell(
@@ -262,63 +112,67 @@ class _MessageState extends State<Message> {
                     ),
                   );
                 },
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  children: [
-                    Column(
-                      children: [
-                        const Text("9 hor"),
-                        Container(
-                          width: size.width / 17,
-                          height: size.width / 17,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(30),
-                              color: Colors.red),
-                          child: const Center(
-                            child: Text(
-                              "7",
-                              style: TextStyle(color: Colors.white),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                    const SizedBox(
-                      width: 50,
-                    ),
-                    Column(
-                      children: const [
-                        Text(
-                          "محمد علي ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                        Text(
-                          "مرحبا محمد ",
-                          style: TextStyle(fontSize: 14),
-                        ),
-                      ],
-                    ),
-                    Container(
-                      width: size.width / 7,
-                      height: size.width / 7,
-                      decoration: const ShapeDecoration(
-                          shape: CircleBorder(), color: Colors.white),
-                      child: const DecoratedBox(
-                        decoration: ShapeDecoration(
-                            shape: CircleBorder(),
-                            image: DecorationImage(
-                                fit: BoxFit.cover,
-                                image: AssetImage("assest/images/man.jpg"))),
-                      ),
-                    )
-                  ],
-                ),
+                child: Chat(context),
               ),
               const Divider(),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget Chat(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceAround,
+      children: [
+        Column(
+          children: [
+            const Text("9 hor"),
+            Container(
+              width: size.width / 17,
+              height: size.width / 17,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30), color: Colors.red),
+              child: const Center(
+                child: Text(
+                  "7",
+                  style: TextStyle(color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        ),
+        const SizedBox(
+          width: 50,
+        ),
+        Column(
+          children: const [
+            Text(
+              "محمد علي ",
+              style: TextStyle(fontSize: 14),
+            ),
+            Text(
+              "مرحبا محمد ",
+              style: TextStyle(fontSize: 14),
+            ),
+          ],
+        ),
+        Container(
+          width: size.width / 7,
+          height: size.width / 7,
+          decoration:
+              const ShapeDecoration(shape: CircleBorder(), color: Colors.white),
+          child: const DecoratedBox(
+            decoration: ShapeDecoration(
+                shape: CircleBorder(),
+                image: DecorationImage(
+                    fit: BoxFit.cover,
+                    image: AssetImage("assest/images/man.jpg"))),
+          ),
+        )
+      ],
     );
   }
 }

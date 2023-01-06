@@ -4,8 +4,6 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'my_account.dart';
-
 class Cards extends StatefulWidget {
   const Cards({Key? key}) : super(key: key);
 
@@ -53,14 +51,11 @@ class _CardsState extends State<Cards> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => MyAccount(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -69,8 +64,8 @@ class _CardsState extends State<Cards> {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  البطاقات",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -124,17 +119,17 @@ class _CardsState extends State<Cards> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 23,
                     ),
-                    Text(
+                    const Text(
                       "Multi Card",
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 3,
                     ),
                     const Text(
@@ -202,17 +197,17 @@ class _CardsState extends State<Cards> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 23,
                     ),
-                    Text(
+                    const Text(
                       "Multi Card",
                       style: TextStyle(
                           fontSize: 20,
                           color: Colors.white,
                           fontWeight: FontWeight.bold),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 3,
                     ),
                     const Text(
@@ -274,7 +269,7 @@ class _CardsState extends State<Cards> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) => const HomePage(),
                     ),
                   );
                 },
@@ -312,20 +307,20 @@ class _CardsState extends State<Cards> {
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(20),
             ),
-            title: Center(child: const Text(" اضافة بطاقة")),
+            title: const Center(child: Text(" اضافة بطاقة")),
             actions: <Widget>[
               Text(
                 "الاسم ",
                 style: TextStyle(color: Colors.grey[500], fontSize: 20),
               ),
-              Text("Warda Sobaih"),
-              Divider(),
+              const Text("Warda Sobaih"),
+              const Divider(),
               Text(
                 "رقم البطاقة",
                 style: TextStyle(color: Colors.grey[500], fontSize: 20),
               ),
-              Text("1234    5555    7777    8888"),
-              Divider(),
+              const Text("1234    5555    7777    8888"),
+              const Divider(),
               Row(
                 //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

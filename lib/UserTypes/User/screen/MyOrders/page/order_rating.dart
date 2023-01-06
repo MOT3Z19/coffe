@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 import 'current_order.dart';
-import 'order_details.dart';
 
 class OrderRating extends StatefulWidget {
   const OrderRating({Key? key}) : super(key: key);
@@ -54,11 +53,8 @@ class _OrderRatingState extends State<OrderRating> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => OrderDetails(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -107,199 +103,74 @@ class _OrderRatingState extends State<OrderRating> {
               SizedBox(
                 width: size.width,
                 height: size.height / 2.7,
-                child: ListView(
+                child: ListView.builder(
+                  itemCount: 4,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                      width: size.width / 2.4,
+                      margin: EdgeInsets.symmetric(
+                          vertical: size.width / 18, horizontal: 5),
+                      child: Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(15.0),
+                        ),
+                        child: Column(
+                          children: [
+                            Image.asset(
+                              "assest/images/coffee4.png",
+                              fit: BoxFit.fill,
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 20),
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.end,
+                                children: const [
+                                  Text(
+                                    "كوفي",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Container(
+                              margin: const EdgeInsets.only(right: 20),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    " #102",
+                                    style: TextStyle(fontSize: 15),
+                                  ),
+                                  Container(
+                                    margin:
+                                        EdgeInsets.only(top: size.height / 58),
+                                    child: Center(
+                                      child: RatingBar.builder(
+                                        initialRating: 0,
+                                        minRating: 1,
+                                        direction: Axis.horizontal,
+                                        allowHalfRating: true,
+                                        itemCount: 5,
+                                        itemSize: 15,
+                                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                                        itemBuilder: (context, _) => const Icon(
+                                          Icons.star,
+                                          color: Colors.amber,
+                                        ),
+                                        onRatingUpdate: (rating) {},
+                                      ),
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    );
+                  },
                   scrollDirection: Axis.horizontal,
-                  children: [
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Container(
-                                    margin:
-                                        EdgeInsets.only(top: size.height / 58),
-                                    child: Center(
-                                      child: RatingBar.builder(
-                                        initialRating: 0,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemCount: 5,
-                                        itemSize: 15,
-                                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                        itemBuilder: (context, _) => const Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        onRatingUpdate: (rating) {},
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Container(
-                                    margin:
-                                        EdgeInsets.only(top: size.height / 58),
-                                    child: Center(
-                                      child: RatingBar.builder(
-                                        initialRating: 0,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemCount: 5,
-                                        itemSize: 15,
-                                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                        itemBuilder: (context, _) => const Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        onRatingUpdate: (rating) {},
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: size.width / 2.4,
-                      margin: EdgeInsets.symmetric(
-                          vertical: size.width / 18, horizontal: 5),
-                      child: Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(15.0),
-                        ),
-                        child: Column(
-                          children: [
-                            Image.asset(
-                              "assest/images/coffee4.png",
-                              fit: BoxFit.fill,
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.end,
-                                children: const [
-                                  Text(
-                                    "كوفي",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                ],
-                              ),
-                            ),
-                            Container(
-                              margin: const EdgeInsets.only(right: 20),
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    " #102",
-                                    style: TextStyle(fontSize: 15),
-                                  ),
-                                  Container(
-                                    margin:
-                                        EdgeInsets.only(top: size.height / 58),
-                                    child: Center(
-                                      child: RatingBar.builder(
-                                        initialRating: 0,
-                                        minRating: 1,
-                                        direction: Axis.horizontal,
-                                        allowHalfRating: true,
-                                        itemCount: 5,
-                                        itemSize: 15,
-                                        // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                                        itemBuilder: (context, _) => const Icon(
-                                          Icons.star,
-                                          color: Colors.amber,
-                                        ),
-                                        onRatingUpdate: (rating) {},
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                  ],
                 ),
               ),
               Container(
@@ -308,10 +179,6 @@ class _OrderRatingState extends State<OrderRating> {
                 child: const TextField(
                   decoration: InputDecoration(
                       border: OutlineInputBorder(),
-                      // enabledBorder: OutlineInputBorder(
-                      //  borderSide: BorderSide(),
-                      // borderSide: BorderSide(width: 1, color: Colors.grey),
-                      // ),
                       labelText: " اكتب ملاحظاتك ..",
                       labelStyle: TextStyle(fontSize: 20, color: Colors.grey)),
                 ),

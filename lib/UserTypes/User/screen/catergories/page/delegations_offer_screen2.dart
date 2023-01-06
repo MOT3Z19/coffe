@@ -63,15 +63,11 @@ class _delegationsOfferScreen2State extends State<delegationsOfferScreen2> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pop(
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          delegationsOfferScreen(),
-                                    ),
                                   );
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.keyboard_arrow_left_rounded,
                                   color: Colors.white,
                                   size: 40,
@@ -229,7 +225,7 @@ class _delegationsOfferScreen2State extends State<delegationsOfferScreen2> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => delegationsMap(),
+                          builder: (context) => const delegationsMap(),
                         ),
                       );
                     },
@@ -328,7 +324,7 @@ class _delegationsOfferScreen2State extends State<delegationsOfferScreen2> {
                                           context,
                                           MaterialPageRoute(
                                             builder: (context) =>
-                                                ChatDetailsPage(),
+                                                const ChatDetailsPage(),
                                           ),
                                         );
                                       },

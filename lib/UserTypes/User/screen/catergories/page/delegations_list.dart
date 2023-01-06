@@ -73,15 +73,11 @@ class _delegationsListState extends State<delegationsList> {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      Navigator.push(
+                                      Navigator.pop(
                                         context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              delegationsMap(),
-                                        ),
                                       );
                                     },
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.keyboard_arrow_left_rounded,
                                       color: Colors.white,
                                       size: 40,
@@ -94,7 +90,8 @@ class _delegationsListState extends State<delegationsList> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => delegationsMap(),
+                                      builder: (context) =>
+                                          const delegationsMap(),
                                     ),
                                   );
                                 },
@@ -268,7 +265,7 @@ class _delegationsListState extends State<delegationsList> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => delegationsOfferScreen2(),
+                          builder: (context) => const delegationsOfferScreen2(),
                         ),
                       );
                     },
@@ -360,7 +357,7 @@ class _delegationsListState extends State<delegationsList> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DelegationPage(),
+                      builder: (context) => const DelegationPage(),
                     ),
                   );
                 },

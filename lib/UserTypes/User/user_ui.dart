@@ -90,7 +90,6 @@ class _UserInterfacesState extends State<UserInterfaces> {
           // Payment4(),
           // PaymentMap3(), // for here in putting the back arrow
           // PaymentMap4(),
-
           delegationsOfferScreen(), // 1 +
           delegationsOfferScreen2(), //2 +
           delegationsMap(), // 3 +

@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
 
-import 'current_order.dart';
 import 'order_rating.dart';
 
 class OrderDetails extends StatefulWidget {
@@ -62,11 +61,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pop(
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) => CurrentOrders(),
-                                    ),
                                   );
                                 },
                                 child: const Icon(
@@ -75,7 +71,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                   size: 40,
                                 ),
                               ),
-                              Center(
+                              const Center(
                                 child: Text(
                                   "تفاصيل الطلب ",
                                   style: TextStyle(
@@ -95,7 +91,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                             ],
                           ),
                         ),
-                        Center(
+                        const Center(
                           child: Text(
                             " مكتمل ",
                             style: TextStyle(color: Colors.white, fontSize: 20),
@@ -319,7 +315,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                         ),
                       ],
                     ),
-                    Text(
+                    const Text(
                       ":  عنوان المرسل له  ",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -411,7 +407,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ],
                 ),
               ),
-              DottedLine(),
+              const DottedLine(),
               Container(
                 margin: EdgeInsets.symmetric(
                     horizontal: size.width / 26, vertical: 2),
@@ -504,7 +500,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => OrderRating(),
+                      builder: (context) => const OrderRating(),
                     ),
                   );
                 },

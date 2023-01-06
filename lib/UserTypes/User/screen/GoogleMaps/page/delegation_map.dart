@@ -46,7 +46,7 @@ class _delegationsMapState extends State<delegationsMap> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => ChatDetailsPage(),
+                builder: (context) => const ChatDetailsPage(),
               ),
             );
           },
@@ -60,7 +60,6 @@ class _delegationsMapState extends State<delegationsMap> {
               ),
             ),
             child: Column(
-              // mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Stack(
                   children: [
@@ -78,7 +77,6 @@ class _delegationsMapState extends State<delegationsMap> {
                       child: Container(
                         margin:
                             EdgeInsets.symmetric(horizontal: size.width / 40),
-                        //  margin: EdgeInsets.symmetric(horizontal: size.width / 20),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -89,15 +87,11 @@ class _delegationsMapState extends State<delegationsMap> {
                                   children: [
                                     InkWell(
                                       onTap: () {
-                                        Navigator.push(
+                                        Navigator.pop(
                                           context,
-                                          MaterialPageRoute(
-                                            builder: (context) =>
-                                                delegationsOfferScreen(),
-                                          ),
                                         );
                                       },
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.keyboard_arrow_left_rounded,
                                         color: Colors.white,
                                         size: 40,
@@ -110,7 +104,8 @@ class _delegationsMapState extends State<delegationsMap> {
                                     Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                        builder: (context) => delegationsList(),
+                                        builder: (context) =>
+                                            const delegationsList(),
                                       ),
                                     );
                                   },
@@ -287,7 +282,8 @@ class _delegationsMapState extends State<delegationsMap> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => delegationsOfferScreen2(),
+                            builder: (context) =>
+                                const delegationsOfferScreen2(),
                           ),
                         );
                       },

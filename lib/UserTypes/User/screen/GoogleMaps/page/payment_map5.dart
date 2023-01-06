@@ -53,7 +53,7 @@ class _PaymentMap5State extends State<PaymentMap5> {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => ChatDetailsPage(),
+                                builder: (context) => const ChatDetailsPage(),
                               ),
                             );
                           },
@@ -62,7 +62,7 @@ class _PaymentMap5State extends State<PaymentMap5> {
                         width: size.width / 10,
                       ),
                       Container(
-                        margin: EdgeInsets.symmetric(vertical: 5),
+                        margin: const EdgeInsets.symmetric(vertical: 5),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(width: 1, color: Colors.grey),
@@ -196,8 +196,9 @@ class _PaymentMap5State extends State<PaymentMap5> {
                                               onTap: () {
                                                 Navigator.of(context).pop();
                                               },
-                                              child: Icon(Icons.arrow_back)),
-                                          Text(
+                                              child:
+                                                  const Icon(Icons.arrow_back)),
+                                          const Text(
                                             " احمد الاغا ",
                                             style: TextStyle(fontSize: 25),
                                           ),
@@ -227,7 +228,7 @@ class _PaymentMap5State extends State<PaymentMap5> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    HomePage(),
+                                                    const HomePage(),
                                               ),
                                             );
                                           },
@@ -257,7 +258,7 @@ class _PaymentMap5State extends State<PaymentMap5> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    OrderRating(),
+                                                    const OrderRating(),
                                               ),
                                             );
                                           },
@@ -363,7 +364,7 @@ class _PaymentMap5State extends State<PaymentMap5> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(

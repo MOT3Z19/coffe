@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:coffee_station/UserTypes/User/screen/Cart/page/full_card.dart';
 import 'package:coffee_station/UserTypes/User/screen/GoogleMaps/page/payment_map.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -65,14 +64,11 @@ class _PaymentState extends State<Payment> {
                             children: [
                               InkWell(
                                 onTap: () {
-                                  Navigator.push(
+                                  Navigator.pop(
                                     context,
-                                    MaterialPageRoute(
-                                      builder: (context) => FullCard(),
-                                    ),
                                   );
                                 },
-                                child: Icon(
+                                child: const Icon(
                                   Icons.keyboard_arrow_left_rounded,
                                   color: Colors.white,
                                   size: 40,
@@ -82,13 +78,13 @@ class _PaymentState extends State<Payment> {
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              const Text(
+                            children: const [
+                              Text(
                                 " بيانات الدفع",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               ),
-                              const Text(
+                              Text(
                                 "اجمالي الطلب : ٧٠ ريال",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
@@ -679,7 +675,7 @@ class _PaymentState extends State<Payment> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Container(
-                    margin: EdgeInsets.symmetric(vertical: 5),
+                    margin: const EdgeInsets.symmetric(vertical: 5),
                     decoration: BoxDecoration(
                         border: Border.all(width: 1, color: Colors.grey),
                         borderRadius: BorderRadius.circular(5)),
@@ -850,7 +846,7 @@ class _PaymentState extends State<Payment> {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
-                          builder: (context) => PaymentMap(),
+                          builder: (context) => const PaymentMap(),
                         ),
                       );
                     },
@@ -924,7 +920,7 @@ class _PaymentState extends State<Payment> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1059,7 +1055,7 @@ class _PaymentState extends State<Payment> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1134,7 +1130,7 @@ class _PaymentState extends State<Payment> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
@@ -1149,8 +1145,8 @@ class _PaymentState extends State<Payment> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    InkWell(
-                      child: const Text(
+                    const InkWell(
+                      child: Text(
                         "تتبع الاشعارات",
                         style: TextStyle(fontSize: 20),
                       ),
