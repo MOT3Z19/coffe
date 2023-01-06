@@ -5,8 +5,6 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
-import '../../sweet_screen.dart';
-
 class StorePage extends StatefulWidget {
   const StorePage({Key? key}) : super(key: key);
 
@@ -102,18 +100,10 @@ class _StorePageState extends State<StorePage> {
                           "مواعيد العمل : من 9 صباحا الى 10 صباحا ",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
-                        // const Text(
-                        //   " من 9 صباحا الى 10 صباحا",
-                        //   style: TextStyle(fontSize: 20, color: Colors.black),
-                        // ),
                         const Text(
                           " رقم المتجر للتواصل: 00966505926024",
                           style: TextStyle(fontSize: 20, color: Colors.black),
                         ),
-                        // const Text(
-                        //   " +1 987 654 3210",
-                        //   style: TextStyle(fontSize: 20, color: Colors.black),
-                        // ),
                         Center(
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
@@ -191,11 +181,8 @@ class _StorePageState extends State<StorePage> {
                       )),
                   InkWell(
                     onTap: () {
-                      Navigator.push(
+                      Navigator.pop(
                         context,
-                        MaterialPageRoute(
-                          builder: (context) => const SweetPage(),
-                        ),
                       );
                     },
                     child: Container(
