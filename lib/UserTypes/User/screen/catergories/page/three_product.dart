@@ -59,12 +59,8 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                 children: [
                                   InkWell(
                                     onTap: () {
-                                      Navigator.push(
+                                      Navigator.pop(
                                         context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const ProductsScreen(),
-                                        ),
                                       );
                                     },
                                     child: const Icon(
@@ -95,13 +91,13 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -109,7 +105,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 3,
                                             ),
                                             Column(
@@ -119,13 +115,13 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -133,7 +129,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               width: 3,
                                             ),
                                             Column(
@@ -143,13 +139,13 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
                                                   color: brownColor,
                                                 ),
-                                                SizedBox(height: 3),
+                                                const SizedBox(height: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -160,7 +156,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                           ],
                                         ),
                                       ), // first shape which contain 3 rows and columns
-                                      SizedBox(
+                                      const SizedBox(
                                         width: 10,
                                       ),
                                       InkWell(
@@ -184,7 +180,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(width: 3),
+                                                const SizedBox(width: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -192,7 +188,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 3,
                                             ),
                                             Row(
@@ -202,7 +198,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(width: 3),
+                                                const SizedBox(width: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -210,7 +206,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 3,
                                             ),
                                             Row(
@@ -220,7 +216,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                   height: 5,
                                                   color: Colors.white,
                                                 ),
-                                                SizedBox(width: 3),
+                                                const SizedBox(width: 3),
                                                 Container(
                                                   width: 5,
                                                   height: 5,
@@ -228,7 +224,7 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
                                                 ),
                                               ],
                                             ),
-                                            SizedBox(
+                                            const SizedBox(
                                               height: 3,
                                             ),
                                           ],
@@ -388,1203 +384,317 @@ class _ThreeProductsScreenState extends State<ThreeProductsScreen> {
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              Item(context),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              Item(context),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Container(
-                    width: size.width / 4,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 4,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 4,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              Item(context),
               const SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    width: size.width / 3.5,
-                    child: Column(
-                      children: [
-                        Stack(
-                          children: [
-                            Image.asset("assest/images/coffee4.png"),
-                            Container(
-                                width: size.width / 6,
-                                height: size.height / 30,
-                                decoration: const BoxDecoration(
-                                  image: DecorationImage(
-                                    image: AssetImage(
-                                      "assest/images/yellowbackground.png",
-                                    ),
-                                    fit: BoxFit.fill,
-                                  ),
-                                ),
-                                child: Row(
-                                  children: const [
-                                    Icon(
-                                      Icons.local_fire_department,
-                                      color: Colors.white,
-                                      size: 15,
-                                    ),
-                                    Center(
-                                        child: Text(
-                                      "خصم 10%",
-                                      style: TextStyle(
-                                          color: Colors.white, fontSize: 10),
-                                    )),
-                                  ],
-                                )),
-                          ],
-                        ),
-                        const Text("كوفي"),
-                        Row(
-                          children: [
-                            Row(
-                              // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf2.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.favorite_border,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                                Text(
-                                  "متجر زارا",
-                                  style: TextStyle(
-                                      color: secondaryColor, fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 12,
-                                ),
-                                const Text(
-                                  "٧ ريال",
-                                  style: TextStyle(fontSize: 10),
-                                ),
-                                const SizedBox(
-                                  width: 2,
-                                ),
-                                Stack(
-                                  children: [
-                                    Image.asset(
-                                      "assest/images/leaf.png",
-                                      width: 20,
-                                    ),
-                                    Container(
-                                      margin: const EdgeInsets.symmetric(
-                                          vertical: 3, horizontal: 3),
-                                      child: const Icon(
-                                        Icons.shopping_cart_outlined,
-                                        color: Colors.white,
-                                        size: 12,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        )
-                      ],
-                    ),
-                  ),
-                ],
-              ),
+              Item(context),
             ],
           ),
         ),
       ),
+    );
+  }
+
+  Widget Item(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      children: [
+        SizedBox(
+          width: size.width / 3.5,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset("assest/images/coffee4.png"),
+                  Container(
+                      width: size.width / 6,
+                      height: size.height / 30,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assest/images/yellowbackground.png",
+                          ),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Row(
+                        children: const [
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                          Center(
+                              child: Text(
+                            "خصم 10%",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          )),
+                        ],
+                      )),
+                ],
+              ),
+              const Text("كوفي"),
+              Row(
+                children: [
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf2.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.favorite_border,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "متجر زارا",
+                        style: TextStyle(color: secondaryColor, fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 12,
+                      ),
+                      const Text(
+                        "٧ ريال",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          width: size.width / 3.5,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset("assest/images/coffee4.png"),
+                  Container(
+                      width: size.width / 6,
+                      height: size.height / 30,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assest/images/yellowbackground.png",
+                          ),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Row(
+                        children: const [
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                          Center(
+                              child: Text(
+                            "خصم 10%",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          )),
+                        ],
+                      )),
+                ],
+              ),
+              const Text("كوفي"),
+              Row(
+                children: [
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf2.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.favorite_border,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "متجر زارا",
+                        style: TextStyle(color: secondaryColor, fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 12,
+                      ),
+                      const Text(
+                        "٧ ريال",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+        SizedBox(
+          width: size.width / 3.5,
+          child: Column(
+            children: [
+              Stack(
+                children: [
+                  Image.asset("assest/images/coffee4.png"),
+                  Container(
+                      width: size.width / 6,
+                      height: size.height / 30,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "assest/images/yellowbackground.png",
+                          ),
+                          fit: BoxFit.fill,
+                        ),
+                      ),
+                      child: Row(
+                        children: const [
+                          Icon(
+                            Icons.local_fire_department,
+                            color: Colors.white,
+                            size: 15,
+                          ),
+                          Center(
+                              child: Text(
+                            "خصم 10%",
+                            style: TextStyle(color: Colors.white, fontSize: 10),
+                          )),
+                        ],
+                      )),
+                ],
+              ),
+              const Text("كوفي"),
+              Row(
+                children: [
+                  Row(
+                    // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf2.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.favorite_border,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Text(
+                        "متجر زارا",
+                        style: TextStyle(color: secondaryColor, fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 12,
+                      ),
+                      const Text(
+                        "٧ ريال",
+                        style: TextStyle(fontSize: 10),
+                      ),
+                      const SizedBox(
+                        width: 2,
+                      ),
+                      Stack(
+                        children: [
+                          Image.asset(
+                            "assest/images/leaf.png",
+                            width: 20,
+                          ),
+                          Container(
+                            margin: const EdgeInsets.symmetric(
+                                vertical: 3, horizontal: 3),
+                            child: const Icon(
+                              Icons.shopping_cart_outlined,
+                              color: Colors.white,
+                              size: 12,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
     );
   }
 }
