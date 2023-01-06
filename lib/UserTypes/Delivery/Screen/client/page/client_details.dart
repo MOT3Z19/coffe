@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/order4.dart';
 import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/side_drawer.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
@@ -51,11 +50,8 @@ class _ClientDetailsState extends State<ClientDetails> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Order4(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -65,8 +61,8 @@ class _ClientDetailsState extends State<ClientDetails> {
                               size: 30,
                             ),
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "تفاصيل العميل",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -103,7 +99,6 @@ class _ClientDetailsState extends State<ClientDetails> {
                           height: size.height / 3,
                           child: Card(
                             child: Column(
-                              //   mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
                                 const SizedBox(
                                   height: 80,
@@ -117,24 +112,24 @@ class _ClientDetailsState extends State<ClientDetails> {
                                 ),
                                 Row(
                                   mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    const Icon(
+                                  children: const [
+                                    Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
-                                    const Icon(
+                                    Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
-                                    const Icon(
+                                    Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
-                                    const Icon(
+                                    Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
-                                    const Icon(
+                                    Icon(
                                       Icons.star,
                                       color: Colors.amber,
                                     ),
@@ -235,138 +230,79 @@ class _ClientDetailsState extends State<ClientDetails> {
                   style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
                 ),
               ),
-              SizedBox(
-                width: size.width / 1.1,
-                height: size.height / 3.5,
-                child: Card(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const CircleAvatar(
-                        backgroundImage: AssetImage("assest/images/man.jpg"),
-                        maxRadius: 30,
-                      ),
-                      const Center(
-                        child: Text(
-                          " ايما ستون ",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 1.3,
-                        height: size.height / 14,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: greyColor2,
-                        ),
-                        child: const Center(
-                          child: Text(
-                            " قائد مركبة مميز وذو خبرة أنصح به ",
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(
-                width: size.width / 1.1,
-                height: size.height / 3.5,
-                child: Card(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const CircleAvatar(
-                        backgroundImage: AssetImage("assest/images/man.jpg"),
-                        maxRadius: 30,
-                      ),
-                      const Center(
-                        child: Text(
-                          " ايما ستون ",
-                          style: TextStyle(fontSize: 20),
-                        ),
-                      ),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                          const Icon(
-                            Icons.star,
-                            color: Colors.amber,
-                            size: 15,
-                          ),
-                        ],
-                      ),
-                      Container(
-                        width: size.width / 1.3,
-                        height: size.height / 14,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(20),
-                          color: greyColor2,
-                        ),
-                        child: const Center(
-                          child: Text(
-                            " قائد مركبة مميز وذو خبرة أنصح به ",
-                            style: TextStyle(fontSize: 20),
-                          ),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
+              Box(context),
+              Box(context),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return SizedBox(
+      width: size.width / 1.1,
+      height: size.height / 3.5,
+      child: Card(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            const CircleAvatar(
+              backgroundImage: AssetImage("assest/images/man.jpg"),
+              maxRadius: 30,
+            ),
+            const Center(
+              child: Text(
+                " ايما ستون ",
+                style: TextStyle(fontSize: 20),
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: const [
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+                Icon(
+                  Icons.star,
+                  color: Colors.amber,
+                  size: 15,
+                ),
+              ],
+            ),
+            Container(
+              width: size.width / 1.3,
+              height: size.height / 14,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: greyColor2,
+              ),
+              child: const Center(
+                child: Text(
+                  " قائد مركبة مميز وذو خبرة أنصح به ",
+                  style: TextStyle(fontSize: 20),
+                ),
+              ),
+            )
+          ],
         ),
       ),
     );
