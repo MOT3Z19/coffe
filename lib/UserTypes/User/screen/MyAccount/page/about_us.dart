@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/Delivery/Screen/Profile/page/my_profile.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:flutter/material.dart';
 
@@ -43,14 +42,11 @@ class AboutUS extends StatelessWidget {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => DeliveryProfile(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -59,8 +55,8 @@ class AboutUS extends StatelessWidget {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               "  من نحن",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
