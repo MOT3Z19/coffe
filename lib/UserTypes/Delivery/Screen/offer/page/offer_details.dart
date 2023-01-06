@@ -1,13 +1,10 @@
 import 'dart:ui';
 
 import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/order2.dart';
-import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/order4.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 
 import '../../Orders/page/order_details.dart';
-
-// import '../../../../User/screen/MyOrders/page/order_details.dart';
 
 class OfferDetails extends StatefulWidget {
   const OfferDetails({Key? key}) : super(key: key);
@@ -34,15 +31,11 @@ class _OfferDetailsState extends State<OfferDetails> {
                   children: [
                     const SizedBox(
                       height: 60,
-                      //width: 10,
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const Order4(),
-                          ),
                         );
                       },
                       child: const Icon(
@@ -91,9 +84,6 @@ class _OfferDetailsState extends State<OfferDetails> {
                       ),
                       child: Column(
                         children: [
-                          // const SizedBox(
-                          //   height: 30,
-                          // ),
                           Container(
                             margin: const EdgeInsets.symmetric(vertical: 30),
                             child: const Text(
@@ -105,12 +95,12 @@ class _OfferDetailsState extends State<OfferDetails> {
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text(
+                              const Text(
                                 "٥ دقائق متبقية",
                                 style: TextStyle(
                                     fontWeight: FontWeight.bold, fontSize: 18),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 width: 20,
                               ),
                               InkWell(
@@ -136,7 +126,6 @@ class _OfferDetailsState extends State<OfferDetails> {
                               ),
                             ],
                           ),
-
                           Container(
                             margin: const EdgeInsets.symmetric(vertical: 10),
                             child: const Text(
@@ -175,27 +164,16 @@ class _OfferDetailsState extends State<OfferDetails> {
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
                                 SizedBox(
-                                  // margin: EdgeInsets.symmetric(
-                                  //   horizontal: size.width / 20,
-                                  // ),
                                   height: size.height / 15,
                                   width: size.width / 4,
                                   child: const TextField(
                                     maxLines: 9,
                                     decoration: InputDecoration(
                                         border: OutlineInputBorder(),
-                                        //labelText: "",
                                         labelStyle: TextStyle(
                                             fontSize: 20, color: Colors.grey)),
                                   ),
                                 ),
-                                // Text(
-                                //   "٢٠ ريال",
-                                //   style: TextStyle(
-                                //       fontWeight: FontWeight.bold,
-                                //       fontSize: 18,
-                                //       color: secondaryColor),
-                                // ),
                                 const Text(
                                   "القيمة المضافة للتوصيل  بالريال",
                                   style: TextStyle(
@@ -205,7 +183,6 @@ class _OfferDetailsState extends State<OfferDetails> {
                               ],
                             ),
                           ),
-
                           Container(
                             margin: EdgeInsets.symmetric(
                               horizontal: size.width / 20,
@@ -295,7 +272,7 @@ class _OfferDetailsState extends State<OfferDetails> {
                           onTap: () {
                             Navigator.of(context).pop();
                           },
-                          child: Icon(Icons.arrow_back)),
+                          child: const Icon(Icons.arrow_back)),
                     ],
                   ),
                   const Center(
@@ -309,11 +286,11 @@ class _OfferDetailsState extends State<OfferDetails> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(Icons.navigate_before),
+                    const Icon(Icons.navigate_before),
                     Container(
                         margin: EdgeInsets.only(left: size.width / 3),
-                        child: Text("102#")),
-                    Icon(Icons.navigate_next),
+                        child: const Text("102#")),
+                    const Icon(Icons.navigate_next),
                   ],
                 ),
                 Container(
@@ -517,7 +494,7 @@ class _OfferDetailsState extends State<OfferDetails> {
                           ),
                         ],
                       ),
-                      Text(
+                      const Text(
                         "عنوان التوصيل منه",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
@@ -576,7 +553,7 @@ class _OfferDetailsState extends State<OfferDetails> {
                       child: Container(
                         width: size.width / 2.8,
                         height: size.height / 16,
-                        margin: EdgeInsets.symmetric(vertical: 25),
+                        margin: const EdgeInsets.symmetric(vertical: 25),
                         decoration: const BoxDecoration(
                           color: Colors.black,
                           borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -596,7 +573,7 @@ class _OfferDetailsState extends State<OfferDetails> {
                       child: Container(
                         width: size.width / 2.8,
                         height: size.height / 16,
-                        margin: EdgeInsets.symmetric(vertical: 25),
+                        margin: const EdgeInsets.symmetric(vertical: 25),
                         decoration: BoxDecoration(
                           color: secondaryColor,
                           borderRadius:

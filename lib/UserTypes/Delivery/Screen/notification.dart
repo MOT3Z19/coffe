@@ -116,20 +116,20 @@ class _DeliveryNotificationState extends State<DeliveryNotification> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => GoogleMap2()));
+                                  builder: (context) => const GoogleMap2()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.location_on_sharp,
                           size: 20,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "المكان: شارع خالد بن الوليد",
                         style: TextStyle(fontSize: 15),
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "اسم الزبون: محمد مرتجى ",
                     style: TextStyle(fontSize: 15),
                   ),
@@ -220,20 +220,20 @@ class _DeliveryNotificationState extends State<DeliveryNotification> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => GoogleMap2()));
+                                  builder: (context) => const GoogleMap2()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.location_on_sharp,
                           size: 20,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "المكان: شارع خالد بن الوليد",
                         style: TextStyle(fontSize: 15),
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "اسم الزبون: محمد مرتجى ",
                     style: TextStyle(fontSize: 15),
                   ),
@@ -313,20 +313,20 @@ class _DeliveryNotificationState extends State<DeliveryNotification> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => GoogleMap2()));
+                                  builder: (context) => const GoogleMap2()));
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.location_on_sharp,
                           size: 20,
                         ),
                       ),
-                      Text(
+                      const Text(
                         "المكان: شارع خالد بن الوليد",
                         style: TextStyle(fontSize: 15),
                       ),
                     ],
                   ),
-                  Text(
+                  const Text(
                     "اسم الزبون: محمد مرتجى ",
                     style: TextStyle(fontSize: 15),
                   ),
@@ -377,8 +377,10 @@ class _DeliveryNotificationState extends State<DeliveryNotification> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => ClientRating()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ClientRating()));
                 },
                 child: Container(
                   width: size.width / 1.2,

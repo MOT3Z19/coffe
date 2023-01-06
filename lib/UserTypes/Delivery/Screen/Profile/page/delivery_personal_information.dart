@@ -104,12 +104,7 @@ class _DeliveryPersonalInforamtionState
                       text: const TextSpan(
                           text: "الاسم كامل",
                           style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (لن يظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                          children: <TextSpan>[]),
                     ),
                   ),
                 ],
@@ -140,12 +135,7 @@ class _DeliveryPersonalInforamtionState
                       text: const TextSpan(
                           text: "اسم المستخدم ",
                           style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                          children: <TextSpan>[]),
                     ),
                   ),
                 ],
@@ -176,12 +166,7 @@ class _DeliveryPersonalInforamtionState
                       text: const TextSpan(
                           text: " الموقع ",
                           style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                          children: <TextSpan>[]),
                     ),
                   ),
                 ],
@@ -214,7 +199,6 @@ class _DeliveryPersonalInforamtionState
                       style: TextStyle(fontSize: 18, color: Colors.black),
                     ),
                     isExpanded: true,
-
                     items: items
                         .map((item) => DropdownMenuItem<String>(
                               value: item,
@@ -238,7 +222,6 @@ class _DeliveryPersonalInforamtionState
                     icon: const Icon(
                       Icons.keyboard_arrow_down_outlined,
                     ),
-
                     iconSize: 25,
                     iconEnabledColor: Colors.black,
                     buttonHeight: size.height / 20,
@@ -246,19 +229,16 @@ class _DeliveryPersonalInforamtionState
                     buttonPadding: const EdgeInsets.only(right: 14),
                     buttonElevation: 2,
                     itemHeight: 40,
-                    //  itemPadding: const EdgeInsets.only(left: 14, right: 14),
                     dropdownMaxHeight: 380,
                     dropdownWidth: 380,
                     dropdownPadding: null,
                     dropdownDecoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(14),
-                      // color: Colors.redAccent,
                     ),
                     dropdownElevation: 8,
                     scrollbarRadius: const Radius.circular(40),
                     scrollbarThickness: 5,
                     scrollbarAlwaysShow: true,
-                    // offset: const Offset(-20, 0),
                   ),
                 ),
               ),
@@ -277,12 +257,7 @@ class _DeliveryPersonalInforamtionState
                       text: const TextSpan(
                           text: "رقم الهوية",
                           style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                          children: <TextSpan>[]),
                     ),
                   ),
                 ],
@@ -312,14 +287,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "تاريخ الميلاد ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "تاريخ الميلاد ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -349,14 +319,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "رقم الهاتف ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "رقم الهاتف ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -386,14 +351,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "  تاريخ انتهاء الرخصة ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "  تاريخ انتهاء الرخصة ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -423,14 +383,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "رقم السيارة",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "رقم السيارة",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -450,7 +405,6 @@ class _DeliveryPersonalInforamtionState
               const SizedBox(
                 height: 10,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -460,14 +414,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "مصنع السيارة ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "مصنع السيارة ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -487,7 +436,6 @@ class _DeliveryPersonalInforamtionState
               const SizedBox(
                 height: 10,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -497,14 +445,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "  نوع السيارة ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "  نوع السيارة ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -524,7 +467,6 @@ class _DeliveryPersonalInforamtionState
               const SizedBox(
                 height: 10,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -534,14 +476,9 @@ class _DeliveryPersonalInforamtionState
                     ),
                     child: RichText(
                       text: const TextSpan(
-                          text: "  موديل السيارة  ",
-                          style: TextStyle(fontSize: 18, color: Colors.black),
-                          children: <TextSpan>[
-                            // TextSpan(
-                            //     text: ' (سيظهر للجميع ) ',
-                            //     style:
-                            //         TextStyle(color: Colors.grey, fontSize: 18))
-                          ]),
+                        text: "  موديل السيارة  ",
+                        style: TextStyle(fontSize: 18, color: Colors.black),
+                      ),
                     ),
                   ),
                 ],
@@ -561,7 +498,6 @@ class _DeliveryPersonalInforamtionState
               const SizedBox(
                 height: 10,
               ),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [

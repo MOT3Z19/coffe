@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/order4.dart';
 import 'package:coffee_station/UserTypes/Delivery/Screen/Orders/page/order_details.dart';
 import 'package:coffee_station/UserTypes/Delivery/Screen/offer/page/offer_details.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -31,24 +30,20 @@ class _GoogleMap1State extends State<GoogleMap1> {
               ),
             ),
             child: Column(
-              //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       height: 100,
                     ),
                     InkWell(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pop(
                           context,
-                          MaterialPageRoute(
-                            builder: (context) => const Order4(),
-                          ),
                         );
                       },
-                      child: Icon(
+                      child: const Icon(
                         // added by vp
                         Icons.keyboard_arrow_left_rounded,
                         color: Colors.black,
@@ -67,8 +62,8 @@ class _GoogleMap1State extends State<GoogleMap1> {
                           ),
                         );
                       },
-                      child: Center(
-                        child: const Text(
+                      child: const Center(
+                        child: Text(
                           "102#",
                           style: TextStyle(fontSize: 18),
                           textAlign: TextAlign.center,
@@ -153,7 +148,7 @@ class _GoogleMap1State extends State<GoogleMap1> {
                                   ),
                                   Row(
                                     mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
+                                    children: const [
                                       Text(
                                         " ٥ دقائق متبقية ",
                                         style: TextStyle(fontSize: 25),

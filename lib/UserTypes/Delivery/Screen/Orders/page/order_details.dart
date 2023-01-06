@@ -8,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
 import '../../client/page/client_details.dart';
-import 'order4.dart';
 
 class OrderDetails extends StatefulWidget {
   const OrderDetails({Key? key}) : super(key: key);
@@ -47,11 +46,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const Order4(),
-                                ),
                               );
                             },
                             child: const Icon(
@@ -93,7 +89,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   Icon(Icons.navigate_next),
                 ],
               ),
-              Container(
+              SizedBox(
                 width: size.width,
                 height: size.height / 7,
                 child: ListView(
@@ -215,7 +211,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
@@ -261,7 +257,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
@@ -307,7 +303,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 8,
               ),
               Container(
@@ -338,7 +334,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                         ],
                       ),
                     ),
-                    Text(
+                    const Text(
                       "عنوان التوصيل منه",
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),

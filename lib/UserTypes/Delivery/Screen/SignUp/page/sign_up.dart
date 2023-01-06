@@ -49,8 +49,8 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         children: [
-                          InkWell(
-                            child: const Icon(
+                          const InkWell(
+                            child: Icon(
                               // added by vp
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
@@ -62,7 +62,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                           ),
                           Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
+                            children: const [
                               Text(
                                 " أضف بياناتك  ",
                                 style: TextStyle(
@@ -112,22 +112,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                 const SizedBox(
                   height: 10,
                 ),
-                Container(
-                  margin: EdgeInsets.symmetric(
-                    horizontal: size.width / 20,
-                    vertical: size.width / 40,
-                  ),
-                  child: const TextField(
-                    readOnly: true,
-                    // enableInteractiveSelection: false,
-                    decoration: InputDecoration(
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(width: 1, color: Colors.grey),
-                        ),
-                        hintText: "احمد محمود  ",
-                        hintStyle: TextStyle(color: Colors.black)),
-                  ),
-                ),
+                Field(context, " احمد محمود "),
                 Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: size.width / 20,
@@ -226,130 +211,16 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                         ),
                       ),
                     ),
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: "رقم الهوية",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    //
 
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: "تاريخ الميلاد ",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    //
+                    Field(context, " رقم الهوية "),
+                    Field(context, "  تاريخ الميلاد "),
+                    Field(context, "رقم الهاتف "),
+                    Field(context, "تاريخ انتهاء الرخصة "),
+                    Field(context, "رقم السيارة"),
+                    Field(context, "مصنع السيارة"),
+                    Field(context, "نوع السيارة"),
+                    Field(context, "موديل السيارة"),
 
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: "رقم الهاتف",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: " تاريخ انتهاء الرخصة ",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: "رقم السيارة",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: " مصنع السيارة",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: " نوع السيارة",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.symmetric(
-                        horizontal: size.width / 20,
-                        vertical: size.width / 40,
-                      ),
-                      child: const TextField(
-                        decoration: InputDecoration(
-                            enabledBorder: UnderlineInputBorder(
-                              borderSide:
-                                  BorderSide(width: 1, color: Colors.grey),
-                            ),
-                            hintText: "موديل السيارة ",
-                            hintStyle: TextStyle(color: Colors.black)),
-                      ),
-                    ),
                     const SizedBox(
                       height: 20,
                     ),
@@ -371,29 +242,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: size.width / 4,
-                              height: size.height / 10,
-                              decoration: BoxDecoration(
-                                color: boxColor,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              margin: const EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 20),
-                              child: const Center(
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    prefixIcon: Center(
-                                      child: Icon(
-                                        Icons.file_upload,
-                                        size: 50,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            Image(context),
                           ],
                         ),
                         Column(
@@ -410,29 +259,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: size.width / 4,
-                              height: size.height / 10,
-                              decoration: BoxDecoration(
-                                color: boxColor,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              margin: const EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 20),
-                              child: const Center(
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    prefixIcon: Center(
-                                      child: Icon(
-                                        Icons.file_upload,
-                                        size: 50,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            Image(context),
                           ],
                         ),
                         Column(
@@ -449,29 +276,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                                 ),
                               ),
                             ),
-                            Container(
-                              width: size.width / 4,
-                              height: size.height / 10,
-                              decoration: BoxDecoration(
-                                color: boxColor,
-                                borderRadius: BorderRadius.circular(15),
-                              ),
-                              margin: const EdgeInsets.symmetric(
-                                  horizontal: 5, vertical: 20),
-                              child: const Center(
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    border: InputBorder.none,
-                                    prefixIcon: Center(
-                                      child: Icon(
-                                        Icons.file_upload,
-                                        size: 50,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
+                            Image(context),
                           ],
                         ),
                       ],
@@ -506,6 +311,50 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                   ],
                 ),
               ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget Field(BuildContext context, String title) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      margin: EdgeInsets.symmetric(
+        horizontal: size.width / 20,
+        vertical: size.width / 40,
+      ),
+      child: TextField(
+        decoration: InputDecoration(
+            enabledBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(width: 1, color: Colors.grey),
+            ),
+            hintText: "$title",
+            hintStyle: const TextStyle(color: Colors.black)),
+      ),
+    );
+  }
+
+  Widget Image(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Container(
+      width: size.width / 4,
+      height: size.height / 10,
+      decoration: BoxDecoration(
+        color: boxColor,
+        borderRadius: BorderRadius.circular(15),
+      ),
+      margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
+      child: const Center(
+        child: TextField(
+          decoration: InputDecoration(
+            border: InputBorder.none,
+            prefixIcon: Center(
+              child: Icon(
+                Icons.file_upload,
+                size: 50,
+              ),
             ),
           ),
         ),
