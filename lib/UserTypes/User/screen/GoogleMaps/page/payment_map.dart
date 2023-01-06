@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/User/screen/Cart/payment.dart';
 import 'package:coffee_station/UserTypes/User/screen/Cart/payment3.dart';
 import 'package:coffee_station/UserTypes/User/screen/catergories/page/notification.dart';
 import 'package:coffee_station/core/constant.dart';
@@ -38,7 +37,6 @@ class _PaymentMapState extends State<PaymentMap> {
                 ),
               ),
               child: Column(
-                //  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -48,11 +46,8 @@ class _PaymentMapState extends State<PaymentMap> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.push(
+                          Navigator.pop(
                             context,
-                            MaterialPageRoute(
-                              builder: (context) => Payment(),
-                            ),
                           );
                         },
                         child: const Icon(
@@ -62,7 +57,7 @@ class _PaymentMapState extends State<PaymentMap> {
                         ),
                       ),
                       Container(
-                        margin: EdgeInsets.symmetric(vertical: 5),
+                        margin: const EdgeInsets.symmetric(vertical: 5),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             border: Border.all(width: 1, color: Colors.grey),
@@ -217,7 +212,7 @@ class _PaymentMapState extends State<PaymentMap> {
                                               context,
                                               MaterialPageRoute(
                                                 builder: (context) =>
-                                                    Payement3(),
+                                                    const Payement3(),
                                               ),
                                             );
                                           },
@@ -316,10 +311,10 @@ class _PaymentMapState extends State<PaymentMap> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
-                Text(
+                const Text(
                   "  تم قبول طلبك لدى التاجر وجاري التجهيز",
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                 ),
@@ -335,7 +330,7 @@ class _PaymentMapState extends State<PaymentMap> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => Notification1(),
+                            builder: (context) => const Notification1(),
                           ),
                         );
                       },
@@ -377,7 +372,7 @@ class _PaymentMapState extends State<PaymentMap> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
