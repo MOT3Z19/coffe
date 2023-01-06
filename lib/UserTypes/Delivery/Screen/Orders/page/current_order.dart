@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 
-import 'order_detials2.dart';
 import 'orderr1.dart';
 
 class CurrentOrder extends StatefulWidget {
@@ -206,741 +205,9 @@ class _CurrentOrderState extends State<CurrentOrder> {
                   ],
                 ),
               ),
-              // Container(
-              //   margin: EdgeInsets.symmetric(
-              //       vertical: size.height / 60, horizontal: size.width / 20),
-              //   width: size.width,
-              //   height: size.height / 4,
-              //   child: ListView(
-              //     scrollDirection: Axis.horizontal,
-              //     children: [
-              //       InkWell(
-              //         child: SizedBox(
-              //           width: size.width / 1.1,
-              //           height: size.height / 13,
-              //           child: Card(
-              //             child: Row(
-              //               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              //               children: [
-              //                 Column(
-              //                   children: [
-              //                     const SizedBox(
-              //                       height: 20,
-              //                     ),
-              //                     Row(
-              //                       children: [
-              //                         const Text(
-              //                           "في التوصيل",
-              //                           style: TextStyle(
-              //                             fontSize: 16,
-              //                           ),
-              //                         ),
-              //                         SizedBox(
-              //                           width: size.width / 7,
-              //                         ),
-              //                         const Text(
-              //                           "كوفي",
-              //                           style: TextStyle(
-              //                             fontSize: 20,
-              //                           ),
-              //                         ),
-              //                       ],
-              //                     ),
-              //                     Row(
-              //                       children: [
-              //                         SizedBox(
-              //                           width: size.width / 5,
-              //                         ),
-              //                         const Text(
-              //                           "محمد الحتو",
-              //                           style: TextStyle(
-              //                             fontSize: 20,
-              //                           ),
-              //                         ),
-              //                       ],
-              //                     ),
-              //                     Row(
-              //                       mainAxisAlignment:
-              //                           MainAxisAlignment.spaceAround,
-              //                       children: [
-              //                         Text(
-              //                           "١٠ ريال",
-              //                           style: TextStyle(
-              //                             color: secondaryColor,
-              //                             fontSize: 20,
-              //                           ),
-              //                         ),
-              //                         SizedBox(
-              //                           width: size.width / 5.5,
-              //                         ),
-              //                         const Text(
-              //                           ": القيمة",
-              //                           style: TextStyle(
-              //                             fontSize: 20,
-              //                           ),
-              //                         ),
-              //                       ],
-              //                     ),
-              //                     // Row(
-              //                     //   children: [
-              //                     //     SizedBox(
-              //                     //       width: size.width / 5,
-              //                     //     ),
-              //                     //     RatingBar.builder(
-              //                     //       initialRating: 5,
-              //                     //       minRating: 1,
-              //                     //       direction: Axis.horizontal,
-              //                     //       allowHalfRating: true,
-              //                     //       itemCount: 5,
-              //                     //       itemSize: 20,
-              //                     //       // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-              //                     //       itemBuilder: (context, _) => const Icon(
-              //                     //         Icons.star,
-              //                     //         color: Colors.amber,
-              //                     //       ),
-              //                     //       onRatingUpdate: (rating) {},
-              //                     //     ),
-              //                     //   ],
-              //                     // ),
-              //                     Row(
-              //                       children: [
-              //                         const Text(
-              //                           " احمد محمود",
-              //                           style: TextStyle(
-              //                             fontSize: 16,
-              //                           ),
-              //                         ),
-              //                         SizedBox(
-              //                           width: size.width / 25,
-              //                         ),
-              //                         const Text(
-              //                           "اسم العميل",
-              //                           style: TextStyle(
-              //                             fontSize: 20,
-              //                           ),
-              //                         ),
-              //                       ],
-              //                     ),
-              //                     Row(
-              //                       children: [
-              //                         InkWell(
-              //                           onTap: () {
-              //                             showDialog1();
-              //                           },
-              //                           child: Container(
-              //                               width: size.width / 5,
-              //                               height: size.height / 30,
-              //                               decoration: const BoxDecoration(
-              //                                 image: DecorationImage(
-              //                                   image: AssetImage(
-              //                                     "assest/images/yellowbackground.png",
-              //                                   ),
-              //                                   fit: BoxFit.fill,
-              //                                 ),
-              //                               ),
-              //                               child: Center(
-              //                                   child: Text(
-              //                                 "الغاء",
-              //                                 style: TextStyle(
-              //                                     color: Colors.white,
-              //                                     fontSize: 15),
-              //                               ))),
-              //                         ),
-              //                         SizedBox(
-              //                           width: 10,
-              //                         ),
-              //                         InkWell(
-              //                           onTap: () {
-              //                             Navigator.push(
-              //                               context,
-              //                               MaterialPageRoute(
-              //                                 builder: (context) =>
-              //                                     const OrderDetails2(),
-              //                               ),
-              //                             );
-              //                           },
-              //                           child: Row(
-              //                             children: [
-              //                               const Text("تفاصيل الطلب"),
-              //                               // SizedBox(
-              //                               //   width: size.width / 4,
-              //                               // ),
-              //                             ],
-              //                           ),
-              //                         ),
-              //                       ],
-              //                     ),
-              //                   ],
-              //                 ),
-              //                 const SizedBox(
-              //                   width: 10,
-              //                 ),
-              //                 // const SizedBox(
-              //                 //   height: 10,
-              //                 // ),
-              //                 Image.asset(
-              //                   "assest/images/coffee3.png",
-              //                   fit: BoxFit.fill,
-              //                   width: size.width / 2.5,
-              //                   // height: size.height / 8,
-              //                 ),
-              //               ],
-              //             ),
-              //           ),
-              //         ),
-              //       ),
-              //       const SizedBox(
-              //         width: 10,
-              //       ),
-              //     ],
-              //   ),
-              // ),
-              InkWell(
-                child: SizedBox(
-                  width: size.width / 1.1,
-                  height: size.height / 3.3,
-                  child: Card(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(left: size.width / 3.7),
-                              child: const Text(
-                                "#102",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  "في التوصيل",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 7,
-                                ),
-                                const Text(
-                                  "كوفي",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: size.width / 5,
-                                ),
-                                const Text(
-                                  "محمد الحتو",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  "١٠ ريال",
-                                  style: TextStyle(
-                                    color: secondaryColor,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 5.5,
-                                ),
-                                const Text(
-                                  ": القيمة",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // Row(
-                            //   children: [
-                            //     SizedBox(
-                            //       width: size.width / 5,
-                            //     ),
-                            //     RatingBar.builder(
-                            //       initialRating: 5,
-                            //       minRating: 1,
-                            //       direction: Axis.horizontal,
-                            //       allowHalfRating: true,
-                            //       itemCount: 5,
-                            //       itemSize: 20,
-                            //       // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                            //       itemBuilder: (context, _) => const Icon(
-                            //         Icons.star,
-                            //         color: Colors.amber,
-                            //       ),
-                            //       onRatingUpdate: (rating) {},
-                            //     ),
-                            //   ],
-                            // ),
-                            Row(
-                              children: [
-                                const Text(
-                                  " احمد محمود",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 25,
-                                ),
-                                const Text(
-                                  "اسم العميل",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    showDialog1();
-                                  },
-                                  child: Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        "الغاء",
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 15),
-                                      ))),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            const OrderDetails2(),
-                                      ),
-                                    );
-                                  },
-                                  child: Row(
-                                    children: [
-                                      const Text("تفاصيل الطلب"),
-                                      // SizedBox(
-                                      //   width: size.width / 4,
-                                      // ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        // const SizedBox(
-                        //   height: 10,
-                        // ),
-                        Image.asset(
-                          "assest/images/coffee3.png",
-                          fit: BoxFit.fill,
-                          width: size.width / 2.5,
-                          // height: size.height / 8,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                child: SizedBox(
-                  width: size.width / 1.1,
-                  height: size.height / 3.3,
-                  child: Card(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(left: size.width / 3.7),
-                              child: const Text(
-                                "#102",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  "في التوصيل",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 7,
-                                ),
-                                const Text(
-                                  "كوفي",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: size.width / 5,
-                                ),
-                                const Text(
-                                  "محمد الحتو",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  "١٠ ريال",
-                                  style: TextStyle(
-                                    color: secondaryColor,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 5.5,
-                                ),
-                                const Text(
-                                  ": القيمة",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // Row(
-                            //   children: [
-                            //     SizedBox(
-                            //       width: size.width / 5,
-                            //     ),
-                            //     RatingBar.builder(
-                            //       initialRating: 5,
-                            //       minRating: 1,
-                            //       direction: Axis.horizontal,
-                            //       allowHalfRating: true,
-                            //       itemCount: 5,
-                            //       itemSize: 20,
-                            //       // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                            //       itemBuilder: (context, _) => const Icon(
-                            //         Icons.star,
-                            //         color: Colors.amber,
-                            //       ),
-                            //       onRatingUpdate: (rating) {},
-                            //     ),
-                            //   ],
-                            // ),
-                            Row(
-                              children: [
-                                const Text(
-                                  " احمد محمود",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 25,
-                                ),
-                                const Text(
-                                  "اسم العميل",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    showDialog1();
-                                  },
-                                  child: Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        "الغاء",
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 15),
-                                      ))),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            const OrderDetails2(),
-                                      ),
-                                    );
-                                  },
-                                  child: Row(
-                                    children: [
-                                      const Text("تفاصيل الطلب"),
-                                      // SizedBox(
-                                      //   width: size.width / 4,
-                                      // ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        // const SizedBox(
-                        //   height: 10,
-                        // ),
-                        Image.asset(
-                          "assest/images/coffee3.png",
-                          fit: BoxFit.fill,
-                          width: size.width / 2.5,
-                          // height: size.height / 8,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              InkWell(
-                child: SizedBox(
-                  width: size.width / 1.1,
-                  height: size.height / 3.3,
-                  child: Card(
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Column(
-                          children: [
-                            const SizedBox(
-                              height: 20,
-                            ),
-                            Container(
-                              margin: EdgeInsets.only(left: size.width / 3.7),
-                              child: const Text(
-                                "#102",
-                                style: TextStyle(
-                                  fontSize: 16,
-                                ),
-                              ),
-                            ),
-                            Row(
-                              children: [
-                                const Text(
-                                  "في التوصيل",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 7,
-                                ),
-                                const Text(
-                                  "كوفي",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                SizedBox(
-                                  width: size.width / 5,
-                                ),
-                                const Text(
-                                  "محمد الحتو",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Text(
-                                  "١٠ ريال",
-                                  style: TextStyle(
-                                    color: secondaryColor,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 5.5,
-                                ),
-                                const Text(
-                                  ": القيمة",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            // Row(
-                            //   children: [
-                            //     SizedBox(
-                            //       width: size.width / 5,
-                            //     ),
-                            //     RatingBar.builder(
-                            //       initialRating: 5,
-                            //       minRating: 1,
-                            //       direction: Axis.horizontal,
-                            //       allowHalfRating: true,
-                            //       itemCount: 5,
-                            //       itemSize: 20,
-                            //       // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
-                            //       itemBuilder: (context, _) => const Icon(
-                            //         Icons.star,
-                            //         color: Colors.amber,
-                            //       ),
-                            //       onRatingUpdate: (rating) {},
-                            //     ),
-                            //   ],
-                            // ),
-                            Row(
-                              children: [
-                                const Text(
-                                  " احمد محمود",
-                                  style: TextStyle(
-                                    fontSize: 16,
-                                  ),
-                                ),
-                                SizedBox(
-                                  width: size.width / 25,
-                                ),
-                                const Text(
-                                  "اسم العميل",
-                                  style: TextStyle(
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            Row(
-                              children: [
-                                InkWell(
-                                  onTap: () {
-                                    showDialog1();
-                                  },
-                                  child: Container(
-                                      width: size.width / 5,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(
-                                            "assest/images/yellowbackground.png",
-                                          ),
-                                          fit: BoxFit.fill,
-                                        ),
-                                      ),
-                                      child: Center(
-                                          child: Text(
-                                        "الغاء",
-                                        style: TextStyle(
-                                            color: Colors.white, fontSize: 15),
-                                      ))),
-                                ),
-                                SizedBox(
-                                  width: 10,
-                                ),
-                                InkWell(
-                                  onTap: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (context) =>
-                                            const OrderDetails2(),
-                                      ),
-                                    );
-                                  },
-                                  child: Row(
-                                    children: [
-                                      const Text("تفاصيل الطلب"),
-                                      // SizedBox(
-                                      //   width: size.width / 4,
-                                      // ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        const SizedBox(
-                          width: 10,
-                        ),
-                        // const SizedBox(
-                        //   height: 10,
-                        // ),
-                        Image.asset(
-                          "assest/images/coffee3.png",
-                          fit: BoxFit.fill,
-                          width: size.width / 2.5,
-                          // height: size.height / 8,
-                        ),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
+              Box(context),
+              Box(context),
+              Box(context),
             ],
           ),
         ),
@@ -967,19 +234,18 @@ class _CurrentOrderState extends State<CurrentOrder> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
               ],
             ),
-            //content: Text("body"),
             actions: <Widget>[
               const SizedBox(
                 height: 10,
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: size.width / 10),
-                child: Text(
+                child: const Text(
                   "هل انت متاكد من الغاء التوصيل .. اطلب من العميل الموافقة على الغاء التوصيل",
                   style: TextStyle(fontSize: 18),
                   textAlign: TextAlign.center,
@@ -995,8 +261,8 @@ class _CurrentOrderState extends State<CurrentOrder> {
                     child: Container(
                       width: size.width / 3.5,
                       height: size.height / 17,
-                      margin:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 30),
                       decoration: BoxDecoration(
                         color: primaryColor,
                         borderRadius:
@@ -1058,19 +324,18 @@ class _CurrentOrderState extends State<CurrentOrder> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
               ],
             ),
-            //content: Text("body"),
             actions: <Widget>[
               const SizedBox(
                 height: 10,
               ),
               Container(
                 margin: EdgeInsets.symmetric(horizontal: size.width / 10),
-                child: Center(
+                child: const Center(
                   child: Text(
                     "سيتم تاكيد طلب الالغاء في الاشعارات قريبا ",
                     style: TextStyle(fontSize: 18),
@@ -1088,8 +353,8 @@ class _CurrentOrderState extends State<CurrentOrder> {
                     child: Container(
                       width: size.width / 1.5,
                       height: size.height / 17,
-                      margin:
-                          EdgeInsets.symmetric(horizontal: 10, vertical: 30),
+                      margin: const EdgeInsets.symmetric(
+                          horizontal: 10, vertical: 30),
                       decoration: BoxDecoration(
                         color: primaryColor,
                         borderRadius:
@@ -1108,5 +373,184 @@ class _CurrentOrderState extends State<CurrentOrder> {
             ],
           );
         });
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return InkWell(
+      child: SizedBox(
+        width: size.width / 1.1,
+        height: size.height / 3.3,
+        child: Card(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Column(
+                children: [
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  Container(
+                    margin: EdgeInsets.only(left: size.width / 3.7),
+                    child: const Text(
+                      "#102",
+                      style: TextStyle(
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  Row(
+                    children: [
+                      const Text(
+                        "في التوصيل",
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      SizedBox(
+                        width: size.width / 7,
+                      ),
+                      const Text(
+                        "كوفي",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      SizedBox(
+                        width: size.width / 5,
+                      ),
+                      const Text(
+                        "محمد الحتو",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Text(
+                        "١٠ ريال",
+                        style: TextStyle(
+                          color: secondaryColor,
+                          fontSize: 20,
+                        ),
+                      ),
+                      SizedBox(
+                        width: size.width / 5.5,
+                      ),
+                      const Text(
+                        ": القيمة",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  // Row(
+                  //   children: [
+                  //     SizedBox(
+                  //       width: size.width / 5,
+                  //     ),
+                  //     RatingBar.builder(
+                  //       initialRating: 5,
+                  //       minRating: 1,
+                  //       direction: Axis.horizontal,
+                  //       allowHalfRating: true,
+                  //       itemCount: 5,
+                  //       itemSize: 20,
+                  //       // itemPadding: EdgeInsets.symmetric(horizontal: 2.0),
+                  //       itemBuilder: (context, _) => const Icon(
+                  //         Icons.star,
+                  //         color: Colors.amber,
+                  //       ),
+                  //       onRatingUpdate: (rating) {},
+                  //     ),
+                  //   ],
+                  // ),
+                  Row(
+                    children: [
+                      const Text(
+                        " احمد محمود",
+                        style: TextStyle(
+                          fontSize: 16,
+                        ),
+                      ),
+                      SizedBox(
+                        width: size.width / 25,
+                      ),
+                      const Text(
+                        "اسم العميل",
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Row(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          showDialog1();
+                        },
+                        child: Container(
+                            width: size.width / 5,
+                            height: size.height / 30,
+                            decoration: const BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage(
+                                  "assest/images/yellowbackground.png",
+                                ),
+                                fit: BoxFit.fill,
+                              ),
+                            ),
+                            child: const Center(
+                                child: Text(
+                              "الغاء",
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 15),
+                            ))),
+                      ),
+                      const SizedBox(
+                        width: 10,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pop(
+                            context,
+                          );
+                        },
+                        child: Row(
+                          children: const [
+                            Text("تفاصيل الطلب"),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              // const SizedBox(
+              //   height: 10,
+              // ),
+              Image.asset(
+                "assest/images/coffee3.png",
+                fit: BoxFit.fill,
+                width: size.width / 2.5,
+                // height: size.height / 8,
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }
