@@ -1,7 +1,6 @@
 import 'dart:ui';
 
 import 'package:coffee_station/UserTypes/User/screen/Chat/page/chat_details_page.dart';
-import 'package:coffee_station/UserTypes/User/screen/HomePage/page/home_page.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -37,14 +36,11 @@ class _ProductPageState extends State<ProductPage> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => const HomePage(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.arrow_back_ios,
                               color: Colors.black,
                               size: 30,
@@ -465,286 +461,80 @@ class _ProductPageState extends State<ProductPage> {
                   ),
                   width: size.width,
                   height: size.height / 6.9, // need
-                  child: ListView(
+                  child: ListView.builder(
+                    itemCount: 4,
+                    itemBuilder: (BuildContext context, int index) {
+                      return Card(
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30.0),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Column(
+                              children: [
+                                const Text(
+                                  " كوفي",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                const Text(
+                                  " ريال 18",
+                                  style: TextStyle(
+                                      fontSize: 20,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Container(
+                                      width: size.width / 10,
+                                      height: size.height / 30,
+                                      decoration: const BoxDecoration(
+                                          image: DecorationImage(
+                                        image: AssetImage(
+                                            "assest/images/leaf2.png"),
+                                      )),
+                                      child: const Center(
+                                        child: Icon(
+                                          Icons.favorite_border,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                    const SizedBox(
+                                      width: 90,
+                                    ),
+                                    Container(
+                                      width: size.width / 10,
+                                      height: size.height / 30,
+                                      decoration: const BoxDecoration(
+                                          image: DecorationImage(
+                                        image: AssetImage(
+                                            "assest/images/leaf.png"),
+                                      )),
+                                      child: const Center(
+                                        child: Icon(
+                                          Icons.shopping_cart_outlined,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                            Image.asset(
+                              "assest/images/coffee3.png",
+                              // fit: BoxFit.fill,
+                            ),
+                          ],
+                        ),
+                      );
+                    },
                     scrollDirection: Axis.horizontal,
-                    children: [
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf2.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.favorite_border,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 90,
-                                    ),
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.shopping_cart_outlined,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf2.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.favorite_border,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 90,
-                                    ),
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.shopping_cart_outlined,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf2.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.favorite_border,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 90,
-                                    ),
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.shopping_cart_outlined,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Card(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30.0),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Column(
-                              children: [
-                                const Text(
-                                  " كوفي",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                const Text(
-                                  " ريال 18",
-                                  style: TextStyle(
-                                      fontSize: 20,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf2.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.favorite_border,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                    const SizedBox(
-                                      width: 90,
-                                    ),
-                                    Container(
-                                      width: size.width / 10,
-                                      height: size.height / 30,
-                                      decoration: const BoxDecoration(
-                                          image: DecorationImage(
-                                        image: AssetImage(
-                                            "assest/images/leaf.png"),
-                                      )),
-                                      child: const Center(
-                                        child: Icon(
-                                          Icons.shopping_cart_outlined,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                            Image.asset(
-                              "assest/images/coffee3.png",
-                              // fit: BoxFit.fill,
-                            ),
-                          ],
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ],
