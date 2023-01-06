@@ -1,4 +1,3 @@
-import 'package:coffee_station/UserTypes/Delivery/Screen/Profile/page/my_profile.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/side_drawar.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
@@ -49,14 +48,11 @@ class _ContactUsState extends State<ContactUs> {
                         children: [
                           InkWell(
                             onTap: () {
-                              Navigator.push(
+                              Navigator.pop(
                                 context,
-                                MaterialPageRoute(
-                                  builder: (context) => DeliveryProfile(),
-                                ),
                               );
                             },
-                            child: Icon(
+                            child: const Icon(
                               Icons.keyboard_arrow_left_rounded,
                               color: Colors.white,
                               size: 40,
@@ -65,8 +61,8 @@ class _ContactUsState extends State<ContactUs> {
                           SizedBox(
                             width: size.width / 4,
                           ),
-                          Center(
-                            child: const Text(
+                          const Center(
+                            child: Text(
                               " اتصل بنا",
                               style:
                                   TextStyle(color: Colors.white, fontSize: 20),
@@ -155,7 +151,7 @@ class _ContactUsState extends State<ContactUs> {
                         onTap: () {
                           Navigator.of(context).pop();
                         },
-                        child: Icon(Icons.arrow_back)),
+                        child: const Icon(Icons.arrow_back)),
                   ],
                 ),
                 const Center(
