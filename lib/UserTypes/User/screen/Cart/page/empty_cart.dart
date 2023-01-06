@@ -53,14 +53,15 @@ class _EmptyCartState extends State<EmptyCart> {
                       children: [
                         InkWell(
                           onTap: () {
+                            // Navigator.pop(context);
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => HomePage(),
+                                builder: (context) => const HomePage(),
                               ),
                             );
                           },
-                          child: Icon(
+                          child: const Icon(
                             Icons.keyboard_arrow_left_rounded,
                             color: Colors.white,
                             size: 40,
@@ -69,8 +70,8 @@ class _EmptyCartState extends State<EmptyCart> {
                         SizedBox(
                           width: size.width / 4,
                         ),
-                        Center(
-                          child: const Text(
+                        const Center(
+                          child: Text(
                             " سلتي",
                             style: TextStyle(color: Colors.white, fontSize: 20),
                           ),
@@ -102,7 +103,7 @@ class _EmptyCartState extends State<EmptyCart> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => FullCard(),
+                      builder: (context) => const FullCard(),
                     ),
                   );
                 },
@@ -115,7 +116,7 @@ class _EmptyCartState extends State<EmptyCart> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => FavouriteProduct(),
+                    builder: (context) => const FavouriteProduct(),
                   ),
                 );
               },
@@ -141,7 +142,7 @@ class _EmptyCartState extends State<EmptyCart> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => HomePage(),
+                    builder: (context) => const HomePage(),
                   ),
                 );
               },
