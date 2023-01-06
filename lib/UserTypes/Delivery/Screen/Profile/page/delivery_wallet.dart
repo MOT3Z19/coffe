@@ -176,189 +176,75 @@ class _DeliveryWalletState extends State<DeliveryWallet> {
               const SizedBox(
                 height: 20,
               ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: size.height / 30, right: size.height / 30),
-                child: SizedBox(
-                  width: size.width / 1.2,
-                  height: size.height / 7,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          const Expanded(
-                            child: Center(
-                              child: Text(
-                                "تم خصم 50 ريال من حسابك اشتراك في باقة",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: size.height / 7,
-                            decoration: const BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: Colors.grey,
-                            ))),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "8/8/1888",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                " الاحد",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "4:55 PM",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: size.height / 30, right: size.height / 30),
-                child: SizedBox(
-                  width: size.width / 1.2,
-                  height: size.height / 7,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          const Expanded(
-                            child: Center(
-                              child: Text(
-                                "تم خصم 50 ريال من حسابك اشتراك في باقة",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: size.height / 7,
-                            decoration: const BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: Colors.grey,
-                            ))),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "8/8/1888",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                " الاحد",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "4:55 PM",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(
-                    left: size.height / 30, right: size.height / 30),
-                child: SizedBox(
-                  width: size.width / 1.2,
-                  height: size.height / 7,
-                  child: Card(
-                      shape: RoundedRectangleBorder(
-                        side: const BorderSide(color: Colors.white70, width: 1),
-                        borderRadius: BorderRadius.circular(10),
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: [
-                          const Expanded(
-                            child: Center(
-                              child: Text(
-                                "تم خصم 50 ريال من حسابك اشتراك في باقة",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ),
-                          ),
-                          Container(
-                            width: 1,
-                            height: size.height / 7,
-                            decoration: const BoxDecoration(
-                                border: Border.fromBorderSide(BorderSide(
-                              color: Colors.grey,
-                            ))),
-                          ),
-                          const SizedBox(
-                            width: 5,
-                          ),
-                          Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: const [
-                              Text(
-                                "8/8/1888",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                " الاحد",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                              Text(
-                                "4:55 PM",
-                                style: TextStyle(
-                                    fontSize: 12, fontWeight: FontWeight.bold),
-                              ),
-                            ],
-                          ),
-                        ],
-                      )),
-                ),
-              ),
+              Box(context),
+              Box(context),
+              Box(context),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget Box(BuildContext context) {
+    Size size = MediaQuery.of(context).size;
+    return Padding(
+      padding: EdgeInsets.only(left: size.height / 30, right: size.height / 30),
+      child: SizedBox(
+        width: size.width / 1.2,
+        height: size.height / 7,
+        child: Card(
+            shape: RoundedRectangleBorder(
+              side: const BorderSide(color: Colors.white70, width: 1),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                const Expanded(
+                  child: Center(
+                    child: Text(
+                      "تم خصم 50 ريال من حسابك اشتراك في باقة",
+                      style: TextStyle(
+                        fontSize: 12,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+                Container(
+                  width: 1,
+                  height: size.height / 7,
+                  decoration: const BoxDecoration(
+                      border: Border.fromBorderSide(BorderSide(
+                    color: Colors.grey,
+                  ))),
+                ),
+                const SizedBox(
+                  width: 5,
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: const [
+                    Text(
+                      "8/8/1888",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      " الاحد",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                    Text(
+                      "4:55 PM",
+                      style:
+                          TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+                    ),
+                  ],
+                ),
+              ],
+            )),
       ),
     );
   }
