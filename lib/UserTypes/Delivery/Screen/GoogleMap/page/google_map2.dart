@@ -4,7 +4,6 @@ import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/material.dart';
 
 import '../../client/page/client_rating.dart';
-import '../../notification.dart';
 
 class GoogleMap2 extends StatefulWidget {
   const GoogleMap2({Key? key}) : super(key: key);
@@ -45,19 +44,17 @@ class _GoogleMap2State extends State<GoogleMap2> {
                     children: [
                       InkWell(
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) =>
-                                      DeliveryNotification()));
+                          Navigator.pop(
+                            context,
+                          );
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.keyboard_arrow_left_rounded,
                           color: Colors.black,
                           size: 40,
                         ),
                       ),
-                      Icon(
+                      const Icon(
                         Icons.chat_outlined,
                         color: Colors.black,
                         size: 40,
@@ -175,7 +172,7 @@ class _GoogleMap2State extends State<GoogleMap2> {
                                               context,
                                               MaterialPageRoute(
                                                   builder: (context) =>
-                                                      ClientRating()));
+                                                      const ClientRating()));
                                         },
                                         child: Container(
                                           width: size.width / 4,
@@ -204,9 +201,9 @@ class _GoogleMap2State extends State<GoogleMap2> {
                                         height: size.height / 17,
                                         margin: const EdgeInsets.symmetric(
                                             horizontal: 10, vertical: 20),
-                                        decoration: BoxDecoration(
+                                        decoration: const BoxDecoration(
                                           color: Colors.black,
-                                          borderRadius: const BorderRadius.all(
+                                          borderRadius: BorderRadius.all(
                                               Radius.circular(10)),
                                         ),
                                         child: const Center(
