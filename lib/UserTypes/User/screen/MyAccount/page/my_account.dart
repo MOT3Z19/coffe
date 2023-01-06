@@ -59,7 +59,7 @@ class _MyAccountState extends State<MyAccount> {
               const SizedBox(
                 height: 30,
               ),
-              Container(
+              SizedBox(
                   width: size.width,
                   height: size.height,
                   child: const AccountSection()),
