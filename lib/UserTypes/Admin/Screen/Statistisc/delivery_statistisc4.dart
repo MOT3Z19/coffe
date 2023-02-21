@@ -16,40 +16,40 @@ class AdminStatistics4 extends StatefulWidget {
 }
 
 class _AdminStatistics4State extends State<AdminStatistics4> {
-  String? selectedValue;
-  List<String> items = ['احمد محمود'];
+  String? selectedValue20;
+  List<String> items20 = ['احمد محمود'];
 
-  String? selectedValue4;
-  List<String> items4 = [
+  String? selectedValue21;
+  List<String> items21 = [
     '  الفرع الاول',
     '  الفرع التاني',
     '  الفرع الثالث',
   ];
-  String? selectedValue7;
-  List<String> items7 = [
+  String? selectedValue22;
+  List<String> items22 = [
     'احمد محمود',
     'محمد محمود',
     'علي محمود',
   ];
-  String? selectedValue8;
-  List<String> items8 = [
+  String? selectedValue23;
+  List<String> items23 = [
     'احمد محمود',
     'محمد محمود',
     'علي محمود',
   ];
-  String? selectedValue9;
-  List<String> items9 = [
+  String? selectedValue24;
+  List<String> items24 = [
     'دائن',
     'مدين',
   ];
-  String? selectedValue10;
-  List<String> items10 = [
+  String? selectedValue25;
+  List<String> items25 = [
     '١/١/٢٠٢٠',
     '١/٤/٢٠٢٠',
     '١/٧/٢٠٢٠',
   ];
-  String? selectedValue11;
-  List<String> items11 = [
+  String? selectedValue26;
+  List<String> items26 = [
     '١/٤/٢٠٢٠',
     '١/٧/٢٠٢٠',
     '١/٩/٢٠٢٠',
@@ -270,6 +270,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                   ),
                 ],
               ),
+              ////////
               const SizedBox(
                 height: 20,
               ),
@@ -294,7 +295,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       ),
                     ],
                   ),
-                  items: items
+                  items: items20
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -308,10 +309,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue,
+                  value: selectedValue20,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue = value as String;
+                      selectedValue20 = value as String;
                     });
                   },
                   icon: const Icon(
@@ -372,7 +373,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       ),
                     ],
                   ),
-                  items: items4
+                  items: items21
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -386,10 +387,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue4,
+                  value: selectedValue21,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue4 = value as String;
+                      selectedValue21 = value as String;
                     });
                   },
                   icon: const Icon(
@@ -450,7 +451,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       ),
                     ],
                   ),
-                  items: items8
+                  items: items23
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -464,10 +465,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue8,
+                  value: selectedValue23,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue8 = value as String;
+                      selectedValue23 = value as String;
                     });
                   },
                   icon: const Icon(
@@ -528,7 +529,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       ),
                     ],
                   ),
-                  items: items7
+                  items: items22
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -542,10 +543,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue7,
+                  value: selectedValue22,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue7 = value as String;
+                      selectedValue22 = value as String;
                     });
                   },
                   icon: const Icon(
@@ -606,7 +607,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                       ),
                     ],
                   ),
-                  items: items9
+                  items: items24
                       .map((item) => DropdownMenuItem<String>(
                             value: item,
                             child: Text(
@@ -620,10 +621,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                             ),
                           ))
                       .toList(),
-                  value: selectedValue9,
+                  value: selectedValue24,
                   onChanged: (value) {
                     setState(() {
-                      selectedValue9 = value as String;
+                      selectedValue24 = value as String;
                     });
                   },
                   icon: const Icon(
@@ -696,7 +697,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                           ),
                         ],
                       ),
-                      items: items11
+                      items: items26
                           .map((item) => DropdownMenuItem<String>(
                                 value: item,
                                 child: Text(
@@ -710,10 +711,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                                 ),
                               ))
                           .toList(),
-                      value: selectedValue11,
+                      value: selectedValue26,
                       onChanged: (value) {
                         setState(() {
-                          selectedValue11 = value as String;
+                          selectedValue26 = value as String;
                         });
                       },
                       icon: const Icon(
@@ -771,7 +772,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                           ),
                         ],
                       ),
-                      items: items10
+                      items: items25
                           .map((item) => DropdownMenuItem<String>(
                                 value: item,
                                 child: Text(
@@ -785,10 +786,10 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                                 ),
                               ))
                           .toList(),
-                      value: selectedValue10,
+                      value: selectedValue25,
                       onChanged: (value) {
                         setState(() {
-                          selectedValue10 = value as String;
+                          selectedValue25 = value as String;
                         });
                       },
                       icon: const Icon(
@@ -851,7 +852,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
                   ),
                   InkWell(
                     onTap: () {
-                      showDialog1();
+                      showDialog11();
                     },
                     child: Container(
                       width: size.width / 2.2,
@@ -880,7 +881,7 @@ class _AdminStatistics4State extends State<AdminStatistics4> {
     );
   }
 
-  showDialog1() {
+  showDialog11() {
     return showDialog(
         context: context,
         barrierDismissible: true,
