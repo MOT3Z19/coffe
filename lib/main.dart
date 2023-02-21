@@ -1,6 +1,6 @@
+import 'package:coffee_station/UserTypes/Admin/Screen/admin_main_tabs.dart';
+import 'package:coffee_station/UserTypes/User/screen/splash_screen.dart';
 import 'package:flutter/material.dart';
-
-import 'UserTypes/Admin/Screen/admin_main_tabs.dart';
 
 void main() {
   // runApp(MaterialApp(home: SplashScreen()));
