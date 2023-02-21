@@ -265,15 +265,15 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
                   ],
                 ),
               ),
-              Item(context, "  اجمالي عدد التجار"),
-              Item(context, "  اجمالي عدد المندوبين"),
-              Item(context, "  اجمالي افرع المتجر"),
-              Item(context, "  اجمالي الاصناف"),
-              Item(context, "  اجمالي الارباح"),
-              Item(context, "  اجمالي العملاء"),
-              Item(context, "  اجمالي البدان"),
-              Item(context, "  اجمالي المدن"),
-              Item(context, "  اجمالي الاحياء"),
+              Item2(context, "  اجمالي عدد التجار"),
+              Item2(context, "  اجمالي عدد المندوبين"),
+              Item2(context, "  اجمالي افرع المتجر"),
+              Item2(context, "  اجمالي الاصناف"),
+              Item2(context, "  اجمالي الارباح"),
+              Item2(context, "  اجمالي العملاء"),
+              Item2(context, "  اجمالي البدان"),
+              Item2(context, "  اجمالي المدن"),
+              Item2(context, "  اجمالي الاحياء"),
               const Divider(
                 // color: Colors.black,
                 thickness: 1,
@@ -316,12 +316,12 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
               Container(
                   margin: const EdgeInsets.symmetric(vertical: 8),
                   child: const DottedLine(dashLength: 20)),
-              Item(context, " اجمالي المبيعات"),
-              Item(context, " اجمالي عدد المندوبين"),
-              Item(context, " اجمالي حصة الموقع"),
-              Item(context, " اجمالي المحصل من الموقع"),
-              Item(context, " اجمالي المسدد من الموقع"),
-              Item(context, " رصيد المندوب"),
+              Item2(context, " اجمالي المبيعات"),
+              Item2(context, " اجمالي عدد المندوبين"),
+              Item2(context, " اجمالي حصة الموقع"),
+              Item2(context, " اجمالي المحصل من الموقع"),
+              Item2(context, " اجمالي المسدد من الموقع"),
+              Item2(context, " رصيد المندوب"),
             ],
           ),
         ),
@@ -329,7 +329,7 @@ class _AdminStatistics1State extends State<AdminStatistics1> {
     );
   }
 
-  Widget Item(BuildContext context, String title) {
+  Widget Item2(BuildContext context, String title) {
     Size size = MediaQuery.of(context).size;
     return Container(
       margin: EdgeInsets.symmetric(horizontal: size.width / 13, vertical: 5),
