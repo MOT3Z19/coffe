@@ -288,7 +288,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           child: Container(
-                            margin: EdgeInsets.only(top: size.height / 12),
+                            margin: EdgeInsets.only(top: size.height / 17),
                             child: const Center(
                               child: Text(
                                 "صنف العصائر",
@@ -309,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                           child: Container(
-                            margin: EdgeInsets.only(top: size.height / 12),
+                            margin: EdgeInsets.only(top: size.height / 17),
                             child: const Center(
                               child: Text(
                                 "صنف المكسرات",
