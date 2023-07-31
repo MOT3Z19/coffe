@@ -1,8 +1,21 @@
 import 'package:coffee_station/UserTypes/User/screen/GoogleMaps/page/google_map.dart';
+import 'package:coffee_station/controller/userController.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignUpForm extends StatelessWidget {
-  const SignUpForm({Key? key}) : super(key: key);
+   SignUpForm({Key? key}) : super(key: key);
+
+  final SignupController _signupController = Get.put(SignupController());
+
+  final TextEditingController _fullNameController = TextEditingController();
+  final TextEditingController _usernameController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordConfirmationController =
+  TextEditingController();
+  final TextEditingController _locationController = TextEditingController();
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _phoneNumberController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +27,8 @@ class SignUpForm extends StatelessWidget {
           width: size.width,
           height: size.height / 13, // last change
           margin: EdgeInsets.symmetric(horizontal: size.width / 20),
-          child: const TextField(
+          child: TextField(
+            controller: _fullNameController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -30,7 +44,8 @@ class SignUpForm extends StatelessWidget {
           margin: EdgeInsets.symmetric(
             horizontal: size.width / 20,
           ),
-          child: const TextField(
+          child:  TextField(
+            controller: _usernameController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -46,7 +61,8 @@ class SignUpForm extends StatelessWidget {
           margin: EdgeInsets.symmetric(
             horizontal: size.width / 20,
           ),
-          child: const TextField(
+          child: TextField(
+            controller: _passwordController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -62,7 +78,8 @@ class SignUpForm extends StatelessWidget {
           margin: EdgeInsets.symmetric(
             horizontal: size.width / 20,
           ),
-          child: const TextField(
+          child: TextField(
+            controller: _passwordConfirmationController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -79,6 +96,7 @@ class SignUpForm extends StatelessWidget {
             horizontal: size.width / 20,
           ),
           child: TextField(
+            controller: _locationController,
             decoration: InputDecoration(
               suffix: InkWell(
                   onTap: () {
@@ -104,7 +122,8 @@ class SignUpForm extends StatelessWidget {
           margin: EdgeInsets.symmetric(
             horizontal: size.width / 20,
           ),
-          child: const TextField(
+          child: TextField(
+            controller: _emailController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),
@@ -120,7 +139,8 @@ class SignUpForm extends StatelessWidget {
           margin: EdgeInsets.symmetric(
             horizontal: size.width / 20,
           ),
-          child: const TextField(
+          child: TextField(
+            controller: _phoneNumberController,
             decoration: InputDecoration(
               enabledBorder: UnderlineInputBorder(
                 borderSide: BorderSide(width: 1, color: Colors.grey),

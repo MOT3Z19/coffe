@@ -1,10 +1,13 @@
 import 'dart:ui';
 
+import 'package:coffee_station/UserTypes/User/screen/HomePage/page/home_page.dart';
 import 'package:coffee_station/UserTypes/User/screen/SignUp/page/sign_up.dart';
+import 'package:coffee_station/controller/userController.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+import 'package:get/get.dart';
 
 import '../../../../../main_tabs.dart';
 
@@ -16,6 +19,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final SignupController _signupController = Get.find();
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+
   String _selected = ' 546***** رقم الهاتف';
   @override
   Widget build(BuildContext context) {
@@ -65,7 +74,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           margin: EdgeInsets.symmetric(
                             horizontal: size.width / 20,
                           ),
-                          child: const TextField(
+                          child:  TextField(
+                            controller: _emailController,
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide:
@@ -83,7 +93,8 @@ class _LoginScreenState extends State<LoginScreen> {
                           margin: EdgeInsets.symmetric(
                             horizontal: size.width / 20,
                           ),
-                          child: const TextField(
+                          child: TextField(
+                            controller: _passwordController,
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide:
@@ -113,16 +124,11 @@ class _LoginScreenState extends State<LoginScreen> {
                             ),
                           ],
                         ),
-                        InkWell(
-                          onTap: () {
-                            //  showDialog2(); // this call to open message dialog
-
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => MainTabs(),
-                              ),
-                            );
+                        ElevatedButton(
+                          onPressed: _signupController.isLoading.value
+                              ? null
+                              : () {
+                            _signin();
                           },
                           child: Container(
                             width: size.width / 1.1,
@@ -543,5 +549,24 @@ class _LoginScreenState extends State<LoginScreen> {
             ],
           );
         });
+  }
+
+  void _signin() async {
+    if (_emailController.text.isEmpty || _passwordController.text.isEmpty) {
+      Get.snackbar('Error', 'Please fill in all fields.');
+      return;
+    }
+
+    bool isSignedIn = await _signupController.signIn(
+      _emailController.text,
+      _passwordController.text,
+    );
+
+    if (isSignedIn) {
+      Get.offAll(HomePage()); // Navigate to the home page
+    } else {
+      // Handle the case where signin is unsuccessful
+      // For example, you can show an error snackbar or an alert.
+    }
   }
 }

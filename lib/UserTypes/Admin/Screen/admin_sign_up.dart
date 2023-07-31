@@ -59,7 +59,7 @@ class _AdminSignUpState extends State<AdminSignUp> {
                                 ),
                               ),
                             ),
-                            const SignUpForm(),
+                             SignUpForm(),
                             const SizedBox(
                               height: 10,
                             ),

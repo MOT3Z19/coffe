@@ -1,9 +1,13 @@
+import 'package:coffee_station/UserTypes/User/screen/GoogleMaps/page/google_map.dart';
 import 'package:coffee_station/UserTypes/User/screen/SignUp/widget/sign_up_form.dart';
 import 'package:coffee_station/UserTypes/User/screen/loginScreen/page/login_screen.dart';
+import 'package:coffee_station/controller/userController.dart';
 import 'package:coffee_station/core/constant.dart';
+import 'package:coffee_station/model/userModel.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/widgets.dart';
+import 'package:get/get.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({Key? key}) : super(key: key);
@@ -11,6 +15,16 @@ class SignUp extends StatefulWidget {
   @override
   State<SignUp> createState() => _SignUpState();
 }
+final SignupController _signupController = Get.put(SignupController());
+
+final TextEditingController _fullNameController = TextEditingController();
+final TextEditingController _usernameController = TextEditingController();
+final TextEditingController _passwordController = TextEditingController();
+final TextEditingController _passwordConfirmationController =
+TextEditingController();
+final TextEditingController _locationController = TextEditingController();
+final TextEditingController _emailController = TextEditingController();
+final TextEditingController _phoneNumberController = TextEditingController();
 
 class _SignUpState extends State<SignUp> {
   bool value = false;
@@ -58,38 +72,166 @@ class _SignUpState extends State<SignUp> {
                                 ),
                               ),
                             ),
-                            const SignUpForm(),
-                            const SizedBox(
+                            Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13, // last change
+                                  margin: EdgeInsets.symmetric(horizontal: size.width / 20),
+                                  child: TextField(
+                                    controller: _fullNameController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: "الاسم كامل ( لن يظهر للجميع)",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child:  TextField(
+                                    controller: _usernameController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: " اسم المستخدم ",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child: TextField(
+                                    controller: _passwordController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: "  كلمة المرور (لن يظهر للجميع)",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child: TextField(
+                                    controller: _passwordConfirmationController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: " تآكيد كلمة المرور",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child: TextField(
+                                    controller: _locationController,
+                                    decoration: InputDecoration(
+                                      suffix: InkWell(
+                                          onTap: () {
+                                            Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                builder: (context) => GoogleMap(),
+                                              ),
+                                            );
+                                          },
+                                          child: const Icon(Icons.location_on_rounded)),
+                                      enabledBorder: const UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: " الموقع ",
+                                      labelStyle: const TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child: TextField(
+                                    controller: _emailController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: " الايميل ( لن يظهر للجميع)",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                                Container(
+                                  width: size.width,
+                                  height: size.height / 13,
+                                  margin: EdgeInsets.symmetric(
+                                    horizontal: size.width / 20,
+                                  ),
+                                  child: TextField(
+                                    controller: _phoneNumberController,
+                                    decoration: InputDecoration(
+                                      enabledBorder: UnderlineInputBorder(
+                                        borderSide: BorderSide(width: 1, color: Colors.grey),
+                                      ),
+                                      labelText: " رقم الهاتف  ( اختياري)",
+                                      labelStyle: TextStyle(fontSize: 15, color: Colors.black),
+                                    ),
+                                  ),
+                                ),
+                              ],
+                            ),
+                             SizedBox(
                               height: 10,
                             ),
-                            InkWell(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                    builder: (context) => const LoginScreen(),
-                                  ),
-                                );
+                            ElevatedButton(
+                              onPressed: _signupController.isLoading.value
+                                  ? null
+                                  : () {
+                                if (_passwordController.text ==
+                                    _passwordConfirmationController.text) {
+                                  UserModel user = UserModel(
+                                    fullName: _fullNameController.text,
+                                    username: _usernameController.text,
+                                    password: _passwordController.text,
+                                    location: _locationController.text,
+                                    email: _emailController.text,
+                                    phoneNumber: _phoneNumberController.text,
+                                  );
+                                  _signupController.signUp(user);
+                                } else {
+                                  Get.snackbar('Error', 'Passwords do not match');
+                                }
                               },
-                              child: Container(
-                                width: size.width / 1.1,
-                                height: size.height / 15,
-                                margin: const EdgeInsets.symmetric(
-                                    horizontal: 10, vertical: 6),
-                                decoration: BoxDecoration(
-                                  color: primaryColor,
-                                  borderRadius: const BorderRadius.all(
-                                      Radius.circular(10)),
-                                ),
-                                child: const Center(
-                                  child: Text(
-                                    "تسجيل",
-                                    style: TextStyle(
-                                        color: Colors.white, fontSize: 24),
-                                  ),
-                                ),
-                              ),
+                              child: _signupController.isLoading.value
+                                  ? CircularProgressIndicator()
+                                  : Text('Signup'),
                             ),
+
+
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceAround,
                               children: [
