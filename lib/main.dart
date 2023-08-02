@@ -21,5 +21,4 @@ void main() async {
   // runApp(MaterialApp(home: ProviderSignUp()));
   // runApp(MaterialApp(home: DeliverySignUp()));
   // runApp(MaterialApp(home: AdminMainTabs()));
-
 }

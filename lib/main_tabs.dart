@@ -206,24 +206,17 @@ class _MainTabsState extends State<MainTabs> {
         ],
       ),
       child: ClipRRect(
-        // borderRadius: BorderRadius.circular(10),
         child: PersistentTabView(
           context,
           controller: _controller,
-          // backgroundColor: Color(0xffe1e9ee),
           backgroundColor: Colors.white,
-
           screens: _sellerScreens(),
           items: _navBarsItems(),
           confineInSafeArea: true,
-
           handleAndroidBackButtonPress: true,
           resizeToAvoidBottomInset: true,
-          // This needs to be true if you want to move up the screen when keyboard appears. Default is true.
           stateManagement: true,
-          // Default is true.
           hideNavigationBarWhenKeyboardShows: true,
-          // Recommended to set 'resizeToAvoidBottomInset' as true while using this argument. Default is true.
           decoration: NavBarDecoration(
             borderRadius: BorderRadius.circular(10.0),
             colorBehindNavBar: Colors.white,
@@ -231,13 +224,10 @@ class _MainTabsState extends State<MainTabs> {
           popAllScreensOnTapOfSelectedTab: true,
           popActionScreens: PopActionScreensType.all,
           itemAnimationProperties: const ItemAnimationProperties(
-            // Navigation Bar's items animation properties.
             duration: Duration(milliseconds: 200),
             curve: Curves.ease,
           ),
           screenTransitionAnimation: const ScreenTransitionAnimation(
-            // Screen transition animation on change of selected tab.
-            // animateTabTransition: true,
             curve: Curves.bounceOut,
             duration: Duration(milliseconds: 100),
           ),

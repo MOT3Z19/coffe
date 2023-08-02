@@ -21,7 +21,7 @@ class SignupController extends GetxController {
 
       if (userCredential.user != null) {
         await _usersCollection.doc(userCredential.user!.uid).set(user.toMap());
-        Get.snackbar('Success', 'Signup successful');
+        Get.snackbar('Success', 'SignUp successful');
         isLoading.value = false;
       }
     } catch (e) {

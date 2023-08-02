@@ -1,11 +1,14 @@
 import 'dart:ui';
 
 import 'package:coffee_station/UserTypes/Delivery/Screen/Bunch/bunch.dart';
+import 'package:coffee_station/controller/deliveryController.dart';
 import 'package:coffee_station/core/constant.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:get/get.dart';
+import 'package:intl/intl.dart';
 
 class DeliverySignUp extends StatefulWidget {
   const DeliverySignUp({Key? key}) : super(key: key);
@@ -16,11 +19,22 @@ class DeliverySignUp extends StatefulWidget {
 
 class _DeliverySignUpState extends State<DeliverySignUp> {
   String? selectedValue;
+  final DeliveryController controller = Get.put(DeliveryController());
+  TextEditingController dateinput = TextEditingController();
+
+
   List<String> items = [
     'هوية وطينة',
     'جواز سفر',
     'اخرى',
   ];
+
+  @override
+  void initState() {
+    dateinput.text = ""; //set the initial value of text field
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
@@ -64,12 +78,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: const [
                               Text(
-                                " أضف بياناتك  ",
-                                style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
-                              ),
-                              Text(
-                                " أحمد محمود  ",
+                                "أضف بياناتك",
                                 style: TextStyle(
                                     color: Colors.white, fontSize: 20),
                               ),
@@ -112,7 +121,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                 const SizedBox(
                   height: 10,
                 ),
-                Field(context, " احمد محمود "),
+                Field(context, "اسم الديلفري"),
                 Container(
                   margin: EdgeInsets.symmetric(
                     horizontal: size.width / 20,
@@ -124,7 +133,7 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                         enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(width: 1, color: Colors.grey),
                         ),
-                        hintText: " Omar@gmail.com",
+                        hintText: "الايميل",
                         hintStyle: TextStyle(color: Colors.black)),
                   ),
                 ),
@@ -213,7 +222,36 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                     ),
 
                     Field(context, " رقم الهوية "),
-                    Field(context, "  تاريخ الميلاد "),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20),
+                      child: TextField(
+                        controller: dateinput, //editing controller of this TextField
+                        decoration: InputDecoration(
+                            hintText: "تاريخ الميلاد"
+                        ),
+                        readOnly: true,
+                        onTap: () async {
+                          DateTime? pickedDate = await showDatePicker(
+                              context: context, initialDate: DateTime.now(),
+                              firstDate: DateTime(1950),
+                              lastDate: DateTime(2101)
+                          );
+
+                          if(pickedDate != null ){
+                            print(pickedDate);
+                            String formattedDate = DateFormat('yyyy-MM-dd').format(pickedDate);
+                            print(formattedDate);
+
+                            setState(() {
+                              dateinput.text = formattedDate;
+                            });
+                          }else{
+                            print("Date is not selected");
+                          }
+                        },
+                      ),
+                    ),
+
                     Field(context, "رقم الهاتف "),
                     Field(context, "تاريخ انتهاء الرخصة "),
                     Field(context, "رقم السيارة"),
@@ -236,13 +274,15 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                               ),
                               child: const Center(
                                 child: Text(
-                                  "    صورة السيارة ",
+                                  "صورة السيارة",
                                   style: TextStyle(
                                       fontSize: 16, color: Colors.black),
                                 ),
                               ),
                             ),
-                            Image(context),
+                            GestureDetector(
+                                onTap: () => controller.pickImage(ImageType.car),
+                                child: Image(context)),
                           ],
                         ),
                         Column(
@@ -253,13 +293,15 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                               ),
                               child: const Center(
                                 child: Text(
-                                  "    صورة رخصة السيارة ",
+                                  "صورة رخصة السيارة",
                                   style: TextStyle(
                                       fontSize: 16, color: Colors.black),
                                 ),
                               ),
                             ),
-                            Image(context),
+                            GestureDetector(
+                                onTap: () => controller.pickImage(ImageType.carLicense),
+                                child: Image(context)),
                           ],
                         ),
                         Column(
@@ -276,13 +318,16 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
                                 ),
                               ),
                             ),
-                            Image(context),
+                            GestureDetector(
+                                onTap: () => controller.pickImage(ImageType.id),
+                                child: Image(context)),
                           ],
                         ),
                       ],
                     ),
                     InkWell(
-                      onTap: () {
+                      onTap: () async {
+                        await controller.signUpAndUploadData();
                         Navigator.push(
                           context,
                           MaterialPageRoute(
@@ -347,16 +392,9 @@ class _DeliverySignUpState extends State<DeliverySignUp> {
       ),
       margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 20),
       child: const Center(
-        child: TextField(
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            prefixIcon: Center(
-              child: Icon(
-                Icons.file_upload,
-                size: 50,
-              ),
-            ),
-          ),
+        child: Icon(
+          Icons.file_upload,
+          size: 50,
         ),
       ),
     );

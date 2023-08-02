@@ -1,6 +1,5 @@
 import 'dart:ui';
 
-import 'package:coffee_station/UserTypes/Delivery/Screen/SignUp/page/sign_up.dart';
 import 'package:coffee_station/UserTypes/User/screen/HomePage/page/home_page.dart';
 import 'package:coffee_station/UserTypes/User/screen/SignUp/page/sign_up.dart';
 import 'package:coffee_station/controller/userController.dart';
@@ -82,6 +81,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   borderSide:
                                       BorderSide(width: 1, color: Colors.grey),
                                 ),
+                                //    hintText: " اسم المستخدم ",
                                 labelText: " اسم المستخدم ",
                                 labelStyle: TextStyle(
                                     fontSize: 15, color: Colors.black)),
@@ -227,7 +227,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                      builder: (context) => const DeliverySignUp(),
+                                      builder: (context) => const SignUp(),
                                     ),
                                   );
                                 },
